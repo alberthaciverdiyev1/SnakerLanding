@@ -329,8 +329,6 @@ document.addEventListener('DOMContentLoaded', () => {
           getSectionPoint('hero', isMobile ? 0.50 : 0.62, 0.90),
           // Point 1b: Client brands marquee section
           getSectionPoint('client-brands', isMobile ? 0.40 : 0.35, 0.50),
-          // Point 2: Pillars section
-          getSectionPoint('pillars', isMobile ? 0.25 : 0.18, 0.50),
           // Point 3: Platform Hub section
           getSectionPoint('platform-hub', isMobile ? 0.70 : 0.78, 0.50),
           // Point 4: Elevated Experiences
