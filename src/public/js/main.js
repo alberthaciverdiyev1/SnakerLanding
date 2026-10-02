@@ -114,6 +114,86 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
+  // 4b. Hero Interactive Floating Cards Mouse Parallax Engine
+  // --------------------------------------------------------------------------
+  const heroSection = document.getElementById('hero');
+  const card1 = document.getElementById('float-card-1');
+  const card2 = document.getElementById('float-card-2');
+  const card3 = document.getElementById('float-card-3');
+  const card4 = document.getElementById('float-card-4');
+  const centralStore = document.getElementById('hero-central-store');
+
+  if (heroSection && !prefersReducedMotion) {
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    heroSection.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      mouseX = x;
+      mouseY = y;
+    });
+
+    heroSection.addEventListener('mouseleave', () => {
+      mouseX = 0;
+      mouseY = 0;
+    });
+
+    const updateParallax = () => {
+      currentX += (mouseX - currentX) * 0.08;
+      currentY += (mouseY - currentY) * 0.08;
+
+      if (window.innerWidth >= 768) {
+        if (card1) {
+          card1.style.transform = `translate3d(${(currentX * -28).toFixed(1)}px, ${(currentY * -24).toFixed(1)}px, 0)`;
+        }
+        if (card2) {
+          card2.style.transform = `translate3d(${(currentX * 24).toFixed(1)}px, ${(currentY * 20).toFixed(1)}px, 0)`;
+        }
+        if (card3) {
+          card3.style.transform = `translate3d(${(currentX * 32).toFixed(1)}px, ${(currentY * -26).toFixed(1)}px, 0)`;
+        }
+        if (card4) {
+          card4.style.transform = `translate3d(${(currentX * -20).toFixed(1)}px, ${(currentY * 24).toFixed(1)}px, 0)`;
+        }
+        if (centralStore) {
+          centralStore.style.transform = `perspective(1000px) rotateX(${(-currentY * 5).toFixed(2)}deg) rotateY(${(currentX * 5).toFixed(2)}deg)`;
+        }
+      }
+
+      requestAnimationFrame(updateParallax);
+    };
+
+    requestAnimationFrame(updateParallax);
+  }
+
+  // --------------------------------------------------------------------------
+  // 4c. Elevated Experiences 3-Tab Switcher (Shopline Showcase)
+  // --------------------------------------------------------------------------
+  const elevatedBox = document.getElementById('elevated-showcase');
+  if (elevatedBox) {
+    const tabBtns = elevatedBox.querySelectorAll('.elevated-tab-btn');
+    const panes = elevatedBox.querySelectorAll('.elevated-tab-pane');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        panes.forEach(p => p.classList.remove('active'));
+
+        btn.classList.add('active');
+        const targetId = 'pane-' + btn.getAttribute('data-tab');
+        const targetPane = document.getElementById(targetId);
+        if (targetPane) {
+          targetPane.classList.add('active');
+        }
+      });
+    });
+  }
+
+  // --------------------------------------------------------------------------
   // 5. Dimensional Continuous Snake Navigation Engine (Brief Section 8 & 9)
   // --------------------------------------------------------------------------
   const trackerEl = document.getElementById('snake-narrator-tracker');
@@ -127,7 +207,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('snake-path-spine')
   ].filter(Boolean);
   const snakeHeadGroup = document.getElementById('snake-head-group');
-  const snakeHeroImg = document.getElementById('snake-hero-img');
 
   if (trackerEl && svgEl && snakePaths.length > 0 && !prefersReducedMotion) {
     let totalLength = 0;
@@ -176,33 +255,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Waypoints weaving naturally down through sections and around/behind mockups
       const waypoints = [
-        // Point 0: Top right hero (emerging from the photographic snake backdrop)
+        // Point 0: Hero stage
         getSectionPoint('hero', isMobile ? 0.75 : 0.82, 0.40),
-        // Point 1: Hero exit curving into economics
-        getSectionPoint('hero', isMobile ? 0.50 : 0.62, 0.88),
-        // Point 2: Economics section left curve
-        getSectionPoint('economics', isMobile ? 0.20 : 0.15, 0.38),
-        // Point 3: Economics section weave through cards
-        getSectionPoint('economics', isMobile ? 0.65 : 0.52, 0.82),
-        // Point 4: Journey timeline right swoop
+        // Point 1: Hero exit curving into pillars
+        getSectionPoint('hero', isMobile ? 0.50 : 0.62, 0.90),
+        // Point 2: Pillars section
+        getSectionPoint('pillars', isMobile ? 0.25 : 0.18, 0.50),
+        // Point 3: Platform Hub section
+        getSectionPoint('platform-hub', isMobile ? 0.70 : 0.78, 0.50),
+        // Point 4: Elevated Experiences
+        getSectionPoint('elevated', isMobile ? 0.30 : 0.25, 0.50),
+        // Point 5: Economics
+        getSectionPoint('economics', isMobile ? 0.65 : 0.60, 0.60),
+        // Point 6: Journey
         getSectionPoint('journey', isMobile ? 0.80 : 0.82, 0.50),
-        // Point 5: Free plan WhatsApp mockup curve
+        // Point 7: Free plan WhatsApp
         getSectionPoint('free-start', isMobile ? 0.20 : 0.22, 0.55),
-        // Point 6: Customizer widget right curve
+        // Point 8: Customizer widget
         getSectionPoint('customization', isMobile ? 0.80 : 0.82, 0.50),
-        // Point 7: Behind dashboard mockup (occlusion dive!)
+        // Point 9: Behind dashboard mockup (occlusion!)
         getSectionPoint('product', isMobile ? 0.35 : 0.32, 0.58),
-        // Point 8: Product section exit right curve
+        // Point 10: Product section exit
         getSectionPoint('product', isMobile ? 0.68 : 0.72, 0.90),
-        // Point 9: Storefronts row left curve
+        // Point 11: Storefronts row
         getSectionPoint('storefronts', isMobile ? 0.25 : 0.25, 0.52),
-        // Point 10: Scale section right curve
+        // Point 12: Scale section
         getSectionPoint('scale', isMobile ? 0.75 : 0.74, 0.50),
-        // Point 11: Pricing section center weave behind featured card
+        // Point 13: Pricing section
         getSectionPoint('pricing', isMobile ? 0.50 : 0.48, 0.55),
-        // Point 12: FAQ section left swoop
+        // Point 14: FAQ section
         getSectionPoint('faq', isMobile ? 0.25 : 0.20, 0.50),
-        // Point 13: Final CTA banner meeting the photographic snake!
+        // Point 15: Final CTA banner
         getSectionPoint('start', isMobile ? 0.50 : 0.52, 0.45)
       ].filter(Boolean);
 

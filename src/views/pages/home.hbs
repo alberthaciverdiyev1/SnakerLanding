@@ -1,52 +1,460 @@
 <!-- ==========================================================================
-     SECTION 1: HERO (Art-Directed Snake & Editorial Master Slogan)
+     SECTION 1: HERO (Shopline-Inspired Interactive Showcase with Floating Cards)
      ========================================================================== -->
-<section class="hero-section" id="hero">
-  <!-- Art-directed snake photo backdrop -->
-  <div class="hero-snake-backdrop" id="hero-snake-backdrop" aria-hidden="true">
-    <div class="snake-radial-glow"></div>
-    <div class="snake-image-wrapper" id="snake-image-wrapper">
-      <img src="/images/snaker-snake.jpg" alt="" class="snake-hero-img" id="snake-hero-img" loading="eager" fetchpriority="high">
-    </div>
-    <div class="snake-gradient-overlay"></div>
+<section class="hero-shopline-section" id="hero">
+  <!-- Perspective Ray Grid Lines Backdrop -->
+  <div class="hero-perspective-lines" aria-hidden="true">
+    <svg class="perspective-svg" viewBox="0 0 1440 900" fill="none" preserveAspectRatio="none">
+      <line x1="720" y1="0" x2="160" y2="420" stroke="rgba(255,255,255,0.14)" stroke-width="1" stroke-dasharray="4 4" />
+      <line x1="720" y1="0" x2="260" y2="720" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4 4" />
+      <line x1="720" y1="0" x2="480" y2="900" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <line x1="720" y1="0" x2="960" y2="900" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <line x1="720" y1="0" x2="1180" y2="460" stroke="rgba(255,255,255,0.14)" stroke-width="1" stroke-dasharray="4 4" />
+      <line x1="720" y1="0" x2="1280" y2="780" stroke="rgba(255,255,255,0.12)" stroke-width="1" stroke-dasharray="4 4" />
+    </svg>
+    <div class="hero-ambient-glow"></div>
   </div>
 
-  <div class="hero-container">
-    <div class="hero-content">
-      <div class="hero-eyebrow" data-entrance="eyebrow">
-        <span class="eyebrow-pip"></span>
-        <span class="eyebrow-text mono">{{t "hero.badge"}}</span>
+  <div class="hero-center-content">
+    <div class="hero-eyebrow-pill font-mono">
+      <span class="eyebrow-pip"></span>
+      <span>{{t "hero.badge"}}</span>
+    </div>
+
+    <h1 class="hero-main-title">
+      {{t "hero.headlineMain"}}<br>
+      <span class="hero-title-accent">{{t "hero.headlineSub"}}</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      {{t "hero.description"}}
+    </p>
+
+    <div class="hero-action-pills">
+      <a href="/{{currentLang}}/pricing#free" class="pill-btn pill-primary">
+        <span>{{t "hero.primaryCta"}}</span>
+      </a>
+      <a href="/{{currentLang}}/demo" class="pill-btn pill-secondary">
+        <span>{{t "hero.demoLink"}}</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- The Interactive Floating Stage (Cards Move with Float Animation + Mouse Parallax) -->
+  <div class="hero-stage-container" id="hero-interactive-stage">
+    
+    <!-- Central Store Browser Mockup (Inspired by Shopline KRAMA) -->
+    <div class="hero-central-store-window" id="hero-central-store">
+      <div class="store-window-bar">
+        <div class="store-dots">
+          <span class="sdot red"></span>
+          <span class="sdot yellow"></span>
+          <span class="sdot green"></span>
+        </div>
+        <div class="store-url-pill font-mono">
+          <span class="lock-icon">&bull;</span> aura.snaker.store
+        </div>
+        <div class="store-window-actions font-mono">
+          <span>Search</span>
+          <span class="store-cart-badge">Cart (2)</span>
+        </div>
+      </div>
+      
+      <div class="store-window-content">
+        <div class="store-header-nav">
+          <div class="store-nav-links">
+            <span class="active">HOME</span>
+            <span>SKINCARE</span>
+            <span>MAKEUP</span>
+            <span>BESTSELLERS</span>
+          </div>
+          <span class="store-brand-title">AURA</span>
+          <div class="store-nav-icons font-mono">
+            <span>EN</span>
+            <span>USD $</span>
+          </div>
+        </div>
+
+        <div class="store-hero-banner-grid">
+          <div class="store-hero-watermark">AURA</div>
+          <div class="store-hero-model-box">
+            <div class="store-model-img-art">
+              <div class="model-face-graphic">
+                <span class="model-glow-ring"></span>
+                <span class="model-smile-sparkle"></span>
+              </div>
+              <div class="model-floating-serum">
+                <span class="serum-glow"></span>
+                <span class="serum-cap"></span>
+                <span class="serum-body font-mono">SERUM 30ml</span>
+              </div>
+            </div>
+          </div>
+          <div class="store-hero-text-side">
+            <span class="store-hero-tag font-mono">ORGANIC FORMULA</span>
+            <h2 class="store-hero-heading">Made To Work On All Skin Types</h2>
+            <p class="store-hero-desc">
+              Formulated to gently hydrate, nourish, and protect your skin's natural barrier with organic botanical oils.
+            </p>
+            <a href="#storefronts" class="store-hero-btn font-mono">LEARN MORE &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 Floating Moving Cards (Moving with continuous floating animation + mouse parallax) -->
+    
+    <!-- Card 1: Top-Left Social Commerce / Ad Funnel -->
+    <div class="hero-floating-card card-funnel" id="float-card-1">
+      <div class="fc-card-inner">
+        <div class="fc-badge-bar">
+          <span class="funnel-logo font-mono">F &bull; FUNNEL</span>
+          <div class="social-pills">
+            <span class="soc-pill fb">f</span>
+            <span class="soc-pill ig">&#9679;</span>
+            <span class="soc-pill g">G</span>
+          </div>
+        </div>
+        <div class="funnel-ad-preview">
+          <div class="funnel-ad-media">
+            <div class="ad-tag font-mono">AUTUMN PROMO</div>
+            <div class="ad-model-art">
+              <div class="ad-fashion-silhouette"></div>
+            </div>
+          </div>
+          <div class="funnel-ad-footer">
+            <div class="funnel-copy-lines">
+              <span class="line-1"></span>
+              <span class="line-2"></span>
+            </div>
+            <span class="funnel-shop-btn font-mono">SHOP NOW</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Bottom-Left Subscription & Routine Card -->
+    <div class="hero-floating-card card-subscription" id="float-card-2">
+      <div class="fc-card-inner">
+        <div class="sub-products-row">
+          <div class="sub-bottle-card">
+            <div class="bottle-art emerald">
+              <span class="b-cap"></span>
+              <span class="b-label font-mono">CLEANSE</span>
+            </div>
+          </div>
+          <div class="sub-bottle-card">
+            <div class="bottle-art mint">
+              <span class="b-cap"></span>
+              <span class="b-label font-mono">HYDRATE</span>
+            </div>
+          </div>
+        </div>
+        <div class="sub-routine-title font-mono">HAIR &amp; SKIN ROUTINE</div>
+        <div class="sub-tier-box">
+          <div class="sub-radio-row">
+            <span class="sub-radio active"></span>
+            <span class="sub-text"><strong>Subscribe &amp; Save 10%</strong></span>
+            <span class="sub-price font-mono"><del>$50.00</del> <strong>$45.00</strong></span>
+          </div>
+          <div class="sub-frequency-selector font-mono">
+            <span>Delivery every 30 days</span>
+            <span class="dropdown-chevron">&darr;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Top-Right Cart Recovery / Offer Modal -->
+    <div class="hero-floating-card card-cart-recovery" id="float-card-3">
+      <div class="fc-card-inner">
+        <div class="cr-topbar">
+          <span class="envelope-badge">&#9993;</span>
+          <div class="cr-title font-mono">HANG ON!</div>
+          <span class="cr-close">&times;</span>
+        </div>
+        <div class="cr-subtext">We've saved items in your cart</div>
+        <div class="cr-items-mini">
+          <span class="mini-thumb thumb-1"></span>
+          <span class="mini-thumb thumb-2"></span>
+          <span class="mini-thumb thumb-3"></span>
+        </div>
+        <div class="cr-discount-banner">
+          <div class="cr-banner-text">
+            <strong>Get 10% off</strong> your first order
+          </div>
+          <div class="cr-input-group">
+            <input type="email" placeholder="Enter your email" readonly value="leyla@example.com" class="font-mono">
+            <button class="cr-submit font-mono">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Bottom-Right Member Loyalty & VIP Card -->
+    <div class="hero-floating-card card-loyalty" id="float-card-4">
+      <div class="fc-card-inner">
+        <div class="loyalty-header">
+          <div class="member-avatar">
+            <span>S</span>
+          </div>
+          <div class="member-info">
+            <div class="member-name">Hi Susan</div>
+            <div class="member-tag font-mono">Exclusive Member Benefits &rarr;</div>
+          </div>
+          <span class="loyalty-close">&times;</span>
+        </div>
+        <div class="loyalty-stats-grid font-mono">
+          <div class="l-stat">
+            <span class="l-val">150</span>
+            <span class="l-lbl">Points</span>
+          </div>
+          <div class="l-stat">
+            <span class="l-val">$30</span>
+            <span class="l-lbl">Reward</span>
+          </div>
+          <div class="l-stat">
+            <span class="l-val">&check;</span>
+            <span class="l-lbl">Free Ship</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Chat Launcher Widget -->
+    <div class="hero-chat-launcher" aria-hidden="true">
+      <span class="chat-icon">&#128172;</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION 2: KEY VALUE DRIVERS (Shopline 3-Point Pillar Grid)
+     ========================================================================== -->
+<section class="section section-pillars" id="pillars">
+  <div class="site-container">
+    <div class="pillars-grid">
+      <div class="pillar-card" data-reveal="left">
+        <div class="pillar-icon-badge font-mono">01</div>
+        <h3 class="pillar-title">{{t "pillars.p1Title"}}</h3>
+        <p class="pillar-desc">{{t "pillars.p1Desc"}}</p>
       </div>
 
-      <h1 class="hero-headline" data-entrance="headline">
-        <span class="reveal-line">
-          <span class="reveal-inner">{{t "hero.headlineMain"}}</span>
-        </span>
-        <span class="reveal-line">
-          <span class="reveal-inner highlight-brand">{{t "hero.headlineSub"}}</span>
-        </span>
-      </h1>
-
-      <p class="hero-lead" data-entrance="lead">
-        {{t "hero.description"}}
-      </p>
-
-      <div class="hero-cta-group" data-entrance="buttons">
-        <a href="/{{currentLang}}/pricing#free" class="btn btn-primary btn-large">
-          <span>{{t "hero.primaryCta"}}</span>
-          <span class="btn-arrow">&rarr;</span>
-        </a>
-        <a href="#economics" class="btn btn-secondary btn-large">
-          <span>{{t "hero.secondaryCta"}}</span>
-        </a>
-        <a href="/{{currentLang}}/demo" class="hero-text-link">
-          <span>{{t "hero.demoLink"}}</span>
-          <span class="btn-arrow">&rarr;</span>
-        </a>
+      <div class="pillar-card" data-reveal="scale">
+        <div class="pillar-icon-badge font-mono">02</div>
+        <h3 class="pillar-title">{{t "pillars.p2Title"}}</h3>
+        <p class="pillar-desc">{{t "pillars.p2Desc"}}</p>
       </div>
 
-      <div class="hero-subline-pill" data-entrance="reassurance">
-        <span class="hero-subline-text mono">{{t "hero.subtext"}}</span>
+      <div class="pillar-card" data-reveal="right">
+        <div class="pillar-icon-badge font-mono">03</div>
+        <h3 class="pillar-title">{{t "pillars.p3Title"}}</h3>
+        <p class="pillar-desc">{{t "pillars.p3Desc"}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION 3: THE SNAKER COMMERCE PLATFORM (Shopline-Inspired Hub Grid)
+     ========================================================================== -->
+<section class="section section-platform-hub" id="platform-hub">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "platformHub.label"}}</span>
+      <h2 class="section-title">{{t "platformHub.title"}}</h2>
+      <p class="section-description center-block">{{t "platformHub.subtitle"}}</p>
+    </div>
+
+    <div class="platform-hub-grid" data-reveal="scale">
+      <!-- 1. Online Store -->
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <span class="hub-icon">&#9638;</span>
+          <h3 class="hub-name">{{t "platformHub.onlineStore"}}</h3>
+        </div>
+        <p class="hub-desc">{{t "platformHub.onlineStoreDesc"}}</p>
+        <a href="#storefronts" class="hub-link font-mono">Explore storefronts &rarr;</a>
+      </div>
+
+      <!-- 2. WhatsApp & Chat Commerce -->
+      <div class="hub-card featured">
+        <div class="hub-card-header">
+          <span class="hub-icon brand">&#9742;</span>
+          <h3 class="hub-name">{{t "platformHub.whatsappChat"}}</h3>
+        </div>
+        <p class="hub-desc">{{t "platformHub.whatsappChatDesc"}}</p>
+        <a href="#free-start" class="hub-link font-mono brand">View WhatsApp flow &rarr;</a>
+      </div>
+
+      <!-- 3. Checkout & Payments -->
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <span class="hub-icon">&#128179;</span>
+          <h3 class="hub-name">{{t "platformHub.payments"}}</h3>
+        </div>
+        <p class="hub-desc">{{t "platformHub.paymentsDesc"}}</p>
+        <a href="#pricing" class="hub-link font-mono">Check pricing &rarr;</a>
+      </div>
+
+      <!-- 4. Inventory & Stock -->
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <span class="hub-icon">&#9635;</span>
+          <h3 class="hub-name">{{t "platformHub.inventory"}}</h3>
+        </div>
+        <p class="hub-desc">{{t "platformHub.inventoryDesc"}}</p>
+        <a href="#product" class="hub-link font-mono">See dashboard &rarr;</a>
+      </div>
+
+      <!-- 5. Shipping & Logistics -->
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <span class="hub-icon">&#9992;</span>
+          <h3 class="hub-name">{{t "platformHub.fulfillment"}}</h3>
+        </div>
+        <p class="hub-desc">{{t "platformHub.fulfillmentDesc"}}</p>
+        <a href="/{{currentLang}}/partners" class="hub-link font-mono">Partner carriers &rarr;</a>
+      </div>
+
+      <!-- 6. Loyalty & Rewards -->
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <span class="hub-icon">&#9733;</span>
+          <h3 class="hub-name">{{t "platformHub.loyalty"}}</h3>
+        </div>
+        <p class="hub-desc">{{t "platformHub.loyaltyDesc"}}</p>
+        <a href="#customization" class="hub-link font-mono">Member features &rarr;</a>
+      </div>
+
+      <!-- 7. Analytics & Insights -->
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <span class="hub-icon">&#9646;</span>
+          <h3 class="hub-name">{{t "platformHub.analytics"}}</h3>
+        </div>
+        <p class="hub-desc">{{t "platformHub.analyticsDesc"}}</p>
+        <a href="#product" class="hub-link font-mono">Order analytics &rarr;</a>
+      </div>
+
+      <!-- 8. Social Channels & Funnels -->
+      <div class="hub-card">
+        <div class="hub-card-header">
+          <span class="hub-icon">&#9672;</span>
+          <h3 class="hub-name">{{t "platformHub.socialSelling"}}</h3>
+        </div>
+        <p class="hub-desc">{{t "platformHub.socialSellingDesc"}}</p>
+        <a href="#scale" class="hub-link font-mono">Instagram sellers &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION 4: ELEVATED EXPERIENCES (Shopline 3-Tab Interactive Showcase)
+     ========================================================================== -->
+<section class="section section-elevated" id="elevated">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "elevated.label"}}</span>
+      <h2 class="section-title">{{t "elevated.title"}}</h2>
+      <p class="section-description center-block">{{t "elevated.subtitle"}}</p>
+    </div>
+
+    <!-- 3-Tab Interactive Switcher -->
+    <div class="elevated-showcase-box" id="elevated-showcase" data-reveal="scale">
+      <div class="elevated-tabs-nav">
+        <button class="elevated-tab-btn active" data-tab="tab-builder">
+          <span class="tab-num font-mono">01</span>
+          <div class="tab-info">
+            <span class="tab-title">{{t "elevated.tab1Title"}}</span>
+            <span class="tab-desc">{{t "elevated.tab1Desc"}}</span>
+          </div>
+        </button>
+
+        <button class="elevated-tab-btn" data-tab="tab-themes">
+          <span class="tab-num font-mono">02</span>
+          <div class="tab-info">
+            <span class="tab-title">{{t "elevated.tab2Title"}}</span>
+            <span class="tab-desc">{{t "elevated.tab2Desc"}}</span>
+          </div>
+        </button>
+
+        <button class="elevated-tab-btn" data-tab="tab-apps">
+          <span class="tab-num font-mono">03</span>
+          <div class="tab-info">
+            <span class="tab-title">{{t "elevated.tab3Title"}}</span>
+            <span class="tab-desc">{{t "elevated.tab3Desc"}}</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Live Dynamic Tab Display Viewport -->
+      <div class="elevated-tab-viewport">
+        <!-- View 1: Website Builder & Component Grid -->
+        <div class="elevated-tab-pane active" id="pane-tab-builder">
+          <div class="pane-visual-frame">
+            <div class="pane-browser-header">
+              <span class="p-dot"></span><span class="p-dot"></span><span class="p-dot"></span>
+              <span class="p-url font-mono">studio.snaker.store/builder</span>
+            </div>
+            <div class="builder-visual-content">
+              <div class="builder-sidebar-mock">
+                <span class="b-block-pill font-mono">&plus; Hero Banner</span>
+                <span class="b-block-pill font-mono">&plus; Product Carousel</span>
+                <span class="b-block-pill font-mono">&plus; WhatsApp Bar</span>
+                <span class="b-block-pill font-mono">&plus; Review Grid</span>
+              </div>
+              <div class="builder-stage-mock">
+                <div class="builder-preview-banner">
+                  <div class="bp-tag font-mono">NEW LAUNCH</div>
+                  <div class="bp-headline">Kinetic Wool Overcoats</div>
+                </div>
+                <div class="builder-preview-cards">
+                  <div class="bpc-card"><div class="bpc-thumb"></div><span class="bpc-price font-mono">$185.00</span></div>
+                  <div class="bpc-card"><div class="bpc-thumb"></div><span class="bpc-price font-mono">$220.00</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View 2: Themes & Visual Atmospheric Presets -->
+        <div class="elevated-tab-pane" id="pane-tab-themes">
+          <div class="pane-visual-frame">
+            <div class="pane-browser-header">
+              <span class="p-dot"></span><span class="p-dot"></span><span class="p-dot"></span>
+              <span class="p-url font-mono">themes.snaker.store/curated</span>
+            </div>
+            <div class="themes-visual-grid">
+              <div class="theme-card-preview warm">
+                <span class="tcp-label font-mono">KURA &bull; APPAREL</span>
+                <div class="tcp-hero"></div>
+              </div>
+              <div class="theme-card-preview clean">
+                <span class="tcp-label font-mono">VERDANT &bull; BOTANICALS</span>
+                <div class="tcp-hero"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View 3: Native App & Payment Ecosystem -->
+        <div class="elevated-tab-pane" id="pane-tab-apps">
+          <div class="pane-visual-frame">
+            <div class="pane-browser-header">
+              <span class="p-dot"></span><span class="p-dot"></span><span class="p-dot"></span>
+              <span class="p-url font-mono">apps.snaker.store/ecosystem</span>
+            </div>
+            <div class="apps-visual-grid font-mono">
+              <div class="app-chip"><span class="app-icon brand">&check;</span> WhatsApp 1-Click Order</div>
+              <div class="app-chip"><span class="app-icon">&check;</span> Direct Bank Card Gateway</div>
+              <div class="app-chip"><span class="app-icon">&check;</span> Automated Courier Dispatch</div>
+              <div class="app-chip"><span class="app-icon">&check;</span> Instagram Catalog Feed</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
