@@ -171,12 +171,24 @@
     "paidCta": "14 günlük sınağa başla",
     "businessTitle": "Standart planlardan kənar tələblər?",
     "businessDesc": "Snaker Business fərdi inteqrasiyalar, ERP ixracı və yüksək satış həcmli şirkətlər üçün xüsusi xidmət təklif edir.",
-    "businessCta": "Bizimlə əlaqə"
+    "businessCta": "Bizimlə əlaqə",
+    "businessName": "Business",
+    "businessPrice": "Fərdi",
+    "businessPeriod": "Razılaşdırılmış təklif",
+    "businessFeat1": "Birbaşa tətbiq dəstəyi",
+    "businessFeat2": "ERP və məlumat ixracı planlaması",
+    "businessFeat3": "Brendə uyğun vitrin tənzimləmələri",
+    "businessFeat4": "Həcm və miqrasiya üzrə yönləndirmə",
+    "trialTitle": "14 günlük sınaq necə işləyir",
+    "trialDesc": "Fərdi domen, brend palitraları və kassa qurulmasına tam girişlə başlayın. Davam etməsəniz, mağazanız WhatsApp sifarişli Pulsuz plana keçə bilər."
   },
   "faq": {
     "label": "SUAL-CAVAB",
     "title": "Ən çox verilən suallar.",
-    "subtitle": "Mağaza açılışı, WhatsApp sifarişləri və ödənişlər haqqında aydın cavablar."
+    "subtitle": "Mağaza açılışı, WhatsApp sifarişləri və ödənişlər haqqında aydın cavablar.",
+    "moreTitle": "Başqa sualınız var?",
+    "moreText": "Komandamız mağaza açılışı, domen qurulması, sınaq detalları və Business tələblərini aydınlaşdıra bilər.",
+    "moreCta": "Dəstəyə yazın"
   },
   "finalCta": {
     "title": "Mağazanız buradan başlaya bilər.",
@@ -188,12 +200,25 @@
   "themesPage": {
     "title": "Seçilmiş Mağaza Vitrinləri",
     "lead": "Snaker etibarlı təməli təmin edir. Dizayn və atmosfer isə brendinizə aiddir.",
-    "note": "Pulsuz istifadəçilər hazır mövzu seçir. Ödənişli planlar rəng və blokları dərinləşdirir."
+    "note": "Pulsuz istifadəçilər hazır mövzu seçir. Ödənişli planlar rəng və blokları dərinləşdirir.",
+    "label": "DİZAYN QALEREYASI",
+    "useTheme": "Mövzunu seç"
   },
   "businessPage": {
     "title": "Standart planlar bəs etmədikdə.",
     "lead": "Xüsusi texniki tələbləri, böyük çeşidi və ya fərdi inteqrasiya ehtiyacı olan bizneslər üçün birbaşa tərəfdaşlıq.",
-    "cta": "Bizimlə danışın"
+    "cta": "Bizimlə danışın",
+    "label": "KOMMERSİYA HƏLLƏRİ",
+    "sectionTitle": "Birbaşa tətbiq və kommersiya tərəfdaşlığı",
+    "sectionDesc": "Böyük kataloq, məlumat ixracı və ya brendə uyğun kassa ehtiyacları üçün Snaker Business praktiki e-ticarət qurulumunu birlikdə planlamağa kömək edir.",
+    "point1Title": "Məlumat və ERP planlaması",
+    "point1Text": "Sifariş, müştəri və kataloq ixracını daxili iş axınınıza uyğun planlayın.",
+    "point2Title": "Vitrin uyğunlaşdırması",
+    "point2Text": "Vitrinin brend sisteminizə uyğun görünməsi üçün düzüm və üslubu tənzimləyin.",
+    "point3Title": "Başlanğıc dəstəyi",
+    "point3Text": "Yayım sualları, kataloq miqrasiyası və əməliyyat qurulumunu koordinasiya edin.",
+    "formTitle": "Business söhbətinə başlayın",
+    "formSub": "Həcm və tələblərinizi bizə yazın."
   },
   "partnersPage": {
     "title": "Snaker Tərəfdaşlıq Proqramı",
@@ -208,15 +233,33 @@
   },
   "demoPage": {
     "title": "Mağazanızın necə görünəcəyini canlı görün.",
-    "lead": "Məlumatlarınızı qeyd edin. Təzyiq olmadan, rahat 15 dəqiqəlik canlı təqdimat keçirək."
+    "lead": "Məlumatlarınızı qeyd edin. Təzyiq olmadan, rahat 15 dəqiqəlik canlı təqdimat keçirək.",
+    "label": "CANLI TƏQDİMAT"
   },
   "contactPage": {
     "title": "Bizimlə əlaqə saxlayın.",
-    "lead": "Suallarınız, təklifləriniz və ya Business tələbləriniz üçün komandamızla əlaqə qurun."
+    "lead": "Suallarınız, təklifləriniz və ya Business tələbləriniz üçün komandamızla əlaqə qurun.",
+    "label": "ƏLAQƏ",
+    "generalLabel": "ÜMUMİ SUALLAR",
+    "generalText": "Texniki suallar, mağaza qurulması və hesab yönləndirməsi.",
+    "businessLabel": "BUSINESS VƏ TƏRƏFDAŞLIQ",
+    "businessText": "Yüksək həcmli pərakəndə razılaşmalar, agentlik tərəfdaşlığı və ERP inteqrasiyası.",
+    "responseLabel": "CAVAB MÜDDƏTİ",
+    "responseText": "Komandamız adətən 1 iş günü ərzində cavab verir.",
+    "formTitle": "Mesaj göndərin"
   },
   "aboutPage": {
     "title": "E-ticarəti təməldən sadələşdiririk.",
-    "lead": "Biznesləri aylarla davam edən proqramlaşdırma xərclərindən azad edib birbaşa satışa bağlayırıq."
+    "lead": "Biznesləri aylarla davam edən proqramlaşdırma xərclərindən azad edib birbaşa satışa bağlayırıq.",
+    "label": "SNAKER HAQQINDA",
+    "problemTitle": "E-ticarətdə əsas problem",
+    "problemText1": "Pərakəndə sahibkarlar çox vaxt bahalı fərdi proqramlaşdırma ilə sadə mağaza idarəsini çətinləşdirən ağır platformalar arasında seçim etməli olurlar.",
+    "problemText2": "Əksər bizneslərə aydın kataloq, etibarlı sifariş axını və praktik ödəniş yolu lazımdır. Onlar proqram təminatı idarəçisinə çevrilməməlidir.",
+    "architectureTitle": "Snaker yanaşması",
+    "architectureText1": "Snaker hostinqi, vitrin performansını, qurulum axınını və əməliyyat detallarını bir fokuslu platformada saxlayır ki, satıcı məhsul və müştəriyə daha çox vaxt ayırsın.",
+    "architectureText2": "Pulsuz planda WhatsApp sifarişi ilə başlayın, əməliyyat hazır olduqda fərdi domen, kassa və Business dəstəyinə keçin.",
+    "plansCta": "Tariflərə bax",
+    "contactCta": "Əlaqə saxla"
   },
   "footer": {
     "tagline": "Sıfırdan sistem qurmadan onlayn mağaza açmaq üçün müasir e-ticarət platforması.",
@@ -227,5 +270,58 @@
     "privacy": "Məxfilik Siyasəti",
     "terms": "İstifadə Qaydaları",
     "rights": "Bütün hüquqlar qorunur."
+  },
+  "storefronts": {
+    "cta": "Vitrin mövzularına baxın",
+    "label": "VİTRİNLƏR",
+    "title": "Real kataloqlar üçün hazırlanmış vitrinlər.",
+    "description": "Hazır peşəkar təməldən başlayın, sonra rəngləri, strukturu və məhsul təqdimatını brendinizə uyğunlaşdırın."
+  },
+  "forms": {
+    "name": "Adınız",
+    "email": "E-poçtunuz",
+    "workEmail": "İş e-poçtu",
+    "company": "Şirkət / brend adı",
+    "subject": "Mövzu",
+    "message": "Mesaj",
+    "send": "Mesaj göndər",
+    "subjectPlaceholder": "Sizə necə kömək edə bilərik?",
+    "messagePlaceholder": "Nəyə ehtiyacınız olduğunu yazın.",
+    "requirements": "Tələblərinizi yazın",
+    "requirementsPlaceholder": "Kataloq həcmi, hazırkı platforma, inteqrasiyalar, vaxt planı...",
+    "loading": "Göndərilir...",
+    "error": "Göndərmək mümkün olmadı. Məlumatları yoxlayın.",
+    "networkError": "Şəbəkə xətası. Zəhmət olmasa yenidən yoxlayın."
+  },
+  "demo": {
+    "websitePlaceholder": "https:// və ya @instagram",
+    "sellingPlaceholder": "Geyim, keramika, qida məhsulları...",
+    "messageLabel": "Təqdimatda nəyi görmək istəyirsiniz? (istəyə bağlı)",
+    "messagePlaceholder": "Mövzular, WhatsApp sifarişləri, fərdi domen, ERP ixracı...",
+    "nameLabel": "Adınız",
+    "emailLabel": "E-poçt",
+    "storeLabel": "Mağaza / brend adı",
+    "websiteLabel": "Vebsayt və ya sosial profil",
+    "sellingLabel": "Nə satırsınız?",
+    "submitBtn": "Demo tələb et"
+  },
+  "legal": {
+    "label": "HÜQUQİ",
+    "privacyTitle": "Məxfilik Siyasəti",
+    "privacyLead": "Snaker əlaqə və demo müraciəti məlumatlarını necə idarə edir.",
+    "termsTitle": "İstifadə Qaydaları",
+    "termsLead": "Snaker saytından istifadə və giriş müraciəti üçün əsas şərtlər.",
+    "dataTitle": "Topladığımız məlumatlar",
+    "dataText": "Forma göndərdikdə ad, e-poçt, mağaza adı və mesaj kimi təqdim etdiyiniz məlumatları toplayırıq.",
+    "useTitle": "Necə istifadə edirik",
+    "useText": "Məlumatları müraciətinizə cavab vermək, demo hazırlamaq və uyğun Snaker xidmətlərini müzakirə etmək üçün istifadə edirik.",
+    "contactTitle": "Əlaqə",
+    "contactText": "Məxfilik sualları üçün support@snaker.store ünvanına yazın.",
+    "serviceTitle": "Saytdan istifadə",
+    "serviceText": "Bu sayt Snaker xidmətlərini təqdim edir və ziyarətçilərə məhsul məlumatı və ya demo istəməyə imkan verir.",
+    "demoTitle": "Demo müraciətləri",
+    "demoText": "Müraciət göndərmək ödənişli abunəlik və ya kommersiya müqaviləsi yaratmır.",
+    "limitTitle": "Dəyişikliklər",
+    "limitText": "Məhsul inkişaf etdikcə Snaker sayt məzmununu, planları və xidmət təsvirlərini yeniləyə bilər."
   }
 }

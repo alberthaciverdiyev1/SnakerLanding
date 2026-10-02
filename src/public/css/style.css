@@ -4119,6 +4119,24 @@ img, svg {
   transform: translate(0) scale(1);
 }
 
+.legal-content {
+  max-width: 760px;
+  padding: var(--space-xl) 0;
+}
+
+.legal-content h2 {
+  margin: 0 0 0.65rem;
+  color: var(--text-primary);
+  font-size: 1.15rem;
+}
+
+.legal-content p {
+  margin: 0 0 var(--space-lg);
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+
 /* --------------------------------------------------------------------------
    RESPONSIVE DESIGN (Desktop to Mobile)
    -------------------------------------------------------------------------- */
@@ -4165,11 +4183,269 @@ img, svg {
   .lang-code-link.active { background: var(--brand-surface); color: var(--brand-bright); font-weight: 700; }
   .header-actions .lang-selector-group, .header-actions .header-signin-link { display: none; }
 
+  .header-container {
+    padding: 0.85rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .brand-logo {
+    min-width: 0;
+    font-size: 1rem;
+  }
+
+  .header-actions {
+    gap: 0.45rem;
+  }
+
+  .btn-nav-cta {
+    padding: 8px 11px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  .hero-shopline-section {
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 3.25rem;
+    overflow: hidden;
+  }
+
+  .hero-center-content {
+    width: min(100%, 680px);
+    padding-inline: 1rem;
+  }
+
+  .hero-main-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.02;
+    margin-bottom: 0.9rem;
+  }
+
+  .hero-subtitle {
+    max-width: 34rem;
+    font-size: 1rem;
+  }
+
+  .hero-action-pills {
+    width: 100%;
+    justify-content: center;
+    gap: 0.65rem;
+  }
+
+  .pill-btn {
+    flex: 1 1 145px;
+    max-width: 190px;
+    justify-content: center;
+    padding-inline: 0.9rem;
+    text-align: center;
+  }
+
+  .hero-stage-container {
+    min-height: auto;
+    margin-top: 1.2rem;
+    padding-inline: 1rem;
+    display: block;
+  }
+
+  .hero-central-store-window {
+    width: 100%;
+    min-width: 0;
+    max-width: 430px;
+    margin-inline: auto;
+    border-radius: 13px;
+  }
+
+  .store-window-bar {
+    gap: 0.5rem;
+    padding: 9px 10px;
+  }
+
+  .store-url-pill {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-inline: 9px;
+  }
+
+  .store-window-actions,
+  .store-nav-links,
+  .store-nav-icons {
+    display: none;
+  }
+
+  .store-window-content {
+    padding: 1rem;
+  }
+
+  .store-header-nav {
+    justify-content: center;
+  }
+
+  .store-hero-banner-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding: 1rem;
+  }
+
+  .store-hero-model-box {
+    height: 138px;
+  }
+
+  .store-hero-heading {
+    font-size: 1rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .store-hero-desc {
+    font-size: 0.74rem;
+    line-height: 1.42;
+    margin-bottom: 0.75rem;
+  }
+
+  .store-hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-floating-card,
+  .hero-chat-launcher {
+    display: none;
+  }
+
+  .bento-platform-grid,
+  .platform-hub-grid,
+  .dashboard-metrics-grid,
+  .dashboard-workspace-grid,
+  .pricing-tier-grid,
+  .storefronts-showcase-row,
+  .scale-stages-grid,
+  .themes-gallery-grid,
+  .business-content-grid,
+  .contact-split-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .bento-card {
+    min-height: auto;
+  }
+
+  .dashboard-mockup-wrapper,
+  .dashboard-window,
+  .product-media,
+  .store-preview-frame {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .dashboard-body {
+    padding: 1rem;
+  }
+
+  .dashboard-topbar {
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .dashboard-tabs {
+    max-width: 100%;
+    gap: 0.75rem;
+    padding-bottom: 0.35rem;
+  }
+
+  .orders-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dash-table {
+    min-width: 560px;
+  }
+
+  .plan-amount {
+    font-size: clamp(1.45rem, 9vw, 2.35rem);
+    overflow-wrap: anywhere;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .hero-section { min-height: auto; padding-top: var(--space-lg); padding-bottom: var(--space-xl); }
   .snake-image-wrapper { width: 100%; right: -20%; opacity: 0.5; }
   .hero-headline { font-size: clamp(2.3rem, 8.5vw, 3rem); }
   .form-row { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .site-container,
+  .footer-container {
+    padding-inline: 1rem;
+  }
+
+  .theme-toggle-btn {
+    display: none;
+  }
+
+  .btn-nav-cta {
+    max-width: 132px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero-shopline-section {
+    padding-top: 1.5rem;
+  }
+
+  .hero-center-content {
+    margin-bottom: 0;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .hero-eyebrow-pill,
+  .section-badge-pill,
+  .section-tag,
+  .marquee-eyebrow {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .hero-action-pills,
+  .banner-actions,
+  .about-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pill-btn,
+  .banner-actions .btn,
+  .about-actions-row .btn {
+    max-width: none;
+    width: 100%;
+  }
+
+  .store-hero-watermark {
+    font-size: 4.8rem;
+  }
+
+  .client-brand-card {
+    width: 240px;
+  }
+
+  .page-title,
+  .section-title {
+    overflow-wrap: anywhere;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Reduced Motion Accessibility */

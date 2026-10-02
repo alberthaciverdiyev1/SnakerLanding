@@ -1,13 +1,12 @@
 /**
- * Snaker — Interactive Client Engine
- * Light/Dark Mode Toggle | Live Store Customizer | Continuous Snake Scroll Reveal | AJAX Forms
+ * Snaker site interactions.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // --------------------------------------------------------------------------
-  // 0. Bulletproof Scroll Reveal System (Progressive Enhancement - Frontline)
+  // 0. Scroll reveal
   // --------------------------------------------------------------------------
   try {
     const revealElements = document.querySelectorAll('[data-reveal]');
@@ -73,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
-  // 1. Light & Dark Mode System
+  // 1. Light and dark mode
   // --------------------------------------------------------------------------
   const themeToggle = document.getElementById('theme-toggle');
   const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
@@ -99,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
-  // 2. Sticky Navbar Transition
+  // 2. Sticky navbar
   // --------------------------------------------------------------------------
   const siteHeader = document.getElementById('site-header');
   const handleScroll = () => {
@@ -114,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
   handleScroll();
 
   // --------------------------------------------------------------------------
-  // 3. Mobile Navigation Drawer
+  // 3. Mobile navigation
   // --------------------------------------------------------------------------
   const mobileToggle = document.getElementById('mobile-toggle');
   const mainNav = document.getElementById('main-nav');
@@ -133,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
-  // 4. Interactive Live Store Customizer Mockup (Brief Section 20)
+  // 4. Store customizer preview
   // --------------------------------------------------------------------------
   const previewCanvas = document.getElementById('customizer-preview-canvas');
   const customizerWidget = document.getElementById('customizer-widget');
@@ -180,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
-  // 4b. Hero Interactive Floating Cards Mouse Parallax Engine
+  // 4b. Hero card parallax
   // --------------------------------------------------------------------------
   const heroSection = document.getElementById('hero');
   const card1 = document.getElementById('float-card-1');
@@ -237,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
-  // 4c. Elevated Experiences 3-Tab Switcher (Shopline Showcase)
+  // 4c. Elevated experiences tabs
   // --------------------------------------------------------------------------
   const elevatedBox = document.getElementById('elevated-showcase');
   if (elevatedBox) {
@@ -260,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
-  // 5. Dimensional Continuous Snake Navigation Engine (Brief Section 8 & 9)
+  // 5. Scroll-linked snake path
   // --------------------------------------------------------------------------
   const trackerEl = document.getElementById('snake-narrator-tracker');
   const svgEl = document.getElementById('snake-continuous-svg');
@@ -329,31 +328,31 @@ document.addEventListener('DOMContentLoaded', () => {
           getSectionPoint('hero', isMobile ? 0.50 : 0.62, 0.90),
           // Point 1b: Client brands marquee section
           getSectionPoint('client-brands', isMobile ? 0.40 : 0.35, 0.50),
-          // Point 3: Platform Hub section
+          // Point 2: Platform Hub section
           getSectionPoint('platform-hub', isMobile ? 0.70 : 0.78, 0.50),
-          // Point 4: Elevated Experiences
+          // Point 3: Elevated Experiences
           getSectionPoint('elevated', isMobile ? 0.30 : 0.25, 0.50),
-          // Point 5: Economics
+          // Point 4: Economics
           getSectionPoint('economics', isMobile ? 0.65 : 0.60, 0.60),
-          // Point 6: Journey
+          // Point 5: Journey
           getSectionPoint('journey', isMobile ? 0.80 : 0.82, 0.50),
-          // Point 7: Free plan WhatsApp
+          // Point 6: Free plan WhatsApp
           getSectionPoint('free-start', isMobile ? 0.20 : 0.22, 0.55),
-          // Point 8: Customizer widget
+          // Point 7: Customizer widget
           getSectionPoint('customization', isMobile ? 0.80 : 0.82, 0.50),
-          // Point 9: Behind dashboard mockup (occlusion!)
+          // Point 8: Behind dashboard mockup (occlusion!)
           getSectionPoint('product', isMobile ? 0.35 : 0.32, 0.58),
-          // Point 10: Product section exit
+          // Point 9: Product section exit
           getSectionPoint('product', isMobile ? 0.68 : 0.72, 0.90),
-          // Point 11: Storefronts row
+          // Point 10: Storefronts row
           getSectionPoint('storefronts', isMobile ? 0.25 : 0.25, 0.52),
-          // Point 12: Scale section
+          // Point 11: Scale section
           getSectionPoint('scale', isMobile ? 0.75 : 0.74, 0.50),
-          // Point 13: Pricing section
+          // Point 12: Pricing section
           getSectionPoint('pricing', isMobile ? 0.50 : 0.48, 0.55),
-          // Point 14: FAQ section
+          // Point 13: FAQ section
           getSectionPoint('faq', isMobile ? 0.25 : 0.20, 0.50),
-          // Point 15: Final CTA banner
+          // Point 14: Final CTA banner
           getSectionPoint('start', isMobile ? 0.50 : 0.52, 0.45)
         ].filter(pt => pt && Number.isFinite(pt.x) && Number.isFinite(pt.y));
 
@@ -472,7 +471,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const originalText = submitBtn.innerHTML;
 
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>Sending...</span>';
+      const loadingText = form.getAttribute('data-loading-text') || 'Sending...';
+      submitBtn.innerHTML = `<span>${loadingText}</span>`;
       feedback.textContent = '';
       feedback.className = 'form-feedback';
 
@@ -494,11 +494,11 @@ document.addEventListener('DOMContentLoaded', () => {
           feedback.classList.add('success');
           form.reset();
         } else {
-          feedback.textContent = data.error || 'Failed to submit. Please check your information.';
+          feedback.textContent = data.error || (form.getAttribute('data-error-text') || 'Failed to submit. Please check your information.');
           feedback.classList.add('error');
         }
       } catch (err) {
-        feedback.textContent = 'Network error. Please check your internet connection.';
+        feedback.textContent = form.getAttribute('data-network-error-text') || 'Network error. Please check your internet connection.';
         feedback.classList.add('error');
       } finally {
         submitBtn.disabled = false;

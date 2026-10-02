@@ -1,6 +1,5 @@
 <div class="page-container page-pricing">
   <div class="page-header text-center">
-    <span class="section-tag mono">{{t "pricing.label"}}</span>
     <h1 class="page-title">{{t "pricing.title"}}</h1>
     <p class="page-lead center-block">{{t "pricing.subtitle"}}</p>
   </div>
@@ -61,19 +60,19 @@
       <!-- Business Plan -->
       <div class="pricing-card business-route">
         <div class="pricing-card-header">
-          <h3 class="plan-name">Business</h3>
+          <h3 class="plan-name">{{t "pricing.businessName"}}</h3>
           <p class="plan-desc">{{t "pricing.businessDesc"}}</p>
           <div class="plan-price-wrap">
-            <span class="plan-amount font-mono">Bespoke</span>
-            <span class="plan-period">Direct agreement</span>
+            <span class="plan-amount font-mono">{{t "pricing.businessPrice"}}</span>
+            <span class="plan-period">{{t "pricing.businessPeriod"}}</span>
           </div>
         </div>
         <div class="plan-divider"></div>
         <ul class="plan-features-list">
-          <li class="plan-feature"><span class="feat-check">&check;</span> Dedicated architecture</li>
-          <li class="plan-feature"><span class="feat-check">&check;</span> Custom ERP & data integrations</li>
-          <li class="plan-feature"><span class="feat-check">&check;</span> Tailored styling requirements</li>
-          <li class="plan-feature"><span class="feat-check">&check;</span> High-volume reliability</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat1"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat2"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat3"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat4"}}</li>
         </ul>
         <div class="plan-cta-wrap">
           <a href="/{{currentLang}}/business" class="btn btn-secondary btn-full">
@@ -85,9 +84,9 @@
 
     <!-- 14-Day Trial Callout Banner -->
     <div class="trial-reassurance-box text-center">
-      <h3 class="trb-title">How the 14-day trial works</h3>
+      <h3 class="trb-title">{{t "pricing.trialTitle"}}</h3>
       <p class="trb-desc center-block">
-        Start building your store with full access to custom domain connection, brand palettes, and card checkout. If you choose not to subscribe, your store smoothly transitions to the Free plan with WhatsApp purchasing.
+        {{t "pricing.trialDesc"}}
       </p>
     </div>
 

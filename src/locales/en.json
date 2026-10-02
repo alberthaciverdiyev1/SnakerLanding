@@ -171,12 +171,24 @@
     "paidCta": "Start 14-day trial",
     "businessTitle": "Need something beyond standard plans?",
     "businessDesc": "Snaker Business offers specialized ERP integrations, custom data exports, and dedicated volume architecture.",
-    "businessCta": "Talk to us"
+    "businessCta": "Talk to us",
+    "businessName": "Business",
+    "businessPrice": "Custom",
+    "businessPeriod": "Scoped proposal",
+    "businessFeat1": "Dedicated implementation support",
+    "businessFeat2": "ERP and data export planning",
+    "businessFeat3": "Brand-specific storefront adjustments",
+    "businessFeat4": "Volume and migration guidance",
+    "trialTitle": "How the 14-day trial works",
+    "trialDesc": "Start with full access to custom domain connection, brand palettes, and checkout setup. If you do not continue, your store can remain on the Free plan with WhatsApp ordering."
   },
   "faq": {
     "label": "FAQ",
     "title": "Frequently asked questions.",
-    "subtitle": "Clear answers about store ownership, WhatsApp ordering, and payments."
+    "subtitle": "Clear answers about store ownership, WhatsApp ordering, and payments.",
+    "moreTitle": "Have another question?",
+    "moreText": "Our team can clarify store launch, domain setup, trial details, and Business requirements.",
+    "moreCta": "Contact support"
   },
   "finalCta": {
     "title": "Your store can start here.",
@@ -188,12 +200,25 @@
   "themesPage": {
     "title": "Curated Storefront Foundations",
     "lead": "Snaker provides the reliable backend infrastructure. The visual atmosphere belongs to your brand.",
-    "note": "Free stores choose a theme. Paid plans allow custom palettes and layout components."
+    "note": "Free stores choose a theme. Paid plans allow custom palettes and layout components.",
+    "label": "DESIGN GALLERY",
+    "useTheme": "Use theme"
   },
   "businessPage": {
     "title": "When standard plans aren't enough.",
     "lead": "Direct collaboration for merchants with specialized technical needs, high order volumes, or unique ERP integrations.",
-    "cta": "Talk to us"
+    "cta": "Talk to us",
+    "label": "COMMERCIAL SOLUTIONS",
+    "sectionTitle": "Direct implementation and commercial partnership",
+    "sectionDesc": "For higher-volume catalogs, data exports, or brand-specific checkout needs, Snaker Business pairs your team with implementation support to scope a practical ecommerce setup.",
+    "point1Title": "Data and ERP planning",
+    "point1Text": "Plan order, customer, and catalog exports around your internal workflow.",
+    "point2Title": "Storefront adaptation",
+    "point2Text": "Adjust layout and styling so the storefront reflects your brand system.",
+    "point3Title": "Onboarding support",
+    "point3Text": "Coordinate launch questions, catalog migration, and operational setup.",
+    "formTitle": "Start a Business conversation",
+    "formSub": "Tell us about your volume and requirements."
   },
   "partnersPage": {
     "title": "Snaker Partner Ecosystem",
@@ -208,15 +233,33 @@
   },
   "demoPage": {
     "title": "See what your store could look like with Snaker.",
-    "lead": "Share a few details about your business. We will walk you through a tailored 15-minute demonstration."
+    "lead": "Share a few details about your business. We will walk you through a tailored 15-minute demonstration.",
+    "label": "WALKTHROUGH"
   },
   "contactPage": {
     "title": "Get in touch with Snaker.",
-    "lead": "Reach our team directly for product inquiries, Business partnerships, or general assistance."
+    "lead": "Reach our team directly for product inquiries, Business partnerships, or general assistance.",
+    "label": "COMMUNICATION",
+    "generalLabel": "GENERAL INQUIRIES",
+    "generalText": "Technical questions, store setup, or account guidance.",
+    "businessLabel": "BUSINESS & PARTNERSHIPS",
+    "businessText": "High-volume retail agreements, agency partnerships, and custom ERP integration.",
+    "responseLabel": "RESPONSE WINDOW",
+    "responseText": "Our team typically responds within 1 business day.",
+    "formTitle": "Send a message"
   },
   "aboutPage": {
     "title": "Ecommerce made simpler by design.",
-    "lead": "We help merchants launch professional online stores without the cost and risk of building software from scratch."
+    "lead": "We help merchants launch professional online stores without the cost and risk of building software from scratch.",
+    "label": "ABOUT SNAKER",
+    "problemTitle": "The core problem in ecommerce",
+    "problemText1": "Retail entrepreneurs often have to choose between expensive custom development and bloated platforms that make simple store management feel complicated.",
+    "problemText2": "Most businesses need a clean catalog, reliable order flow, and a practical path to payments. They should not have to become software maintainers.",
+    "architectureTitle": "The Snaker approach",
+    "architectureText1": "Snaker keeps hosting, storefront performance, setup flow, and operational details in one focused platform so merchants can spend more time on products and customers.",
+    "architectureText2": "Start with WhatsApp ordering on the Free plan, then move toward custom domain, checkout, and Business support when the operation is ready.",
+    "plansCta": "Explore plans",
+    "contactCta": "Get in touch"
   },
   "footer": {
     "tagline": "A focused ecommerce platform built for modern retail operations.",
@@ -227,5 +270,58 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "rights": "All rights reserved."
+  },
+  "storefronts": {
+    "cta": "Browse storefront themes",
+    "label": "STOREFRONTS",
+    "title": "Storefronts shaped for real catalogs.",
+    "description": "Start from a polished foundation, then adapt colors, structure, and product storytelling to your brand."
+  },
+  "forms": {
+    "name": "Your name",
+    "email": "Your email",
+    "workEmail": "Work email",
+    "company": "Company / brand name",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send message",
+    "subjectPlaceholder": "What can we help with?",
+    "messagePlaceholder": "Tell us what you need.",
+    "requirements": "Tell us about your requirements",
+    "requirementsPlaceholder": "Catalog size, current platform, integrations, deadlines...",
+    "loading": "Sending...",
+    "error": "Failed to submit. Please check your information.",
+    "networkError": "Network error. Please try again."
+  },
+  "demo": {
+    "websitePlaceholder": "https:// or @instagram",
+    "sellingPlaceholder": "Apparel, ceramics, specialty food...",
+    "messageLabel": "What would you like to explore? (optional)",
+    "messagePlaceholder": "Themes, WhatsApp orders, custom domain, ERP exports...",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "storeLabel": "Store / brand name",
+    "websiteLabel": "Website or social profile",
+    "sellingLabel": "What do you sell?",
+    "submitBtn": "Request demo"
+  },
+  "legal": {
+    "label": "LEGAL",
+    "privacyTitle": "Privacy Policy",
+    "privacyLead": "How Snaker handles contact and demo request information.",
+    "termsTitle": "Terms of Service",
+    "termsLead": "Basic terms for using the Snaker website and requesting access.",
+    "dataTitle": "Information we collect",
+    "dataText": "When you submit a form, we collect the details you provide, such as name, email, store name, and message.",
+    "useTitle": "How we use it",
+    "useText": "We use submitted information to respond to your request, prepare demos, and discuss relevant Snaker services.",
+    "contactTitle": "Contact",
+    "contactText": "For privacy questions, contact support@snaker.store.",
+    "serviceTitle": "Website use",
+    "serviceText": "This website presents Snaker services and lets visitors request product information or a demo.",
+    "demoTitle": "Demo requests",
+    "demoText": "Submitting a request does not create a paid subscription or commercial agreement.",
+    "limitTitle": "Changes",
+    "limitText": "Snaker may update website content, plans, and service descriptions as the product evolves."
   }
 }

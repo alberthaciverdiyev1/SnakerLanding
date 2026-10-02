@@ -30,3 +30,6 @@ Thumbs.db
 # Temporary directories
 tmp/
 temp/
+
+# Local lead captures
+data/

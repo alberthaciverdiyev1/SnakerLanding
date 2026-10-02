@@ -2,6 +2,8 @@ const { supportedLocales, defaultLocale, isSupported } = require('../config/loca
 const { pricingPlans, businessPlan } = require('../config/pricing');
 const { themesList } = require('../config/themes');
 const { faqData } = require('../config/faq');
+const fs = require('fs');
+const path = require('path');
 
 const locales = {
   az: require('../locales/az.json'),
@@ -9,6 +11,27 @@ const locales = {
   ru: require('../locales/ru.json'),
   tr: require('../locales/tr.json')
 };
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email || '').trim());
+}
+
+function sanitizeLeadValue(value) {
+  return String(value || '').trim().slice(0, 2000);
+}
+
+function captureLead(type, payload) {
+  const dataDir = path.join(__dirname, '../../data');
+  fs.mkdirSync(dataDir, { recursive: true });
+  fs.appendFileSync(
+    path.join(dataDir, 'leads.ndjson'),
+    `${JSON.stringify({
+      type,
+      createdAt: new Date().toISOString(),
+      ...payload
+    })}\n`
+  );
+}
 
 // Helper to generate language switcher items preserving current route subpath
 function buildLanguages(currentLang, subPath = '') {
@@ -130,10 +153,34 @@ const pagesController = {
     });
   },
 
+  privacy: (req, res) => {
+    const lang = req.lang;
+    const locale = locales[lang] || locales[defaultLocale];
+    res.render('pages/privacy', {
+      currentLang: lang,
+      currentPath: '/privacy',
+      pageTitle: `${locale.footer.privacy} — Snaker`,
+      metaDescription: locale.legal.privacyLead,
+      languages: buildLanguages(lang, '/privacy')
+    });
+  },
+
+  terms: (req, res) => {
+    const lang = req.lang;
+    const locale = locales[lang] || locales[defaultLocale];
+    res.render('pages/terms', {
+      currentLang: lang,
+      currentPath: '/terms',
+      pageTitle: `${locale.footer.terms} — Snaker`,
+      metaDescription: locale.legal.termsLead,
+      languages: buildLanguages(lang, '/terms')
+    });
+  },
+
   // API Handlers
   postDemo: (req, res) => {
     const { name, email, store_name, selling_category, website, message, lang = 'az' } = req.body;
-    if (!email || !email.includes('@') || !name) {
+    if (!isValidEmail(email) || !sanitizeLeadValue(name)) {
       const errMap = {
         az: 'Zəhmət olmasa adınızı və düzgün e-poçt ünvanınızı qeyd edin.',
         en: 'Please provide your name and a valid email address.',
@@ -142,6 +189,16 @@ const pagesController = {
       };
       return res.status(400).json({ error: errMap[lang] || errMap.az });
     }
+
+    captureLead('demo', {
+      lang: isSupported(lang) ? lang : defaultLocale,
+      name: sanitizeLeadValue(name),
+      email: sanitizeLeadValue(email),
+      storeName: sanitizeLeadValue(store_name),
+      sellingCategory: sanitizeLeadValue(selling_category),
+      website: sanitizeLeadValue(website),
+      message: sanitizeLeadValue(message)
+    });
 
     const successMap = {
       az: `Təşəkkür edirik, ${name}. Məlumatlarınız qeydə alındı, komandamız qısa zamanda sizinlə əlaqə saxlayacaq.`,
@@ -158,7 +215,7 @@ const pagesController = {
 
   postContact: (req, res) => {
     const { name, email, subject, message, lang = 'az' } = req.body;
-    if (!email || !email.includes('@') || !name || !message) {
+    if (!isValidEmail(email) || !sanitizeLeadValue(name) || !sanitizeLeadValue(message)) {
       const errMap = {
         az: 'Zəhmət olmasa bütün tələb olunan xanaları doldurun.',
         en: 'Please fill in all required fields.',
@@ -167,6 +224,14 @@ const pagesController = {
       };
       return res.status(400).json({ error: errMap[lang] || errMap.az });
     }
+
+    captureLead('contact', {
+      lang: isSupported(lang) ? lang : defaultLocale,
+      name: sanitizeLeadValue(name),
+      email: sanitizeLeadValue(email),
+      subject: sanitizeLeadValue(subject),
+      message: sanitizeLeadValue(message)
+    });
 
     const successMap = {
       az: `Mesajınız çatdırıldı, ${name}. Tezliklə cavablandıracağıq.`,

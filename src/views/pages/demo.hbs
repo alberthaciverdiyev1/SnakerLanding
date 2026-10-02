@@ -1,6 +1,5 @@
 <div class="page-container page-demo">
   <div class="page-header text-center">
-    <span class="section-tag mono">WALKTHROUGH</span>
     <h1 class="page-title">{{t "demoPage.title"}}</h1>
     <p class="page-lead center-block">{{t "demoPage.lead"}}</p>
   </div>
@@ -8,7 +7,7 @@
   <div class="site-container">
     <div class="demo-page-wrapper">
       <div class="demo-page-card center-block">
-        <form id="demo-page-form" action="/request-demo" method="POST" class="standard-form">
+        <form id="demo-page-form" action="/request-demo" method="POST" class="standard-form" data-loading-text="{{t "forms.loading"}}" data-error-text="{{t "forms.error"}}" data-network-error-text="{{t "forms.networkError"}}">
           <input type="hidden" name="lang" value="{{currentLang}}">
 
           <div class="form-row">
@@ -29,18 +28,18 @@
             </div>
             <div class="form-group">
               <label for="demo-p-website">{{t "demo.websiteLabel"}}</label>
-              <input type="text" id="demo-p-website" name="website" placeholder="https:// or @instagram">
+              <input type="text" id="demo-p-website" name="website" placeholder="{{t "demo.websitePlaceholder"}}">
             </div>
           </div>
 
           <div class="form-group">
             <label for="demo-p-selling">{{t "demo.sellingLabel"}}</label>
-            <input type="text" id="demo-p-selling" name="selling_category" placeholder="Apparel, ceramics, specialty food, etc.">
+            <input type="text" id="demo-p-selling" name="selling_category" placeholder="{{t "demo.sellingPlaceholder"}}">
           </div>
 
           <div class="form-group">
-            <label for="demo-p-message">What would you like to explore during the walkthrough? (optional)</label>
-            <textarea id="demo-p-message" name="message" rows="3" placeholder="Questions about themes, WhatsApp orders, custom domain, or ERP exports..."></textarea>
+            <label for="demo-p-message">{{t "demo.messageLabel"}}</label>
+            <textarea id="demo-p-message" name="message" rows="3" placeholder="{{t "demo.messagePlaceholder"}}"></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary btn-large btn-full">

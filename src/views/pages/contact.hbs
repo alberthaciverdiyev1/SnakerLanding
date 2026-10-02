@@ -1,6 +1,5 @@
 <div class="page-container page-contact">
   <div class="page-header text-center">
-    <span class="section-tag mono">COMMUNICATION</span>
     <h1 class="page-title">{{t "contactPage.title"}}</h1>
     <p class="page-lead center-block">{{t "contactPage.lead"}}</p>
   </div>
@@ -10,53 +9,53 @@
       <!-- Direct Contact Channels -->
       <div class="contact-channels-side">
         <div class="channel-card">
-          <span class="channel-label mono">GENERAL INQUIRIES</span>
+          <span class="channel-label mono">{{t "contactPage.generalLabel"}}</span>
           <h3 class="channel-heading">support@snaker.store</h3>
-          <p class="channel-sub">Technical questions, store setup, or account guidance.</p>
+          <p class="channel-sub">{{t "contactPage.generalText"}}</p>
         </div>
 
         <div class="channel-card">
-          <span class="channel-label mono">BUSINESS &amp; PARTNERSHIPS</span>
+          <span class="channel-label mono">{{t "contactPage.businessLabel"}}</span>
           <h3 class="channel-heading">business@snaker.store</h3>
-          <p class="channel-sub">High-volume retail agreements, agency partnerships, and custom ERP integration.</p>
+          <p class="channel-sub">{{t "contactPage.businessText"}}</p>
         </div>
 
         <div class="channel-card">
-          <span class="channel-label mono">RESPONSE WINDOW</span>
-          <p class="channel-sub">Our platform operations team typically responds within 1 business day.</p>
+          <span class="channel-label mono">{{t "contactPage.responseLabel"}}</span>
+          <p class="channel-sub">{{t "contactPage.responseText"}}</p>
         </div>
       </div>
 
       <!-- Contact Message Form -->
       <div class="contact-form-side">
         <div class="contact-form-card">
-          <h2 class="form-title">Send a message</h2>
+          <h2 class="form-title">{{t "contactPage.formTitle"}}</h2>
 
-          <form id="general-contact-form" action="/api/contact" method="POST" class="standard-form">
+          <form id="general-contact-form" action="/api/contact" method="POST" class="standard-form" data-loading-text="{{t "forms.loading"}}" data-error-text="{{t "forms.error"}}" data-network-error-text="{{t "forms.networkError"}}">
             <input type="hidden" name="lang" value="{{currentLang}}">
 
             <div class="form-group">
-              <label for="c-name">Your Name</label>
+              <label for="c-name">{{t "forms.name"}}</label>
               <input type="text" id="c-name" name="name" required autocomplete="name">
             </div>
 
             <div class="form-group">
-              <label for="c-email">Your Email</label>
+              <label for="c-email">{{t "forms.email"}}</label>
               <input type="email" id="c-email" name="email" required autocomplete="email">
             </div>
 
             <div class="form-group">
-              <label for="c-subject">Subject</label>
-              <input type="text" id="c-subject" name="subject" placeholder="Question regarding..." required>
+              <label for="c-subject">{{t "forms.subject"}}</label>
+              <input type="text" id="c-subject" name="subject" placeholder="{{t "forms.subjectPlaceholder"}}" required>
             </div>
 
             <div class="form-group">
-              <label for="c-message">Message</label>
-              <textarea id="c-message" name="message" rows="4" placeholder="How can we help?" required></textarea>
+              <label for="c-message">{{t "forms.message"}}</label>
+              <textarea id="c-message" name="message" rows="4" placeholder="{{t "forms.messagePlaceholder"}}" required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-large btn-full">
-              <span>Send Message</span>
+              <span>{{t "forms.send"}}</span>
               <span class="btn-arrow">&rarr;</span>
             </button>
 

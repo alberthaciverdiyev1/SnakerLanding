@@ -41,7 +41,7 @@ app.engine('hbs', engine({
     eq: (a, b) => a === b,
     and: (a, b) => a && b,
     or: (a, b) => a || b,
-    year: () => 2026
+    year: () => new Date().getFullYear()
   }
 }));
 

@@ -171,12 +171,24 @@
     "paidCta": "14 günlük denemeyi başlat",
     "businessTitle": "Standart planların ötesinde ihtiyaçlar?",
     "businessDesc": "Snaker Business özel ERP entegrasyonları, veri aktarımları ve yüksek hacimli işletmeler için özel hizmet sunar.",
-    "businessCta": "Bize ulaşın"
+    "businessCta": "Bize ulaşın",
+    "businessName": "Business",
+    "businessPrice": "Özel",
+    "businessPeriod": "Kapsamlı teklif",
+    "businessFeat1": "Doğrudan uygulama desteği",
+    "businessFeat2": "ERP ve veri dışa aktarım planı",
+    "businessFeat3": "Markaya özel vitrin ayarları",
+    "businessFeat4": "Hacim ve geçiş danışmanlığı",
+    "trialTitle": "14 günlük deneme nasıl işler",
+    "trialDesc": "Özel domain, marka paletleri ve ödeme kurulumu erişimiyle başlayın. Devam etmezseniz mağazanız WhatsApp siparişli Ücretsiz planda kalabilir."
   },
   "faq": {
     "label": "SSS",
     "title": "Sıkça sorulan sorular.",
-    "subtitle": "Mağaza kurulumu, WhatsApp siparişleri ve ödemeler hakkında doğrudan yanıtlar."
+    "subtitle": "Mağaza kurulumu, WhatsApp siparişleri ve ödemeler hakkında doğrudan yanıtlar.",
+    "moreTitle": "Başka sorunuz var mı?",
+    "moreText": "Ekibimiz mağaza açılışı, domain kurulumu, deneme detayları ve Business ihtiyaçlarını netleştirebilir.",
+    "moreCta": "Destekle iletişime geç"
   },
   "finalCta": {
     "title": "Mağazanız buradan başlayabilir.",
@@ -188,12 +200,25 @@
   "themesPage": {
     "title": "Özenle Hazırlanmış Vitrin Temaları",
     "lead": "Snaker güçlü teknik altyapıyı sunar. Mağazanın ruhu ve tasarımı tamamen markanıza aittir.",
-    "note": "Ücretsiz kullanıcılar tema seçer. Ücretli planlar renk ve bileşenleri derinlemesine özelleştirir."
+    "note": "Ücretsiz kullanıcılar tema seçer. Ücretli planlar renk ve bileşenleri derinlemesine özelleştirir.",
+    "label": "TASARIM GALERİSİ",
+    "useTheme": "Temayı seç"
   },
   "businessPage": {
     "title": "Standart planlar yetmediğinde.",
     "lead": "Özel teknik gereksinimleri, yüksek sipariş hacmi veya özel entegrasyon ihtiyacı olan işletmeler için doğrudan iş birliği.",
-    "cta": "Bize ulaşın"
+    "cta": "Bize ulaşın",
+    "label": "TİCARİ ÇÖZÜMLER",
+    "sectionTitle": "Doğrudan uygulama ve ticari ortaklık",
+    "sectionDesc": "Büyük katalog, veri dışa aktarımı veya markaya özel ödeme ihtiyaçları için Snaker Business, pratik e-ticaret kurulumunu birlikte planlamanıza yardımcı olur.",
+    "point1Title": "Veri ve ERP planlaması",
+    "point1Text": "Sipariş, müşteri ve katalog dışa aktarımlarını iç iş akışınıza göre planlayın.",
+    "point2Title": "Vitrin uyarlaması",
+    "point2Text": "Vitrinin marka sisteminizi yansıtması için düzen ve stili ayarlayın.",
+    "point3Title": "Başlangıç desteği",
+    "point3Text": "Yayın soruları, katalog geçişi ve operasyon kurulumunu koordine edin.",
+    "formTitle": "Business görüşmesi başlat",
+    "formSub": "Hacim ve ihtiyaçlarınızı bize anlatın."
   },
   "partnersPage": {
     "title": "Snaker Partner Ekosistemi",
@@ -208,15 +233,33 @@
   },
   "demoPage": {
     "title": "Mağazanızın nasıl görüneceğini canlı görün.",
-    "lead": "İşletmeniz hakkında birkaç detay paylaşın. Size özel 15 dakikalık canlı bir sunum yapalım."
+    "lead": "İşletmeniz hakkında birkaç detay paylaşın. Size özel 15 dakikalık canlı bir sunum yapalım.",
+    "label": "CANLI TANITIM"
   },
   "contactPage": {
     "title": "Snaker ile iletişime geçin.",
-    "lead": "Ürün soruları, Business iş birliği veya genel konular için ekibimize doğrudan ulaşın."
+    "lead": "Ürün soruları, Business iş birliği veya genel konular için ekibimize doğrudan ulaşın.",
+    "label": "İLETİŞİM",
+    "generalLabel": "GENEL SORULAR",
+    "generalText": "Teknik sorular, mağaza kurulumu veya hesap yönlendirmesi.",
+    "businessLabel": "BUSINESS VE İŞ ORTAKLIKLARI",
+    "businessText": "Yüksek hacimli perakende anlaşmaları, ajans ortaklıkları ve ERP entegrasyonu.",
+    "responseLabel": "YANIT SÜRESİ",
+    "responseText": "Ekibimiz genellikle 1 iş günü içinde yanıt verir.",
+    "formTitle": "Mesaj gönder"
   },
   "aboutPage": {
     "title": "E-ticareti temelden basitleştiriyoruz.",
-    "lead": "İşletmeleri aylar süren yazılım projelerinden kurtarıp doğrudan satışa ve müşterilerine odaklıyoruz."
+    "lead": "İşletmeleri aylar süren yazılım projelerinden kurtarıp doğrudan satışa ve müşterilerine odaklıyoruz.",
+    "label": "SNAKER HAKKINDA",
+    "problemTitle": "E-ticarette temel sorun",
+    "problemText1": "Perakende girişimcileri çoğu zaman pahalı özel geliştirme ile basit mağaza yönetimini karmaşıklaştıran ağır platformalar arasında kalır.",
+    "problemText2": "Çoğu işletmenin temiz bir katalog, güvenilir sipariş akışı ve pratik ödeme yolu gerekir. Yazılım bakım ekibine dönüşmeleri gerekmez.",
+    "architectureTitle": "Snaker yaklaşımı",
+    "architectureText1": "Snaker hosting, vitrin performansı, kurulum akışı ve operasyon detaylarını tek odaklı platformda toplar; satıcı ürünlere ve müşterilere odaklanır.",
+    "architectureText2": "Ücretsiz planda WhatsApp siparişiyle başlayın; operasyon hazır olduğunda özel domain, ödeme ve Business desteğine geçin.",
+    "plansCta": "Planları incele",
+    "contactCta": "İletişime geç"
   },
   "footer": {
     "tagline": "Modern perakende için tasarlanmış sade ve odaklı e-ticaret platformu.",
@@ -227,5 +270,58 @@
     "privacy": "Gizlilik Politikası",
     "terms": "Kullanım Koşulları",
     "rights": "Tüm hakları saklıdır."
+  },
+  "storefronts": {
+    "cta": "Vitrin temalarına göz at",
+    "label": "VİTRİNLER",
+    "title": "Gerçek kataloglar için tasarlanmış vitrinler.",
+    "description": "Hazır profesyonel temelden başlayın; renkleri, yapıyı ve ürün anlatımını markanıza uyarlayın."
+  },
+  "forms": {
+    "name": "Adınız",
+    "email": "E-postanız",
+    "workEmail": "İş e-postası",
+    "company": "Şirket / marka adı",
+    "subject": "Konu",
+    "message": "Mesaj",
+    "send": "Mesaj gönder",
+    "subjectPlaceholder": "Nasıl yardımcı olabiliriz?",
+    "messagePlaceholder": "Neye ihtiyacınız olduğunu yazın.",
+    "requirements": "Gereksinimlerinizi anlatın",
+    "requirementsPlaceholder": "Katalog büyüklüğü, mevcut platform, entegrasyonlar, tarih...",
+    "loading": "Gönderiliyor...",
+    "error": "Gönderilemedi. Lütfen bilgileri kontrol edin.",
+    "networkError": "Ağ hatası. Lütfen tekrar deneyin."
+  },
+  "demo": {
+    "websitePlaceholder": "https:// veya @instagram",
+    "sellingPlaceholder": "Giyim, seramik, özel gıda...",
+    "messageLabel": "Tanıtımda neyi görmek istersiniz? (opsiyonel)",
+    "messagePlaceholder": "Temalar, WhatsApp siparişleri, özel domain, ERP dışa aktarımı...",
+    "nameLabel": "Adınız",
+    "emailLabel": "E-posta",
+    "storeLabel": "Mağaza / marka adı",
+    "websiteLabel": "Web sitesi veya sosyal profil",
+    "sellingLabel": "Ne satıyorsunuz?",
+    "submitBtn": "Demo iste"
+  },
+  "legal": {
+    "label": "YASAL",
+    "privacyTitle": "Gizlilik Politikası",
+    "privacyLead": "Snaker iletişim ve demo talebi bilgilerini nasıl işler.",
+    "termsTitle": "Kullanım Koşulları",
+    "termsLead": "Snaker web sitesini kullanma ve erişim talebi için temel koşullar.",
+    "dataTitle": "Topladığımız bilgiler",
+    "dataText": "Form gönderdiğinizde ad, e-posta, mağaza adı ve mesaj gibi sağladığınız bilgileri toplarız.",
+    "useTitle": "Nasıl kullanırız",
+    "useText": "Bilgileri talebinize yanıt vermek, demo hazırlamak ve ilgili Snaker hizmetlerini görüşmek için kullanırız.",
+    "contactTitle": "İletişim",
+    "contactText": "Gizlilik soruları için support@snaker.store adresine yazın.",
+    "serviceTitle": "Web sitesi kullanımı",
+    "serviceText": "Bu web sitesi Snaker hizmetlerini tanıtır ve ziyaretçilerin ürün bilgisi veya demo istemesini sağlar.",
+    "demoTitle": "Demo talepleri",
+    "demoText": "Talep göndermek ücretli abonelik veya ticari sözleşme oluşturmaz.",
+    "limitTitle": "Değişiklikler",
+    "limitText": "Ürün geliştikçe Snaker site içeriğini, planları ve hizmet açıklamalarını güncelleyebilir."
   }
 }

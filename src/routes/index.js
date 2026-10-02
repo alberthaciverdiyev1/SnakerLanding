@@ -27,6 +27,8 @@ router.get('/:lang/demo', langMiddleware, pagesController.demo);
 router.get('/:lang/faq', langMiddleware, pagesController.faq);
 router.get('/:lang/about', langMiddleware, pagesController.about);
 router.get('/:lang/contact', langMiddleware, pagesController.contact);
+router.get('/:lang/privacy', langMiddleware, pagesController.privacy);
+router.get('/:lang/terms', langMiddleware, pagesController.terms);
 
 // Form / API Submission Routes
 router.post('/request-demo', pagesController.postDemo);
