@@ -445,15 +445,15 @@ img, svg {
   padding-top: clamp(4rem, 8vw, 6.5rem);
   padding-bottom: 5rem;
   background:
-    radial-gradient(ellipse 90% 70% at 50% -5%, #1d3dbf 0%, #0d1b58 40%, #050a1d 80%, #030611 100%);
+    radial-gradient(ellipse 90% 70% at 50% -5%, #084020 0%, #052914 40%, #02180b 80%, #010c05 100%);
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(60, 212, 81, 0.15);
   color: #ffffff;
 }
 
 [data-theme="light"] .hero-shopline-section {
   background:
-    radial-gradient(ellipse 90% 70% at 50% -5%, #2563eb 0%, #1e40af 45%, #0f172a 85%, #020617 100%);
+    radial-gradient(ellipse 90% 70% at 50% -5%, #084020 0%, #052914 40%, #02180b 80%, #010c05 100%);
 }
 
 /* Perspective Ray Lines Backdrop */
@@ -479,7 +479,7 @@ img, svg {
   width: 800px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.22) 0%, rgba(16, 185, 129, 0.12) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(60, 212, 81, 0.28) 0%, rgba(16, 185, 129, 0.15) 40%, transparent 70%);
   filter: blur(60px);
 }
 
@@ -503,9 +503,9 @@ img, svg {
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #60a5fa;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #3cd451;
+  background: rgba(60, 212, 81, 0.12);
+  border: 1px solid rgba(60, 212, 81, 0.3);
   padding: 0.28rem 0.85rem;
   border-radius: 9999px;
   margin-bottom: 1.2rem;
@@ -523,13 +523,13 @@ img, svg {
 
 .hero-title-accent {
   color: #ffffff;
-  text-shadow: 0 0 30px rgba(96, 165, 250, 0.4);
+  text-shadow: 0 0 35px rgba(60, 212, 81, 0.5);
 }
 
 .hero-subtitle {
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.84);
+  color: rgba(255, 255, 255, 0.86);
   max-width: 660px;
   margin-bottom: 2rem;
 }
@@ -559,27 +559,28 @@ img, svg {
 
 .pill-primary {
   background: #ffffff;
-  color: #0b1329;
+  color: #022c15;
   border: 1px solid #ffffff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(60, 212, 81, 0.25);
 }
 
 .pill-primary:hover {
-  background: #f8fafc;
+  background: #f0fdf4;
+  color: #011d0e;
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 30px rgba(60, 212, 81, 0.4);
 }
 
 .pill-secondary {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(60, 212, 81, 0.35);
   backdrop-filter: blur(12px);
 }
 
 .pill-secondary:hover {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(60, 212, 81, 0.15);
+  border-color: rgba(60, 212, 81, 0.7);
   transform: translateY(-2px);
 }
 
@@ -741,12 +742,12 @@ img, svg {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background: linear-gradient(145deg, #c7d2fe 0%, #fed7aa 60%, #fef08a 100%);
+  background: linear-gradient(145deg, #052e16 0%, #065f46 60%, #10b981 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.06);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .model-face-graphic {
@@ -754,7 +755,7 @@ img, svg {
   width: 130px;
   height: 150px;
   border-radius: 50% 50% 45% 45%;
-  background: radial-gradient(circle at 50% 40%, #fed7aa 0%, #fba76a 80%);
+  background: radial-gradient(circle at 50% 40%, #fef3c7 0%, #fed7aa 50%, #fba76a 85%);
   box-shadow: 0 10px 25px rgba(251, 146, 60, 0.3);
 }
 
@@ -777,14 +778,14 @@ img, svg {
 .serum-cap {
   width: 20px;
   height: 12px;
-  background: #38bdf8;
+  background: #10b981;
   border-radius: 3px;
   margin-bottom: 4px;
 }
 
 .serum-body {
   font-size: 0.62rem;
-  color: #0369a1;
+  color: #065f46;
   font-weight: 700;
   text-align: center;
 }
@@ -798,7 +799,7 @@ img, svg {
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: #2563eb;
+  color: #10b981;
   margin-bottom: 0.4rem;
   display: inline-block;
 }
@@ -820,7 +821,7 @@ img, svg {
 
 .store-hero-btn {
   display: inline-block;
-  background: #0f172a;
+  background: #022c15;
   color: #ffffff;
   font-size: 0.72rem;
   font-weight: 700;
@@ -830,7 +831,7 @@ img, svg {
   transition: all 0.2s ease;
 }
 .store-hero-btn:hover {
-  background: #2563eb;
+  background: #10b981;
   transform: translateY(-1px);
 }
 
@@ -913,7 +914,7 @@ img, svg {
 .funnel-ad-media {
   position: relative;
   height: 90px;
-  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -938,7 +939,7 @@ img, svg {
   width: 45px;
   height: 65px;
   border-radius: 50% 50% 20% 20%;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(2px);
 }
 
@@ -960,8 +961,8 @@ img, svg {
 .funnel-shop-btn {
   font-size: 0.65rem;
   font-weight: 800;
-  background: #ffffff;
-  color: #000000;
+  background: #3cd451;
+  color: #022c15;
   padding: 4px 10px;
   border-radius: 4px;
 }
@@ -1068,7 +1069,7 @@ img, svg {
   margin-bottom: 4px;
 }
 .envelope-badge {
-  background: #8b5cf6;
+  background: #10b981;
   color: #fff;
   width: 22px;
   height: 22px;
@@ -1108,13 +1109,13 @@ img, svg {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
-.mini-thumb.thumb-1 { background: linear-gradient(135deg, #38bdf8 0%, #1e40af 100%); }
-.mini-thumb.thumb-2 { background: linear-gradient(135deg, #f472b6 0%, #db2777 100%); }
-.mini-thumb.thumb-3 { background: linear-gradient(135deg, #a78bfa 0%, #6d28d9 100%); }
+.mini-thumb.thumb-1 { background: linear-gradient(135deg, #34d399 0%, #047857 100%); }
+.mini-thumb.thumb-2 { background: linear-gradient(135deg, #6ee7b7 0%, #065f46 100%); }
+.mini-thumb.thumb-3 { background: linear-gradient(135deg, #a7f3d0 0%, #047857 100%); }
 
 .cr-discount-banner {
-  background: linear-gradient(135deg, #312e81 0%, #1e1b4b 100%);
-  border: 1px solid rgba(139, 92, 246, 0.35);
+  background: linear-gradient(135deg, #063d1e 0%, #022010 100%);
+  border: 1px solid rgba(52, 211, 153, 0.4);
   border-radius: 8px;
   padding: 8px 10px;
 }
@@ -1140,13 +1141,18 @@ img, svg {
   outline: none;
 }
 .cr-submit {
-  background: #3b82f6;
+  background: #10b981;
   color: #ffffff;
   border: none;
   border-radius: 4px;
   padding: 4px 10px;
   font-size: 0.65rem;
   font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.cr-submit:hover {
+  background: #3cd451;
 }
 
 /* Card 4: Loyalty & VIP (Bottom-Right) */
@@ -1186,7 +1192,7 @@ img, svg {
 
 .member-tag {
   font-size: 0.64rem;
-  color: #fde68a;
+  color: #34d399;
 }
 
 .loyalty-close {
@@ -1213,7 +1219,7 @@ img, svg {
 .l-val {
   font-size: 0.82rem;
   font-weight: 800;
-  color: #fbbf24;
+  color: #3cd451;
 }
 
 .l-lbl {
@@ -1229,18 +1235,21 @@ img, svg {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #2563eb;
+  background: #10b981;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.45);
   z-index: 10;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
-.hero-chat-launcher:hover { transform: scale(1.1); }
+.hero-chat-launcher:hover {
+  background: #3cd451;
+  transform: scale(1.1);
+}
 
 /* Continuous Float Animations */
 @keyframes floatCard1 {
@@ -1657,8 +1666,12 @@ img, svg {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
+}
+
+.snake-narrator-tracker * {
+  pointer-events: none !important;
 }
 
 .snake-continuous-svg {
@@ -2371,7 +2384,7 @@ img, svg {
 
 .badge-status { font-size: 0.68rem; font-weight: 600; padding: 2px 7px; border-radius: 4px; }
 .status-paid { background: rgba(53, 211, 74, 0.15); color: #35d34a; }
-.status-shipped { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
+.status-shipped { background: rgba(16, 185, 129, 0.15); color: #10b981; }
 .status-delivered { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
 
 .inventory-items-list { display: flex; flex-direction: column; gap: 0.65rem; }
@@ -3017,20 +3030,34 @@ img, svg {
 }
 
 /* --------------------------------------------------------------------------
-   REUSABLE SCROLL REVEAL SYSTEM
+   REUSABLE SCROLL REVEAL SYSTEM (Progressive Enhancement - Always Visible Safe)
    -------------------------------------------------------------------------- */
 [data-reveal] {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1;
+  transform: none;
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
-[data-reveal="left"] { transform: translateX(-30px); }
-[data-reveal="right"] { transform: translateX(30px); }
-[data-reveal="scale"] { transform: scale(0.96) translateY(20px); }
+/* Only when JS activates reveal observer, set initial hidden state on unrevealed items */
+.reveal-init [data-reveal]:not(.is-revealed) {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.reveal-init [data-reveal="left"]:not(.is-revealed) {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+.reveal-init [data-reveal="right"]:not(.is-revealed) {
+  opacity: 0;
+  transform: translateX(30px);
+}
+.reveal-init [data-reveal="scale"]:not(.is-revealed) {
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
+}
 
-[data-reveal].is-revealed {
+.reveal-init [data-reveal].is-revealed {
   opacity: 1;
   transform: translate(0) scale(1);
 }

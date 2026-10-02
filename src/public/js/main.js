@@ -7,6 +7,72 @@ document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // --------------------------------------------------------------------------
+  // 0. Bulletproof Scroll Reveal System (Progressive Enhancement - Frontline)
+  // --------------------------------------------------------------------------
+  try {
+    const revealElements = document.querySelectorAll('[data-reveal]');
+    if (revealElements.length > 0) {
+      document.documentElement.classList.add('reveal-init');
+
+      const revealEl = (el) => el.classList.add('is-revealed');
+
+      if (prefersReducedMotion) {
+        revealElements.forEach(revealEl);
+      } else {
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        revealElements.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= vh + 250) {
+            revealEl(el);
+          }
+        });
+
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                revealEl(entry.target);
+                observer.unobserve(entry.target);
+              }
+            });
+          }, {
+            threshold: 0.05,
+            rootMargin: '0px 0px 120px 0px'
+          });
+
+          revealElements.forEach(el => {
+            if (!el.classList.contains('is-revealed')) {
+              observer.observe(el);
+            }
+          });
+        }
+
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              const currentVh = window.innerHeight || document.documentElement.clientHeight;
+              revealElements.forEach(el => {
+                if (!el.classList.contains('is-revealed')) {
+                  const rect = el.getBoundingClientRect();
+                  if (rect.top <= currentVh + 100) {
+                    revealEl(el);
+                  }
+                }
+              });
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+      }
+    }
+  } catch (err) {
+    console.warn('Scroll reveal init handled:', err);
+    document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-revealed'));
+  }
+
+  // --------------------------------------------------------------------------
   // 1. Light & Dark Mode System
   // --------------------------------------------------------------------------
   const themeToggle = document.getElementById('theme-toggle');
@@ -235,104 +301,118 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const buildSnakeWaypoints = () => {
-      const siteMain = document.getElementById('main-content') || trackerEl.parentElement;
-      const mainRect = siteMain.getBoundingClientRect();
-      const mainTop = mainRect.top + window.scrollY;
-      const w = trackerEl.offsetWidth || window.innerWidth;
-      const h = trackerEl.offsetHeight || siteMain.scrollHeight;
-      const isMobile = w < 768;
+      try {
+        const siteMain = document.getElementById('main-content') || trackerEl.parentElement;
+        if (!siteMain) return;
+        const mainRect = siteMain.getBoundingClientRect();
+        const mainTop = mainRect.top + window.scrollY;
+        const w = trackerEl.offsetWidth || window.innerWidth;
+        const h = trackerEl.offsetHeight || siteMain.scrollHeight;
+        const isMobile = w < 768;
 
-      svgEl.setAttribute('viewBox', `0 0 ${w} ${h}`);
+        svgEl.setAttribute('viewBox', `0 0 ${w} ${h}`);
 
-      const getSectionPoint = (id, xFraction, yFraction = 0.5) => {
-        const el = document.getElementById(id);
-        if (!el) return null;
-        const rect = el.getBoundingClientRect();
-        const y = (rect.top + window.scrollY - mainTop) + rect.height * yFraction;
-        const x = w * xFraction;
-        return { x, y };
-      };
+        const getSectionPoint = (id, xFraction, yFraction = 0.5) => {
+          const el = document.getElementById(id);
+          if (!el) return null;
+          const rect = el.getBoundingClientRect();
+          const y = (rect.top + window.scrollY - mainTop) + rect.height * yFraction;
+          const x = w * xFraction;
+          return { x, y };
+        };
 
-      // Waypoints weaving naturally down through sections and around/behind mockups
-      const waypoints = [
-        // Point 0: Hero stage
-        getSectionPoint('hero', isMobile ? 0.75 : 0.82, 0.40),
-        // Point 1: Hero exit curving into pillars
-        getSectionPoint('hero', isMobile ? 0.50 : 0.62, 0.90),
-        // Point 2: Pillars section
-        getSectionPoint('pillars', isMobile ? 0.25 : 0.18, 0.50),
-        // Point 3: Platform Hub section
-        getSectionPoint('platform-hub', isMobile ? 0.70 : 0.78, 0.50),
-        // Point 4: Elevated Experiences
-        getSectionPoint('elevated', isMobile ? 0.30 : 0.25, 0.50),
-        // Point 5: Economics
-        getSectionPoint('economics', isMobile ? 0.65 : 0.60, 0.60),
-        // Point 6: Journey
-        getSectionPoint('journey', isMobile ? 0.80 : 0.82, 0.50),
-        // Point 7: Free plan WhatsApp
-        getSectionPoint('free-start', isMobile ? 0.20 : 0.22, 0.55),
-        // Point 8: Customizer widget
-        getSectionPoint('customization', isMobile ? 0.80 : 0.82, 0.50),
-        // Point 9: Behind dashboard mockup (occlusion!)
-        getSectionPoint('product', isMobile ? 0.35 : 0.32, 0.58),
-        // Point 10: Product section exit
-        getSectionPoint('product', isMobile ? 0.68 : 0.72, 0.90),
-        // Point 11: Storefronts row
-        getSectionPoint('storefronts', isMobile ? 0.25 : 0.25, 0.52),
-        // Point 12: Scale section
-        getSectionPoint('scale', isMobile ? 0.75 : 0.74, 0.50),
-        // Point 13: Pricing section
-        getSectionPoint('pricing', isMobile ? 0.50 : 0.48, 0.55),
-        // Point 14: FAQ section
-        getSectionPoint('faq', isMobile ? 0.25 : 0.20, 0.50),
-        // Point 15: Final CTA banner
-        getSectionPoint('start', isMobile ? 0.50 : 0.52, 0.45)
-      ].filter(Boolean);
+        // Waypoints weaving naturally down through sections and around/behind mockups
+        const waypoints = [
+          // Point 0: Hero stage
+          getSectionPoint('hero', isMobile ? 0.75 : 0.82, 0.40),
+          // Point 1: Hero exit curving into pillars
+          getSectionPoint('hero', isMobile ? 0.50 : 0.62, 0.90),
+          // Point 2: Pillars section
+          getSectionPoint('pillars', isMobile ? 0.25 : 0.18, 0.50),
+          // Point 3: Platform Hub section
+          getSectionPoint('platform-hub', isMobile ? 0.70 : 0.78, 0.50),
+          // Point 4: Elevated Experiences
+          getSectionPoint('elevated', isMobile ? 0.30 : 0.25, 0.50),
+          // Point 5: Economics
+          getSectionPoint('economics', isMobile ? 0.65 : 0.60, 0.60),
+          // Point 6: Journey
+          getSectionPoint('journey', isMobile ? 0.80 : 0.82, 0.50),
+          // Point 7: Free plan WhatsApp
+          getSectionPoint('free-start', isMobile ? 0.20 : 0.22, 0.55),
+          // Point 8: Customizer widget
+          getSectionPoint('customization', isMobile ? 0.80 : 0.82, 0.50),
+          // Point 9: Behind dashboard mockup (occlusion!)
+          getSectionPoint('product', isMobile ? 0.35 : 0.32, 0.58),
+          // Point 10: Product section exit
+          getSectionPoint('product', isMobile ? 0.68 : 0.72, 0.90),
+          // Point 11: Storefronts row
+          getSectionPoint('storefronts', isMobile ? 0.25 : 0.25, 0.52),
+          // Point 12: Scale section
+          getSectionPoint('scale', isMobile ? 0.75 : 0.74, 0.50),
+          // Point 13: Pricing section
+          getSectionPoint('pricing', isMobile ? 0.50 : 0.48, 0.55),
+          // Point 14: FAQ section
+          getSectionPoint('faq', isMobile ? 0.25 : 0.20, 0.50),
+          // Point 15: Final CTA banner
+          getSectionPoint('start', isMobile ? 0.50 : 0.52, 0.45)
+        ].filter(pt => pt && Number.isFinite(pt.x) && Number.isFinite(pt.y));
 
-      if (waypoints.length < 2) return;
+        if (waypoints.length < 2) return;
 
-      const pathData = generateSmoothPath(waypoints);
-      snakePaths.forEach(p => p.setAttribute('d', pathData));
+        const pathData = generateSmoothPath(waypoints);
+        snakePaths.forEach(p => p.setAttribute('d', pathData));
 
-      // Calculate total path length
-      const guidePath = document.getElementById('snake-path-body') || snakePaths[0];
-      totalLength = guidePath.getTotalLength();
+        // Calculate total path length safely
+        const guidePath = document.getElementById('snake-path-body') || snakePaths[0];
+        if (guidePath && typeof guidePath.getTotalLength === 'function') {
+          totalLength = guidePath.getTotalLength() || 0;
+        }
 
-      snakePaths.forEach(p => {
-        p.style.strokeDasharray = `${totalLength} ${totalLength}`;
-        p.style.strokeDashoffset = `${totalLength}`;
-      });
-
-      renderSnake(currentProgress);
+        if (totalLength > 0) {
+          snakePaths.forEach(p => {
+            p.style.strokeDasharray = `${totalLength} ${totalLength}`;
+            p.style.strokeDashoffset = `${totalLength}`;
+          });
+          renderSnake(currentProgress);
+        }
+      } catch (err) {
+        console.warn('Snake waypoints build handled safely:', err);
+      }
     };
 
     const renderSnake = (progress) => {
-      if (totalLength <= 0) return;
-      const clamped = Math.max(0, Math.min(1, progress));
-      const drawOffset = totalLength * (1 - clamped);
-      snakePaths.forEach(p => {
-        p.style.strokeDashoffset = drawOffset;
-      });
+      try {
+        if (!totalLength || totalLength <= 0) return;
+        const clamped = Math.max(0, Math.min(1, progress));
+        const drawOffset = totalLength * (1 - clamped);
+        snakePaths.forEach(p => {
+          p.style.strokeDashoffset = drawOffset;
+        });
 
-      if (snakeHeadGroup) {
-        if (progress <= 0.003) {
-          snakeHeadGroup.style.opacity = '0';
-        } else {
-          snakeHeadGroup.style.opacity = '1';
-          const currentDist = clamped * totalLength;
-          const guidePath = document.getElementById('snake-path-body') || snakePaths[0];
-          const point = guidePath.getPointAtLength(currentDist);
-          
-          // Calculate heading tangent angle
-          const nextDist = Math.min(totalLength, currentDist + 10);
-          const nextPoint = guidePath.getPointAtLength(nextDist);
-          
-          const dx = nextPoint.x - point.x;
-          const dy = nextPoint.y - point.y;
-          const angle = Math.atan2(dy, dx) * (180 / Math.PI);
-          
-          snakeHeadGroup.setAttribute('transform', `translate(${point.x.toFixed(1)}, ${point.y.toFixed(1)}) rotate(${angle.toFixed(1)})`);
+        if (snakeHeadGroup) {
+          if (progress <= 0.003) {
+            snakeHeadGroup.style.opacity = '0';
+          } else {
+            snakeHeadGroup.style.opacity = '1';
+            const currentDist = clamped * totalLength;
+            const guidePath = document.getElementById('snake-path-body') || snakePaths[0];
+            if (guidePath && typeof guidePath.getPointAtLength === 'function') {
+              const point = guidePath.getPointAtLength(currentDist);
+              const nextDist = Math.min(totalLength, currentDist + 10);
+              const nextPoint = guidePath.getPointAtLength(nextDist);
+              
+              const dx = nextPoint.x - point.x;
+              const dy = nextPoint.y - point.y;
+              const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+              
+              if (Number.isFinite(point.x) && Number.isFinite(point.y) && Number.isFinite(angle)) {
+                snakeHeadGroup.setAttribute('transform', `translate(${point.x.toFixed(1)}, ${point.y.toFixed(1)}) rotate(${angle.toFixed(1)})`);
+              }
+            }
+          }
         }
+      } catch (e) {
+        // silent calculation fallback
       }
     };
 
@@ -354,12 +434,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
       if (maxScroll <= 0) return;
 
-      // Parallax on hero photographic snake
+      const snakeHeroImg = document.getElementById('hero-snake-img');
       if (snakeHeroImg && scrollY < 1200) {
         snakeHeroImg.style.transform = `translate3d(0, ${(scrollY * 0.12).toFixed(1)}px, 0)`;
       }
 
-      // Compute normalized progress for smooth bidirectional scroll
       targetProgress = Math.max(0, Math.min(1, scrollY / maxScroll));
 
       if (!isAnimating) {
@@ -368,47 +447,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
-    // Initialize layout after DOM rendering and fonts
     window.addEventListener('load', buildSnakeWaypoints);
     buildSnakeWaypoints();
 
-    // Rebuild waypoints on window resize (debounced)
     let resizeTimer;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(buildSnakeWaypoints, 150);
     });
 
-    // Listen to scroll for active bidirectional motion (progress on scroll down, reverse on scroll up)
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
-
-  // --------------------------------------------------------------------------
-  // 6. Scroll Reveal System ([data-reveal])
-  // --------------------------------------------------------------------------
-  const revealElements = document.querySelectorAll('[data-reveal]');
-  if (revealElements.length > 0) {
-    if (prefersReducedMotion) {
-      revealElements.forEach(el => el.classList.add('is-revealed'));
-    } else {
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-revealed');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -40px 0px'
-      });
-
-      revealElements.forEach(el => revealObserver.observe(el));
-    }
-  }
-
-  // --------------------------------------------------------------------------
   // 7. Generic AJAX Form Handler for Demo & Contact Forms
   // --------------------------------------------------------------------------
   const setupAjaxForm = (formId, feedbackId) => {
