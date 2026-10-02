@@ -1,5 +1,5 @@
 const { supportedLocales, defaultLocale, isSupported } = require('../config/locales');
-const { pricingPlans, businessPlan } = require('../config/pricing');
+const { pricingPlans, businessPlan, pricingComparison } = require('../config/pricing');
 const { themesList } = require('../config/themes');
 const { faqData } = require('../config/faq');
 const fs = require('fs');
@@ -58,6 +58,7 @@ const pagesController = {
       languages: buildLanguages(lang, ''),
       pricingPlans,
       businessPlan,
+      pricingComparison: pricingComparison[lang] || pricingComparison[defaultLocale],
       themesList,
       faqs: faqData[lang] || faqData[defaultLocale]
     });
@@ -74,6 +75,7 @@ const pagesController = {
       languages: buildLanguages(lang, '/pricing'),
       pricingPlans,
       businessPlan,
+      pricingComparison: pricingComparison[lang] || pricingComparison[defaultLocale],
       faqs: faqData[lang] || faqData[defaultLocale]
     });
   },

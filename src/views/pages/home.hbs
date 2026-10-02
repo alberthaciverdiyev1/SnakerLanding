@@ -1490,6 +1490,7 @@
       <!-- Free Plan -->
       <div class="pricing-card free-plan" data-reveal="left">
         <div class="pricing-card-header">
+          <div class="tier-badge-pill pill-free font-mono">🟢 Free</div>
           <h3 class="plan-name">{{t "pricing.freeName"}}</h3>
           <p class="plan-desc">{{t "pricing.freeDesc"}}</p>
           <div class="plan-price-wrap">
@@ -1515,6 +1516,7 @@
       <div class="pricing-card paid-plan is-featured" data-reveal="scale">
         <div class="featured-badge font-mono">{{t "pricing.paidBadge"}}</div>
         <div class="pricing-card-header">
+          <div class="tier-badge-pill pill-premium font-mono">🟣 Premium</div>
           <h3 class="plan-name">{{t "pricing.paidName"}}</h3>
           <p class="plan-desc">{{t "pricing.paidDesc"}}</p>
           <div class="plan-price-wrap">
@@ -1540,19 +1542,20 @@
       <!-- Business Plan (Separate Route) -->
       <div class="pricing-card business-route" data-reveal="right">
         <div class="pricing-card-header">
-          <h3 class="plan-name">Business</h3>
+          <div class="tier-badge-pill pill-business font-mono">⚫ Business</div>
+          <h3 class="plan-name">{{t "pricing.businessName"}}</h3>
           <p class="plan-desc">{{t "pricing.businessDesc"}}</p>
           <div class="plan-price-wrap">
-            <span class="plan-amount font-mono">Bespoke</span>
-            <span class="plan-period">Direct agreement</span>
+            <span class="plan-amount font-mono">{{t "pricing.businessPrice"}}</span>
+            <span class="plan-period">{{t "pricing.businessPeriod"}}</span>
           </div>
         </div>
         <div class="plan-divider"></div>
         <ul class="plan-features-list">
-          <li class="plan-feature"><span class="feat-check">&check;</span> Dedicated architecture</li>
-          <li class="plan-feature"><span class="feat-check">&check;</span> Custom ERP & data integrations</li>
-          <li class="plan-feature"><span class="feat-check">&check;</span> Tailored styling requirements</li>
-          <li class="plan-feature"><span class="feat-check">&check;</span> High-volume reliability</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat1"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat2"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat3"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat4"}}</li>
         </ul>
         <div class="plan-cta-wrap">
           <a href="/{{currentLang}}/business" class="btn btn-secondary btn-full">
@@ -1560,6 +1563,13 @@
           </a>
         </div>
       </div>
+    </div>
+
+    <div class="pricing-matrix-cta text-center mt-xl">
+      <a href="/{{currentLang}}/pricing#comparison" class="table-anchor-btn">
+        <span>{{t "pricing.comparisonTitle"}}</span>
+        <span class="anchor-arrow">&rarr;</span>
+      </a>
     </div>
   </div>
 </section>

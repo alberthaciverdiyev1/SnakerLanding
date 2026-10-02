@@ -2,6 +2,12 @@
   <div class="page-header text-center">
     <h1 class="page-title">{{t "pricing.title"}}</h1>
     <p class="page-lead center-block">{{t "pricing.subtitle"}}</p>
+    <div class="pricing-jump-link">
+      <a href="#comparison" class="table-anchor-btn">
+        <span>{{t "pricing.comparisonTitle"}}</span>
+        <span class="anchor-arrow">&darr;</span>
+      </a>
+    </div>
   </div>
 
   <div class="site-container">
@@ -10,6 +16,7 @@
       <!-- Free Plan -->
       <div class="pricing-card free-plan">
         <div class="pricing-card-header">
+          <div class="tier-badge-pill pill-free font-mono">🟢 Free</div>
           <h3 class="plan-name">{{t "pricing.freeName"}}</h3>
           <p class="plan-desc">{{t "pricing.freeDesc"}}</p>
           <div class="plan-price-wrap">
@@ -31,10 +38,11 @@
         </div>
       </div>
 
-      <!-- Paid Plan -->
+      <!-- Premium Plan (14-day trial) -->
       <div class="pricing-card paid-plan is-featured">
         <div class="featured-badge font-mono">{{t "pricing.paidBadge"}}</div>
         <div class="pricing-card-header">
+          <div class="tier-badge-pill pill-premium font-mono">🟣 Premium</div>
           <h3 class="plan-name">{{t "pricing.paidName"}}</h3>
           <p class="plan-desc">{{t "pricing.paidDesc"}}</p>
           <div class="plan-price-wrap">
@@ -60,6 +68,7 @@
       <!-- Business Plan -->
       <div class="pricing-card business-route">
         <div class="pricing-card-header">
+          <div class="tier-badge-pill pill-business font-mono">⚫ Business</div>
           <h3 class="plan-name">{{t "pricing.businessName"}}</h3>
           <p class="plan-desc">{{t "pricing.businessDesc"}}</p>
           <div class="plan-price-wrap">
@@ -88,6 +97,103 @@
       <p class="trb-desc center-block">
         {{t "pricing.trialDesc"}}
       </p>
+    </div>
+
+    <!-- 24-Feature Comparison Matrix Table -->
+    <div class="pricing-comparison-section" id="comparison">
+      <div class="section-header-editorial text-center">
+        <h2 class="section-title">{{t "pricing.comparisonTitle"}}</h2>
+        <p class="section-description center-block">{{t "pricing.comparisonSubtitle"}}</p>
+      </div>
+
+      <div class="pricing-matrix-scroll-container">
+        <table class="pricing-matrix-table">
+          <thead>
+            <tr>
+              <th class="col-feature">{{t "pricing.matrixFeature"}}</th>
+              <th class="col-tier col-free">
+                <div class="tier-col-header">
+                  <span class="tier-header-badge font-mono">🟢 Free</span>
+                  <div class="tier-header-sub font-mono">{{t "pricing.freePrice"}}</div>
+                </div>
+              </th>
+              <th class="col-tier col-premium is-featured-col">
+                <div class="tier-col-header">
+                  <span class="tier-header-badge font-mono">🟣 Premium</span>
+                  <div class="tier-header-sub font-mono">{{t "pricing.paidPrice"}}</div>
+                </div>
+              </th>
+              <th class="col-tier col-business">
+                <div class="tier-col-header">
+                  <span class="tier-header-badge font-mono">⚫ Business</span>
+                  <div class="tier-header-sub font-mono">{{t "pricing.businessPrice"}}</div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each pricingComparison}}
+            <tr class="matrix-category-row">
+              <td colspan="4" class="matrix-category-cell">
+                <span class="category-name">{{this.category}}</span>
+              </td>
+            </tr>
+            {{#each this.items}}
+            <tr class="matrix-feature-row">
+              <td class="matrix-feature-title">{{this.feature}}</td>
+              <td class="matrix-cell col-free">
+                {{#if (eq this.free.type "check")}}
+                  <span class="matrix-check" aria-label="Yes">&#10003;</span>
+                {{else if (eq this.free.type "cross")}}
+                  <span class="matrix-cross" aria-label="No">&mdash;</span>
+                {{else}}
+                  <span class="matrix-text-val font-mono">{{this.free.val}}</span>
+                {{/if}}
+              </td>
+              <td class="matrix-cell col-premium is-featured-col">
+                {{#if (eq this.premium.type "check")}}
+                  <span class="matrix-check" aria-label="Yes">&#10003;</span>
+                {{else if (eq this.premium.type "cross")}}
+                  <span class="matrix-cross" aria-label="No">&mdash;</span>
+                {{else}}
+                  <span class="matrix-text-val font-mono">{{this.premium.val}}</span>
+                {{/if}}
+              </td>
+              <td class="matrix-cell col-business">
+                {{#if (eq this.business.type "check")}}
+                  <span class="matrix-check" aria-label="Yes">&#10003;</span>
+                {{else if (eq this.business.type "cross")}}
+                  <span class="matrix-cross" aria-label="No">&mdash;</span>
+                {{else}}
+                  <span class="matrix-text-val font-mono">{{this.business.val}}</span>
+                {{/if}}
+              </td>
+            </tr>
+            {{/each}}
+            {{/each}}
+          </tbody>
+          <tfoot>
+            <tr class="matrix-footer-row">
+              <td class="col-feature"></td>
+              <td class="col-tier col-free">
+                <a href="/{{currentLang}}/demo?plan=free" class="btn btn-secondary btn-sm btn-full">
+                  <span>{{t "pricing.freeCta"}}</span>
+                </a>
+              </td>
+              <td class="col-tier col-premium is-featured-col">
+                <a href="/{{currentLang}}/demo?plan=paid" class="btn btn-primary btn-sm btn-full">
+                  <span>{{t "pricing.paidCta"}}</span>
+                </a>
+              </td>
+              <td class="col-tier col-business">
+                <a href="/{{currentLang}}/business" class="btn btn-secondary btn-sm btn-full">
+                  <span>{{t "pricing.businessCta"}}</span>
+                </a>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
 
     <!-- Pricing FAQs -->
