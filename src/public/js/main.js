@@ -334,9 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
           getSectionPoint('elevated', isMobile ? 0.30 : 0.25, 0.50),
           // Point 4: Economics
           getSectionPoint('economics', isMobile ? 0.65 : 0.60, 0.60),
-          // Point 5: Journey
-          getSectionPoint('journey', isMobile ? 0.80 : 0.82, 0.50),
-          // Point 6: Free plan WhatsApp
+          // Point 5: Free plan WhatsApp
           getSectionPoint('free-start', isMobile ? 0.20 : 0.22, 0.55),
           // Point 7: Customizer widget
           getSectionPoint('customization', isMobile ? 0.80 : 0.82, 0.50),
