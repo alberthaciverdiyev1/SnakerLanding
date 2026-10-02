@@ -296,9 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
           getSectionPoint('product', isMobile ? 0.68 : 0.72, 0.90),
           // Point 10: Storefronts row
           getSectionPoint('storefronts', isMobile ? 0.25 : 0.25, 0.52),
-          // Point 11: Scale section
-          getSectionPoint('scale', isMobile ? 0.75 : 0.74, 0.50),
-          // Point 12: Pricing section
+          // Point 11: Pricing section
           getSectionPoint('pricing', isMobile ? 0.50 : 0.48, 0.55),
           // Point 13: FAQ section
           getSectionPoint('faq', isMobile ? 0.25 : 0.20, 0.50),

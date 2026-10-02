@@ -3256,48 +3256,6 @@ img, svg {
   margin-top: var(--space-xl);
 }
 
-/* --------------------------------------------------------------------------
-   SECTION 8: SCALE & WHO SNAKER IS FOR
-   -------------------------------------------------------------------------- */
-.section-scale {
-  background-color: var(--bg);
-}
-
-.scale-stages-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-  margin-top: var(--space-xl);
-}
-
-.scale-card {
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: var(--space-xl) var(--space-lg);
-  box-shadow: var(--shadow-sm);
-}
-
-.scale-icon-mark {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--brand);
-  margin-bottom: 0.4rem;
-  display: block;
-}
-
-.scale-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 0.4rem;
-}
-
-.scale-desc {
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  line-height: 1.55;
-}
 
 /* --------------------------------------------------------------------------
    SECTION 9: PRICING (Free -> Subscription with 14-day trial -> Business)
@@ -3878,7 +3836,6 @@ img, svg {
   .dashboard-workspace-grid { grid-template-columns: 1fr; }
   .storefronts-showcase-row { grid-template-columns: 1fr; }
   .pricing-tier-grid { grid-template-columns: 1fr; max-width: 500px; }
-  .scale-stages-grid { grid-template-columns: 1fr; }
   .themes-gallery-grid { grid-template-columns: 1fr; }
   .business-content-grid, .contact-split-grid { grid-template-columns: 1fr; }
   .partner-categories-grid { grid-template-columns: 1fr; }
@@ -4046,7 +4003,6 @@ img, svg {
   .dashboard-workspace-grid,
   .pricing-tier-grid,
   .storefronts-showcase-row,
-  .scale-stages-grid,
   .themes-gallery-grid,
   .business-content-grid,
   .contact-split-grid {
