@@ -23,7 +23,6 @@ router.get('/:lang', langMiddleware, pagesController.home);
 router.get('/:lang/pricing', langMiddleware, pagesController.pricing);
 router.get('/:lang/themes', langMiddleware, pagesController.themes);
 router.get('/:lang/business', langMiddleware, pagesController.business);
-router.get('/:lang/partners', langMiddleware, pagesController.partners);
 router.get('/:lang/demo', langMiddleware, pagesController.demo);
 router.get('/:lang/faq', langMiddleware, pagesController.faq);
 router.get('/:lang/about', langMiddleware, pagesController.about);

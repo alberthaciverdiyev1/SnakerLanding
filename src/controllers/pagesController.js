@@ -2,7 +2,6 @@ const { supportedLocales, defaultLocale, isSupported } = require('../config/loca
 const { pricingPlans, businessPlan } = require('../config/pricing');
 const { themesList } = require('../config/themes');
 const { faqData } = require('../config/faq');
-const { partnerCategories } = require('../config/partners');
 
 const locales = {
   az: require('../locales/az.json'),
@@ -37,8 +36,7 @@ const pagesController = {
       pricingPlans,
       businessPlan,
       themesList,
-      faqs: faqData[lang] || faqData[defaultLocale],
-      partnerCategories
+      faqs: faqData[lang] || faqData[defaultLocale]
     });
   },
 
@@ -80,19 +78,6 @@ const pagesController = {
       metaDescription: locale.businessPage.lead,
       languages: buildLanguages(lang, '/business'),
       businessPlan
-    });
-  },
-
-  partners: (req, res) => {
-    const lang = req.lang;
-    const locale = locales[lang] || locales[defaultLocale];
-    res.render('pages/partners', {
-      currentLang: lang,
-      currentPath: '/partners',
-      pageTitle: `${locale.nav.partners} — Snaker`,
-      metaDescription: locale.partnersPage.lead,
-      languages: buildLanguages(lang, '/partners'),
-      partnerCategories
     });
   },
 
