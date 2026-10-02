@@ -619,6 +619,7 @@ img, svg {
   margin-bottom: var(--space-xl);
 }
 
+.section-header-editorial.text-center,
 .section-header-editorial.center-block,
 .center-block {
   margin-inline: auto;
