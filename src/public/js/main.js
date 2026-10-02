@@ -131,52 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 4. Store customizer preview
-  // --------------------------------------------------------------------------
-  const previewCanvas = document.getElementById('customizer-preview-canvas');
-  const customizerWidget = document.getElementById('customizer-widget');
-
-  if (previewCanvas && customizerWidget) {
-    // Color Palette Selector
-    const colorBtns = customizerWidget.querySelectorAll('.cw-color-btn');
-    colorBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        colorBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const colorClass = btn.getAttribute('data-color');
-        previewCanvas.classList.remove('theme-emerald', 'theme-obsidian', 'theme-amber', 'theme-clay');
-        previewCanvas.classList.add(colorClass);
-      });
-    });
-
-    // Header Alignment Selector
-    const headerBtns = customizerWidget.querySelectorAll('[data-header]');
-    headerBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        headerBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const headerClass = btn.getAttribute('data-header');
-        previewCanvas.classList.remove('align-left', 'align-center', 'align-split');
-        previewCanvas.classList.add(headerClass);
-      });
-    });
-
-    // Product Grid Columns Selector
-    const gridBtns = customizerWidget.querySelectorAll('[data-grid]');
-    gridBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        gridBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const gridClass = btn.getAttribute('data-grid');
-        previewCanvas.classList.remove('grid-2col', 'grid-3col');
-        previewCanvas.classList.add(gridClass);
-      });
-    });
-  }
 
   // --------------------------------------------------------------------------
   // 4b. Hero card parallax
@@ -336,9 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
           getSectionPoint('economics', isMobile ? 0.65 : 0.60, 0.60),
           // Point 5: Free plan WhatsApp
           getSectionPoint('free-start', isMobile ? 0.20 : 0.22, 0.55),
-          // Point 7: Customizer widget
-          getSectionPoint('customization', isMobile ? 0.80 : 0.82, 0.50),
-          // Point 8: Behind dashboard mockup (occlusion!)
+          // Point 6: Behind dashboard mockup (occlusion!)
           getSectionPoint('product', isMobile ? 0.35 : 0.32, 0.58),
           // Point 9: Product section exit
           getSectionPoint('product', isMobile ? 0.68 : 0.72, 0.90),
