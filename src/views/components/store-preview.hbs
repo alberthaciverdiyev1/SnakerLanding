@@ -1,0 +1,58 @@
+<!--
+SNAKER PRODUCT MOCKUP COMPONENT
+Replace this modular component with actual screenshot or video when available.
+-->
+<div class="product-media store-preview-frame {{themeClass}}" data-theme-preview="{{themeId}}">
+  <div class="store-preview-topbar">
+    <div class="sp-dots">
+      <span class="sp-dot"></span>
+      <span class="sp-dot"></span>
+      <span class="sp-dot"></span>
+    </div>
+    <span class="sp-url font-mono">{{domain}}</span>
+  </div>
+
+  <div class="store-preview-canvas">
+    {{#if image}}
+      <img src="{{image}}" alt="{{name}} Store Preview" class="sp-img" loading="lazy">
+    {{else}}
+      <!-- Modular HTML Mockup -->
+      <div class="mock-store-inner">
+        <header class="mock-store-header">
+          <span class="mock-brand-title">{{name}}</span>
+          <div class="mock-nav-links">
+            <span class="mock-nav-item">Catalog</span>
+            <span class="mock-nav-item">About</span>
+            <span class="mock-cart-btn">Cart (0)</span>
+          </div>
+        </header>
+
+        <section class="mock-store-hero">
+          <span class="mock-tagline font-mono">{{category}}</span>
+          <h3 class="mock-hero-heading">{{heroHeadline}}</h3>
+        </section>
+
+        <div class="mock-product-grid">
+          <div class="mock-product-card">
+            <div class="mock-product-img-box">
+              <span class="mock-img-placeholder"></span>
+            </div>
+            <div class="mock-product-info">
+              <span class="mock-p-title">{{item1Title}}</span>
+              <span class="mock-p-price font-mono">{{item1Price}}</span>
+            </div>
+          </div>
+          <div class="mock-product-card">
+            <div class="mock-product-img-box">
+              <span class="mock-img-placeholder"></span>
+            </div>
+            <div class="mock-product-info">
+              <span class="mock-p-title">{{item2Title}}</span>
+              <span class="mock-p-price font-mono">{{item2Price}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/if}}
+  </div>
+</div>

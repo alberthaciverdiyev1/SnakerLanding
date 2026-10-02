@@ -1,152 +1,173 @@
 {
   "lang": "tr",
   "meta": {
-    "title": "Snaker — Online satış artık daha kolay",
-    "description": "Basit ve ekonomik online mağaza platformu."
+    "title": "Snaker — Mağazanızı kurun. Sıfırdan sistem değil.",
+    "description": "Sıfırdan yazılım geliştirme maliyetlerine katlanmadan kendi online mağazanızı açın. Ücretsiz başlayın veya 14 gün deneyin."
   },
   "nav": {
     "product": "Ürün",
-    "solutions": "Çözümler",
     "themes": "Vitrinler",
     "pricing": "Fiyatlar",
+    "business": "Business",
+    "partners": "İş Ortakları",
     "faq": "SSS",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "demo": "Demo",
     "signIn": "Giriş yap",
     "createStore": "Mağaza oluştur",
+    "startFree": "Ücretsiz başla",
     "requestDemo": "Demo isteyin"
   },
   "hero": {
-    "headlineMain": "Online satış,",
-    "headlineSub": "artık daha kolay.",
-    "description": "Karmaşık araçlar olmadan mağazanızı kurun. Ürün, ödeme ve siparişler tek platformda.",
+    "badge": "ECOMMERCE PLATFORM",
+    "headlineMain": "Mağazanı kur.",
+    "headlineSub": "Sıfırdan e-ticaret sistemi değil.",
+    "description": "Sıfırdan e-ticaret yazılımı geliştirmek çoğu işletme için pahalı ve gereksizdir. Snaker, mağazanızı hemen başlatıp büyütmeniz için gereken güçlü temeli sağlar.",
     "primaryCta": "Mağaza oluştur",
-    "secondaryCta": "Demo isteyin",
-    "subtext": "Vitrin · Ürünler · Siparişler · Ödemeler"
+    "secondaryCta": "Snaker'ı Keşfet",
+    "demoLink": "Demo isteyin",
+    "subtext": "Ücretsiz başla · 14 günlük tam deneme · Sıfır komisyon"
   },
-  "intro": {
-    "label": "YAKLAŞIM",
-    "title": "Mağaza yönetmek kolay olmalı.",
-    "lead": "Karmaşık yazılımlara gerek yok. Sadece ürünlerinize ve satışa odaklanın."
+  "economics": {
+    "label": "RASYONEL YAKLAŞIM",
+    "title": "İşletmenizin bir mağazaya ihtiyacı var. Yeni bir yazılım projesine değil.",
+    "subtitle": "Neden e-ticaret altyapısını sıfırdan inşa edesiniz?",
+    "customTitle": "Sıfırdan geliştirmek",
+    "custom1": "Aylar süren yazılım süreçleri ve belirsiz teslim tarihleri",
+    "custom2": "Sürekli sunucu, güvenlik ve bakım masrafları",
+    "custom3": "Her güncellemede bozulan eklenti ve tema bağımlılıkları",
+    "custom4": "Ufak bir fiyat veya sayfa değişikliği için geliştiriciye bağımlılık",
+    "snakerTitle": "Snaker temeli",
+    "snaker1": "Saatler içinde satışa hazır vitrin ve ürün kataloğu",
+    "snaker2": "Tam yönetilen güvenli altyapı, otomatik SSL ve yüksek hız",
+    "snaker3": "Eklenti karmaşası olmadan çalışan tek ve stabil mağaza motoru",
+    "snaker4": "Katalog, marka kimliği ve siparişler üzerinde tam kontrol"
   },
-  "pillars": {
-    "simplicityTitle": "Kod yazmadan yönetin",
-    "simplicityBody": "Ürün ekleyin, fiyatları güncelleyin ve siparişleri tek dokunuşla takip edin.",
-    "affordabilityTitle": "Şeffaf ve ekonomik fiyat",
-    "affordabilityBody": "Zorunlu ücretli eklentiler veya gizli komisyonlar yok.",
-    "autonomyTitle": "Kendi bağımsız markanız",
-    "autonomyBody": "Kendi alan adınız, kendi tasarımınız ve doğrudan banka hesabınıza yatan kazanç."
+  "journey": {
+    "label": "YOLCULUK",
+    "title": "Fikirden canlı mağazaya.",
+    "step1Title": "Oluştur",
+    "step1Desc": "Snaker hesabınızı saniyeler içinde açın.",
+    "step2Title": "Seç",
+    "step2Desc": "Sektörünüze özel hazırlanmış şık vitrin temasını seçin.",
+    "step3Title": "Ekle",
+    "step3Desc": "Ürün fotoğraflarını yükleyin, varyantları ve fiyatları belirleyin.",
+    "step4Title": "Yayınla",
+    "step4Desc": "Mağazanız yayında ve sipariş almaya hazır."
   },
-  "product": {
-    "label": "OPERASYON PANELİ",
-    "title": "Tüm ticaretiniz tek ekranda.",
-    "subtitle": "Siparişler, stoklar ve müşteriler tam kontrolünüz altında.",
-    "tabOverview": "Genel Bakış",
-    "tabOrders": "Siparişler",
-    "tabProducts": "Ürünler",
-    "tabCustomers": "Müşteriler",
-    "tabThemes": "Vitrin Tasarımı",
-    "tabSettings": "Ayarlar",
-    "todaySales": "Bugünkü satış",
-    "ordersToShip": "Gönderilecek",
-    "payoutStatus": "Banka transferi",
-    "recentOrdersTitle": "Son siparişler",
-    "statusPaid": "Ödendi",
-    "statusShipped": "Kargoda",
-    "statusDelivered": "Teslim edildi",
-    "orderNum": "Sipariş",
-    "customer": "Müşteri",
-    "items": "Ürünler",
-    "status": "Durum",
-    "total": "Tutar",
-    "stockLevelTitle": "Stok durumu",
-    "inStock": "stokta",
-    "lowStock": "az kaldı"
+  "freePlan": {
+    "label": "RİSKSİZ BAŞLANGIÇ",
+    "title": "Ücretsiz başlayın. Taahhütsüz deneyin.",
+    "lead": "Aylık abonelik ödemeden önce vitrininizi açın, ürünlerinizi ekleyin ve ilk siparişleri doğrudan WhatsApp üzerinden almaya başlayın.",
+    "feat1": "Snaker alt alan adında eksiksiz online vitrin",
+    "feat2": "Hazır tasarım teması seçimi",
+    "feat3": "Doğrudan WhatsApp sipariş akışı",
+    "feat4": "Sezgisel ürün ve katalog yönetimi",
+    "cta": "Ücretsiz başla"
   },
-  "steps": {
-    "label": "BAŞLANGIÇ",
-    "title": "3 adımda satışa başlayın.",
-    "step1Num": "01",
-    "step1Title": "Mağazanızı kurun",
-    "step1Desc": "İsminizi belirleyin ve alan adınızı bağlayın.",
-    "step2Num": "02",
-    "step2Title": "Ürünleri ekleyin",
-    "step2Desc": "Fotoğrafları yükleyin ve fiyatları yazın.",
-    "step3Num": "03",
-    "step3Title": "Siparişleri alın",
-    "step3Desc": "Ödemeleri alıp hemen satışa başlayın."
+  "customizer": {
+    "label": "ÖZELLEŞTİRME",
+    "title": "Mağazanız herkesle aynı görünmek zorunda değil.",
+    "description": "Ücretsiz kullanıcılar hazır vitrin temasını seçer. Ücretli planlarda marka renkleri ve hazır bileşen dizilimleri özelleştirilebilir.",
+    "previewTitle": "VİTRİN ÖN İZLEMESİ",
+    "controlsTitle": "CANLI DÜZENLEME",
+    "colorsLabel": "Marka Rengi",
+    "headerLabel": "Başlık Düzeni",
+    "gridLabel": "Ürün Dizilimi",
+    "trialBadge": "Gelişmiş özelleştirmeyi 14 gün ücretsiz deneyin"
   },
-  "storefronts": {
-    "label": "ÖRNEK VİTRİNLER",
-    "title": "Markanıza özel vitrinler.",
-    "description": "Tüm cihazlara tam uyumlu, hızlı ve modern mağaza tasarımları.",
-    "store1Name": "Kura Giyim",
-    "store1Type": "Giyim ve Tekstil",
-    "store2Name": "Verdant Studio",
-    "store2Type": "Doğal Kozmetik",
-    "store3Name": "Mono Objects",
-    "store3Type": "Tasarım Objeleri",
-    "mobileReady": "Tüm ekranlarda hızlı ve kusursuz."
+  "tasks": {
+    "label": "OPERASYON",
+    "title": "Günlük perakende işleri için tasarlandı.",
+    "task1Title": "Ürün ekle. Fiyat güncelle. Satışa devam et.",
+    "task1Desc": "Karmaşık veri tabanı formları yok. Herhangi bir tarayıcıdan saniyeler içinde güncelleyin.",
+    "task2Title": "Siparişleriniz tam beklediğiniz yerde.",
+    "task2Desc": "Sipariş durumları, teslimat takibi ve müşteri iletişim detayları tek ekranda.",
+    "task3Title": "Mağazayı markanıza ait hissettirin.",
+    "task3Desc": "Dönüşüm odaklı hazır bileşenlerle kendi mağaza atmosferinizi oluşturun."
   },
-  "performance": {
-    "label": "ALTYAPI",
-    "title": "Işık hızında yükleme.",
-    "description": "Hızlı sayfalar, kayıpsız satışlar. Sunucu yönetimi tamamen bizde."
+  "scale": {
+    "label": "KİMLER İÇİN",
+    "title": "Olduğunuz noktadan başlayın.",
+    "scale1Title": "İlk mağaza ve Instagram satıcıları",
+    "scale1Desc": "WhatsApp sipariş akışı ile profesyonel bir online vitrin.",
+    "scale2Title": "Yerel dükkanlar ve bağımsız perakende",
+    "scale2Desc": "Kendi alan adınız ve doğrudan kart ödemeleriyle fiziksel satışı internete taşıyın.",
+    "scale3Title": "Büyüyen markalar ve geniş kataloglar",
+    "scale3Desc": "Katalog hacmini artırın, siparişleri otomatikleştirin veya özel Business çözümü talep edin."
   },
   "pricing": {
     "label": "FİYATLANDIRMA",
-    "title": "Net ve şeffaf planlar.",
-    "subtitle": "İşletmenize en uygun seviyeyi seçin.",
-    "starterName": "Başlangıç",
-    "starterDesc": "Yeni başlayan mağazalar için.",
-    "starterPrice": "Fiyat için iletişime geçin",
-    "starterFeat1": "Eksiksiz online vitrin",
-    "starterFeat2": "100 adede kadar ürün",
-    "starterFeat3": "Özel alan adı bağlantısı",
-    "starterFeat4": "Doğrudan ödeme entegrasyonu",
-    "starterFeat5": "Standart destek",
-    "starterCta": "Başlayın",
-    "businessName": "Business",
-    "businessDesc": "Büyüyen ve aktif perakende işletmeleri için.",
-    "businessPrice": "Fiyat için iletişime geçin",
-    "businessBadge": "Önerilen",
-    "businessFeat1": "Sınırsız aktif ürün",
-    "businessFeat2": "Gelişmiş stok takibi",
-    "businessFeat3": "Otomatik kargo yönetimi",
-    "businessFeat4": "İndirim ve kupon kodları",
-    "businessFeat5": "Öncelikli destek",
-    "businessCta": "Başlayın",
-    "proName": "Pro",
-    "proDesc": "Büyük markalar ve yüksek sipariş hacmi için.",
-    "proPrice": "Fiyat için iletişime geçin",
-    "proFeat1": "Özel müşteri temsilcisi",
-    "proFeat2": "Muhasebe ve ERP entegrasyonu",
-    "proFeat3": "Özel vitrin tasarımı",
-    "proFeat4": "Garantili SLA desteği",
-    "proFeat5": "Ekip yetkilendirme sistemi",
-    "proCta": "Bize ulaşın"
+    "title": "Şeffaf ve net planlar.",
+    "subtitle": "Ücretsiz başlayın, büyüdükçe yükseltin veya özel Business gereksinimleri görüşün.",
+    "freeName": "Ücretsiz",
+    "freePrice": "0 ₺",
+    "freePeriod": "süresiz",
+    "freeDesc": "WhatsApp sipariş modeliyle herhangi bir abonelik ödemeden başlamak için.",
+    "freeFeat1": "Snaker alt alan adında vitrin",
+    "freeFeat2": "Tasarım teması seçimi",
+    "freeFeat3": "WhatsApp sipariş alma",
+    "freeFeat4": "Ürün ve görsel yönetimi",
+    "freeCta": "Ücretsiz başla",
+    "paidName": "Ücretli Plan",
+    "paidPrice": "Aylık abonelik",
+    "paidPeriod": "14 günlük ücretsiz deneme",
+    "paidBadge": "14 gün deneme",
+    "paidDesc": "Özel alan adı, doğrudan kartla ödeme ve gelişmiş görsel özelleştirme için.",
+    "paidFeat1": "Kendi alan adınız (.com vb.)",
+    "paidFeat2": "Özel marka renkleri ve bileşen blokları",
+    "paidFeat3": "Doğrudan kart ve online ödeme",
+    "paidFeat4": "Gelişmiş stok ve sipariş takibi",
+    "paidCta": "14 günlük denemeyi başlat",
+    "businessTitle": "Standart planların ötesinde ihtiyaçlar?",
+    "businessDesc": "Snaker Business özel ERP entegrasyonları, veri aktarımları ve yüksek hacimli işletmeler için özel hizmet sunar.",
+    "businessCta": "Bize ulaşın"
   },
   "faq": {
-    "label": "SORU & CEVAP",
+    "label": "SSS",
     "title": "Sıkça sorulan sorular.",
-    "subtitle": "Mağaza kurulumu ve ödemeler hakkında kısa yanıtlar."
+    "subtitle": "Mağaza kurulumu, WhatsApp siparişleri ve ödemeler hakkında doğrudan yanıtlar."
   },
-  "demo": {
-    "label": "GÖRÜŞME AYARLAYIN",
-    "title": "Snaker'ı canlı görün.",
-    "description": "Bilgilerinizi bırakın, size özel kısa bir sunum yapalım.",
-    "nameLabel": "Adınız",
-    "emailLabel": "E-posta adresiniz",
-    "storeLabel": "Mağaza veya marka adı",
-    "sellingLabel": "Ne satıyorsunuz?",
-    "websiteLabel": "Mevcut web sitesi veya Instagram",
-    "submitBtn": "Demo isteyin",
-    "submitting": "Gönderiliyor...",
-    "successMsg": "Teşekkürler. Ekibimiz kısa süre içinde sizinle iletişime geçecek."
+  "finalCta": {
+    "title": "Mağazanız buradan başlayabilir.",
+    "subtitle": "Hemen ücretsiz başlayın veya tam Snaker deneyimini 14 gün boyunca deneyin.",
+    "btnFree": "Ücretsiz başla",
+    "btnTrial": "14 gün deneyin",
+    "businessLink": "Özel kurumsal ihtiyaçlarınız mı var? Bizimle görüşün."
   },
-  "cta": {
-    "title": "Mağazanızı hemen açın.",
-    "description": "Snaker ile kolay ve ekonomik online satışa başlayın.",
-    "primary": "Mağaza oluştur",
-    "secondary": "Demo isteyin"
+  "themesPage": {
+    "title": "Özenle Hazırlanmış Vitrin Temaları",
+    "lead": "Snaker güçlü teknik altyapıyı sunar. Mağazanın ruhu ve tasarımı tamamen markanıza aittir.",
+    "note": "Ücretsiz kullanıcılar tema seçer. Ücretli planlar renk ve bileşenleri derinlemesine özelleştirir."
+  },
+  "businessPage": {
+    "title": "Standart planlar yetmediğinde.",
+    "lead": "Özel teknik gereksinimleri, yüksek sipariş hacmi veya özel entegrasyon ihtiyacı olan işletmeler için doğrudan iş birliği.",
+    "cta": "Bize ulaşın"
+  },
+  "partnersPage": {
+    "title": "Snaker Partner Ekosistemi",
+    "lead": "Tasarım ajansları, teknoloji geliştiricileri ve e-ticaret uzmanları için açık ekosistem.",
+    "applyCta": "Partner olmak için başvurun",
+    "agencyTitle": "Tasarım ve Yazılım Ajansları",
+    "agencyDesc": "Müşterilerinize sıfırdan kod yazmadan hızla çalışan profesyonel mağazalar teslim edin.",
+    "techTitle": "Teknoloji ve Ödeme Sistemleri",
+    "techDesc": "Fintech veya SaaS çözümlerinizi doğrudan Snaker altyapısına entegre edin.",
+    "logisticsTitle": "Kargo ve Operasyon Sağlayıcıları",
+    "logisticsDesc": "Snaker mağaza sahiplerine otomatik kargo ve lojistik hizmetlerinizi sunun."
+  },
+  "demoPage": {
+    "title": "Mağazanızın nasıl görüneceğini canlı görün.",
+    "lead": "İşletmeniz hakkında birkaç detay paylaşın. Size özel 15 dakikalık canlı bir sunum yapalım."
+  },
+  "contactPage": {
+    "title": "Snaker ile iletişime geçin.",
+    "lead": "Ürün soruları, Business iş birliği veya genel konular için ekibimize doğrudan ulaşın."
+  },
+  "aboutPage": {
+    "title": "E-ticareti temelden basitleştiriyoruz.",
+    "lead": "İşletmeleri aylar süren yazılım projelerinden kurtarıp doğrudan satışa ve müşterilerine odaklıyoruz."
   },
   "footer": {
     "tagline": "Modern perakende için tasarlanmış sade ve odaklı e-ticaret platformu.",

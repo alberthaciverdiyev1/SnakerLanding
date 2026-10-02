@@ -5,8 +5,8 @@
         <a href="/{{currentLang}}" class="brand-logo footer-logo" aria-label="Snaker Home">
           <span class="logo-symbol">
             <svg width="22" height="22" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-              <path d="M8 32 C8 24 16 22 20 20 C24 18 32 16 32 8" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-              <circle cx="32" cy="8" r="2.8" fill="var(--snake-eye)"/>
+              <path d="M8 32 C8 24 16 22 20 20 C24 18 32 16 32 8" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+              <circle cx="32" cy="8" r="2.5" fill="var(--snake-eye)"/>
             </svg>
           </span>
           <span class="logo-text">SNAKER</span>
@@ -20,27 +20,35 @@
         <div class="footer-col">
           <h4 class="footer-heading">{{t "footer.platform"}}</h4>
           <ul class="footer-links">
-            <li><a href="#product">{{t "nav.product"}}</a></li>
-            <li><a href="#solutions">{{t "nav.solutions"}}</a></li>
-            <li><a href="#storefronts">{{t "nav.themes"}}</a></li>
-            <li><a href="#pricing">{{t "nav.pricing"}}</a></li>
+            <li><a href="/{{currentLang}}#product">{{t "nav.product"}}</a></li>
+            <li><a href="/{{currentLang}}/themes">{{t "nav.themes"}}</a></li>
+            <li><a href="/{{currentLang}}/pricing">{{t "nav.pricing"}}</a></li>
+            <li><a href="/{{currentLang}}/business">{{t "nav.business"}}</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">{{t "footer.company"}}</h4>
+          <ul class="footer-links">
+            <li><a href="/{{currentLang}}/about">{{t "nav.about"}}</a></li>
+            <li><a href="/{{currentLang}}/partners">{{t "nav.partners"}}</a></li>
+            <li><a href="/{{currentLang}}/contact">{{t "nav.contact"}}</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4 class="footer-heading">{{t "footer.resources"}}</h4>
           <ul class="footer-links">
-            <li><a href="#how-it-works">{{t "steps.title"}}</a></li>
-            <li><a href="#faq">{{t "nav.faq"}}</a></li>
-            <li><a href="#demo">{{t "nav.requestDemo"}}</a></li>
+            <li><a href="/{{currentLang}}/faq">{{t "nav.faq"}}</a></li>
+            <li><a href="/{{currentLang}}/demo">{{t "nav.demo"}}</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4 class="footer-heading">{{t "footer.legal"}}</h4>
           <ul class="footer-links">
-            <li><a href="#privacy">{{t "footer.privacy"}}</a></li>
-            <li><a href="#terms">{{t "footer.terms"}}</a></li>
+            <li><a href="/{{currentLang}}/contact">{{t "footer.privacy"}}</a></li>
+            <li><a href="/{{currentLang}}/contact">{{t "footer.terms"}}</a></li>
           </ul>
         </div>
       </div>

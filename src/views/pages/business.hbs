@@ -1,0 +1,83 @@
+<div class="page-container page-business">
+  <div class="page-header text-center">
+    <span class="section-tag mono">COMMERCIAL SOLUTIONS</span>
+    <h1 class="page-title">{{t "businessPage.title"}}</h1>
+    <p class="page-lead center-block">{{t "businessPage.lead"}}</p>
+  </div>
+
+  <div class="site-container">
+    <div class="business-content-grid">
+      <!-- Left: Rationale and Capabilities -->
+      <div class="business-info-side">
+        <h2 class="biz-section-heading">Direct engineering &amp; commercial partnership</h2>
+        <p class="biz-desc">
+          When your retail operation requires high-volume throughput, custom warehouse exports, or brand-specific checkout behavior, standard plans can feel constraining. Snaker Business connects you directly with our core platform team to configure an ecommerce foundation tailored to your exact operational reality.
+        </p>
+
+        <div class="biz-focus-points">
+          <div class="bfp-item">
+            <span class="bfp-num mono">01</span>
+            <div>
+              <h3 class="bfp-title">Custom Data &amp; ERP Connectors</h3>
+              <p class="bfp-text">Direct order, customer, and catalog synchronization with your internal software.</p>
+            </div>
+          </div>
+          <div class="bfp-item">
+            <span class="bfp-num mono">02</span>
+            <div>
+              <h3 class="bfp-title">Bespoke Storefront Styling</h3>
+              <p class="bfp-text">Fine-tuned layout components that strictly honor your brand's typographic and visual identity.</p>
+            </div>
+          </div>
+          <div class="bfp-item">
+            <span class="bfp-num mono">03</span>
+            <div>
+              <h3 class="bfp-title">Dedicated Account Engineering</h3>
+              <p class="bfp-text">Direct communication channels for operational questions, onboarding, and catalog migration.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Direct Consultation Form -->
+      <div class="business-form-side">
+        <div class="biz-form-card">
+          <h3 class="form-title">Start a Business conversation</h3>
+          <p class="form-sub">Tell us about your operational volume and requirements.</p>
+
+          <form id="business-contact-form" action="/api/contact" method="POST" class="standard-form">
+            <input type="hidden" name="lang" value="{{currentLang}}">
+            <input type="hidden" name="subject" value="Business Inquiry">
+
+            <div class="form-group">
+              <label for="biz-name">Your Name</label>
+              <input type="text" id="biz-name" name="name" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="biz-email">Work Email</label>
+              <input type="email" id="biz-email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="biz-company">Company / Brand Name</label>
+              <input type="text" id="biz-company" name="company" required>
+            </div>
+
+            <div class="form-group">
+              <label for="biz-message">Tell us about your requirements</label>
+              <textarea id="biz-message" name="message" rows="4" placeholder="Catalog size, current platform, specific integrations needed..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large btn-full">
+              <span>{{t "businessPage.cta"}}</span>
+              <span class="btn-arrow">&rarr;</span>
+            </button>
+
+            <div class="form-feedback" id="biz-form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="page-container page-contact">
+  <div class="page-header text-center">
+    <span class="section-tag mono">COMMUNICATION</span>
+    <h1 class="page-title">{{t "contactPage.title"}}</h1>
+    <p class="page-lead center-block">{{t "contactPage.lead"}}</p>
+  </div>
+
+  <div class="site-container">
+    <div class="contact-split-grid">
+      <!-- Direct Contact Channels -->
+      <div class="contact-channels-side">
+        <div class="channel-card">
+          <span class="channel-label mono">GENERAL INQUIRIES</span>
+          <h3 class="channel-heading">support@snaker.store</h3>
+          <p class="channel-sub">Technical questions, store setup, or account guidance.</p>
+        </div>
+
+        <div class="channel-card">
+          <span class="channel-label mono">BUSINESS &amp; PARTNERSHIPS</span>
+          <h3 class="channel-heading">business@snaker.store</h3>
+          <p class="channel-sub">High-volume retail agreements, agency partnerships, and custom ERP integration.</p>
+        </div>
+
+        <div class="channel-card">
+          <span class="channel-label mono">RESPONSE WINDOW</span>
+          <p class="channel-sub">Our platform operations team typically responds within 1 business day.</p>
+        </div>
+      </div>
+
+      <!-- Contact Message Form -->
+      <div class="contact-form-side">
+        <div class="contact-form-card">
+          <h2 class="form-title">Send a message</h2>
+
+          <form id="general-contact-form" action="/api/contact" method="POST" class="standard-form">
+            <input type="hidden" name="lang" value="{{currentLang}}">
+
+            <div class="form-group">
+              <label for="c-name">Your Name</label>
+              <input type="text" id="c-name" name="name" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="c-email">Your Email</label>
+              <input type="email" id="c-email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="c-subject">Subject</label>
+              <input type="text" id="c-subject" name="subject" placeholder="Question regarding..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="c-message">Message</label>
+              <textarea id="c-message" name="message" rows="4" placeholder="How can we help?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large btn-full">
+              <span>Send Message</span>
+              <span class="btn-arrow">&rarr;</span>
+            </button>
+
+            <div class="form-feedback" id="contact-form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

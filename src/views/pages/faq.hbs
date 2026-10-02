@@ -1,0 +1,29 @@
+<div class="page-container page-faq">
+  <div class="page-header text-center">
+    <span class="section-tag mono">{{t "faq.label"}}</span>
+    <h1 class="page-title">{{t "faq.title"}}</h1>
+    <p class="page-lead center-block">{{t "faq.subtitle"}}</p>
+  </div>
+
+  <div class="site-container">
+    <div class="faq-accordion-wrap max-width-reader center-block">
+      {{#each faqs}}
+      <details class="faq-item" {{#if @first}}open{{/if}}>
+        <summary class="faq-question">
+          <span class="faq-q-text">{{this.q}}</span>
+          <span class="faq-icon">&plus;</span>
+        </summary>
+        <div class="faq-answer">
+          <p>{{this.a}}</p>
+        </div>
+      </details>
+      {{/each}}
+    </div>
+
+    <div class="faq-support-callout text-center">
+      <h3>Have another question?</h3>
+      <p>Our team is available to answer any specifics regarding store launch or domain setup.</p>
+      <a href="/{{currentLang}}/contact" class="btn btn-secondary">Contact support &rarr;</a>
+    </div>
+  </div>
+</div>

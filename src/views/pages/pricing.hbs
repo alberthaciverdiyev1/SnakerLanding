@@ -1,0 +1,115 @@
+<div class="page-container page-pricing">
+  <div class="page-header text-center">
+    <span class="section-tag mono">{{t "pricing.label"}}</span>
+    <h1 class="page-title">{{t "pricing.title"}}</h1>
+    <p class="page-lead center-block">{{t "pricing.subtitle"}}</p>
+  </div>
+
+  <div class="site-container">
+    <!-- Pricing Cards Grid -->
+    <div class="pricing-tier-grid">
+      <!-- Free Plan -->
+      <div class="pricing-card free-plan">
+        <div class="pricing-card-header">
+          <h3 class="plan-name">{{t "pricing.freeName"}}</h3>
+          <p class="plan-desc">{{t "pricing.freeDesc"}}</p>
+          <div class="plan-price-wrap">
+            <span class="plan-amount font-mono">{{t "pricing.freePrice"}}</span>
+            <span class="plan-period">{{t "pricing.freePeriod"}}</span>
+          </div>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features-list">
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.freeFeat1"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.freeFeat2"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.freeFeat3"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.freeFeat4"}}</li>
+        </ul>
+        <div class="plan-cta-wrap">
+          <a href="/{{currentLang}}/demo?plan=free" class="btn btn-secondary btn-full">
+            <span>{{t "pricing.freeCta"}}</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Paid Plan -->
+      <div class="pricing-card paid-plan is-featured">
+        <div class="featured-badge font-mono">{{t "pricing.paidBadge"}}</div>
+        <div class="pricing-card-header">
+          <h3 class="plan-name">{{t "pricing.paidName"}}</h3>
+          <p class="plan-desc">{{t "pricing.paidDesc"}}</p>
+          <div class="plan-price-wrap">
+            <span class="plan-amount highlight font-mono">{{t "pricing.paidPrice"}}</span>
+            <span class="plan-period">{{t "pricing.paidPeriod"}}</span>
+          </div>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features-list">
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.paidFeat1"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.paidFeat2"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.paidFeat3"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.paidFeat4"}}</li>
+        </ul>
+        <div class="plan-cta-wrap">
+          <a href="/{{currentLang}}/demo?plan=paid" class="btn btn-primary btn-full">
+            <span>{{t "pricing.paidCta"}}</span>
+            <span class="btn-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Business Plan -->
+      <div class="pricing-card business-route">
+        <div class="pricing-card-header">
+          <h3 class="plan-name">Business</h3>
+          <p class="plan-desc">{{t "pricing.businessDesc"}}</p>
+          <div class="plan-price-wrap">
+            <span class="plan-amount font-mono">Bespoke</span>
+            <span class="plan-period">Direct agreement</span>
+          </div>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features-list">
+          <li class="plan-feature"><span class="feat-check">&check;</span> Dedicated architecture</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> Custom ERP & data integrations</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> Tailored styling requirements</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> High-volume reliability</li>
+        </ul>
+        <div class="plan-cta-wrap">
+          <a href="/{{currentLang}}/business" class="btn btn-secondary btn-full">
+            <span>{{t "pricing.businessCta"}}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14-Day Trial Callout Banner -->
+    <div class="trial-reassurance-box text-center">
+      <h3 class="trb-title">How the 14-day trial works</h3>
+      <p class="trb-desc center-block">
+        Start building your store with full access to custom domain connection, brand palettes, and card checkout. If you choose not to subscribe, your store smoothly transitions to the Free plan with WhatsApp purchasing.
+      </p>
+    </div>
+
+    <!-- Pricing FAQs -->
+    <div class="page-faq-section">
+      <div class="section-header-editorial text-center">
+        <h2 class="section-title">{{t "faq.title"}}</h2>
+      </div>
+
+      <div class="faq-accordion-wrap">
+        {{#each faqs}}
+        <details class="faq-item" {{#if @first}}open{{/if}}>
+          <summary class="faq-question">
+            <span class="faq-q-text">{{this.q}}</span>
+            <span class="faq-icon">&plus;</span>
+          </summary>
+          <div class="faq-answer">
+            <p>{{this.a}}</p>
+          </div>
+        </details>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

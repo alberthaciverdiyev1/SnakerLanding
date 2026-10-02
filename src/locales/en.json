@@ -1,152 +1,173 @@
 {
   "lang": "en",
   "meta": {
-    "title": "Snaker — Online selling, made simpler",
-    "description": "Simple and affordable online store platform."
+    "title": "Snaker — Build your store. Not your ecommerce system.",
+    "description": "Launch your own online store without paying for custom development from scratch. Start free or try full features for 14 days."
   },
   "nav": {
     "product": "Product",
-    "solutions": "Solutions",
     "themes": "Storefronts",
     "pricing": "Pricing",
+    "business": "Business",
+    "partners": "Partners",
     "faq": "FAQ",
+    "about": "About",
+    "contact": "Contact",
+    "demo": "Demo",
     "signIn": "Sign in",
     "createStore": "Create store",
-    "requestDemo": "Request demo"
+    "startFree": "Start free",
+    "requestDemo": "Request a demo"
   },
   "hero": {
-    "headlineMain": "Online selling,",
-    "headlineSub": "made simpler.",
-    "description": "Launch your store without complex tools. Products, payments, and orders in one place.",
-    "primaryCta": "Create store",
-    "secondaryCta": "Request demo",
-    "subtext": "Storefront · Products · Orders · Payments"
+    "badge": "ECOMMERCE PLATFORM",
+    "headlineMain": "Build your store.",
+    "headlineSub": "Not your ecommerce system.",
+    "description": "Creating ecommerce from scratch is expensive and unnecessary for most businesses. Snaker gives you the foundation to launch, manage and grow your own online store.",
+    "primaryCta": "Create your store",
+    "secondaryCta": "Explore Snaker",
+    "demoLink": "Request a demo",
+    "subtext": "Start free · 14-day full trial · Zero platform commission"
   },
-  "intro": {
-    "label": "THE APPROACH",
-    "title": "Running a store should be simple.",
-    "lead": "No complex software needed. Just focus on your products and sales."
+  "economics": {
+    "label": "THE RATIONALE",
+    "title": "Your business needs a store. It doesn't need another software project.",
+    "subtitle": "Why build ecommerce from scratch?",
+    "customTitle": "Building from scratch",
+    "custom1": "Months of custom frontend and backend development",
+    "custom2": "Ongoing hosting, security patches, and server bills",
+    "custom3": "Plugin dependencies that break after version updates",
+    "custom4": "Reliance on developers for minor price or layout edits",
+    "snakerTitle": "The Snaker foundation",
+    "snaker1": "Live storefront and catalog ready in hours, not months",
+    "snaker2": "Fully managed infrastructure, automatic SSL, and fast edge delivery",
+    "snaker3": "Reliable unified store engine without plugin chaos",
+    "snaker4": "Direct ownership over your catalog, branding, and customer orders"
   },
-  "pillars": {
-    "simplicityTitle": "Manage without code",
-    "simplicityBody": "Add products, update prices, and process orders with a single tap.",
-    "affordabilityTitle": "Clear, honest pricing",
-    "affordabilityBody": "No mandatory paid add-ons or hidden transaction commissions.",
-    "autonomyTitle": "Your independent brand",
-    "autonomyBody": "Your domain, your design, and direct payouts to your bank account."
+  "journey": {
+    "label": "THE JOURNEY",
+    "title": "From idea to live store.",
+    "step1Title": "Create",
+    "step1Desc": "Create your Snaker account in moments.",
+    "step2Title": "Choose",
+    "step2Desc": "Select a curated theme designed for your retail category.",
+    "step3Title": "Add",
+    "step3Desc": "Upload product photos, configure variants, and set prices.",
+    "step4Title": "Publish",
+    "step4Desc": "Your store is live and ready to take customer orders."
   },
-  "product": {
-    "label": "OPERATIONAL INTERFACE",
-    "title": "All your commerce in one place.",
-    "subtitle": "Orders, inventory, and customers fully in view.",
-    "tabOverview": "Overview",
-    "tabOrders": "Orders",
-    "tabProducts": "Products",
-    "tabCustomers": "Customers",
-    "tabThemes": "Storefront",
-    "tabSettings": "Settings",
-    "todaySales": "Today's sales",
-    "ordersToShip": "To ship",
-    "payoutStatus": "Bank deposit",
-    "recentOrdersTitle": "Recent orders",
-    "statusPaid": "Paid",
-    "statusShipped": "Shipped",
-    "statusDelivered": "Delivered",
-    "orderNum": "Order",
-    "customer": "Customer",
-    "items": "Items",
-    "status": "Status",
-    "total": "Total",
-    "stockLevelTitle": "Inventory status",
-    "inStock": "in stock",
-    "lowStock": "low stock"
+  "freePlan": {
+    "label": "RISK-FREE START",
+    "title": "Start free. Test without commitment.",
+    "lead": "Launch your storefront, add your catalog, and receive customer orders through WhatsApp before paying a single subscription.",
+    "feat1": "Complete online storefront on a Snaker subdomain",
+    "feat2": "Curated visual theme selection",
+    "feat3": "Direct WhatsApp ordering flow and communication",
+    "feat4": "Intuitive product and catalog management",
+    "cta": "Start free"
   },
-  "steps": {
-    "label": "ONBOARDING",
-    "title": "Start selling in 3 steps.",
-    "step1Num": "01",
-    "step1Title": "Set up your store",
-    "step1Desc": "Name your store and connect your domain.",
-    "step2Num": "02",
-    "step2Title": "Add your products",
-    "step2Desc": "Upload photos and set your prices.",
-    "step3Num": "03",
-    "step3Title": "Receive orders",
-    "step3Desc": "Accept payments and begin selling immediately."
+  "customizer": {
+    "label": "CUSTOMIZATION",
+    "title": "Your store shouldn't look like everyone else's.",
+    "description": "Free stores select a curated theme. Paid plans unlock brand color palettes and flexible layout components.",
+    "previewTitle": "STORE PREVIEW",
+    "controlsTitle": "LIVE CUSTOMIZATION",
+    "colorsLabel": "Brand Palette",
+    "headerLabel": "Header Alignment",
+    "gridLabel": "Product Grid",
+    "trialBadge": "Try deeper customization free for 14 days"
   },
-  "storefronts": {
-    "label": "SHOWCASE",
-    "title": "Storefronts built for your brand.",
-    "description": "Fast, fully responsive store themes for every device.",
-    "store1Name": "Kura Goods",
-    "store1Type": "Apparel & Textiles",
-    "store2Name": "Verdant Studio",
-    "store2Type": "Skincare & Botanicals",
-    "store3Name": "Mono Objects",
-    "store3Type": "Crafted Hardware",
-    "mobileReady": "Fast and responsive on all screens."
+  "tasks": {
+    "label": "OPERATIONS",
+    "title": "Built around daily retail tasks.",
+    "task1Title": "Add a product. Change a price. Keep selling.",
+    "task1Desc": "No cryptic database forms. Update catalog details in seconds from any device.",
+    "task2Title": "Your orders, where you expect them.",
+    "task2Desc": "Clear order statuses, fulfillment notes, and customer contacts in one place.",
+    "task3Title": "Make the store feel like yours.",
+    "task3Desc": "Shape your visual atmosphere using components engineered for high conversion."
   },
-  "performance": {
-    "label": "INFRASTRUCTURE",
-    "title": "Ultra-fast load times.",
-    "description": "Instant pages, zero lost sales. Infrastructure fully managed."
+  "scale": {
+    "label": "WHO IS SNAKER FOR",
+    "title": "Start where you are.",
+    "scale1Title": "First store & Instagram sellers",
+    "scale1Desc": "A professional digital storefront with effortless WhatsApp purchasing.",
+    "scale2Title": "Local shops & independent retail",
+    "scale2Desc": "Connect a custom domain and accept online card payments directly.",
+    "scale3Title": "Growing brands & large catalogs",
+    "scale3Desc": "Expand product count, automate fulfillment, or request tailored Business setups."
   },
   "pricing": {
-    "label": "PLANS",
-    "title": "Clear, straightforward plans.",
-    "subtitle": "Choose the level that fits your business.",
-    "starterName": "Starter",
-    "starterDesc": "For new merchants launching their catalog.",
-    "starterPrice": "Contact for pricing",
-    "starterFeat1": "Full online storefront",
-    "starterFeat2": "Up to 100 products",
-    "starterFeat3": "Custom domain connection",
-    "starterFeat4": "Direct payment integrations",
-    "starterFeat5": "Standard support",
-    "starterCta": "Get started",
-    "businessName": "Business",
-    "businessDesc": "For active retail stores scaling operations.",
-    "businessPrice": "Contact for pricing",
-    "businessBadge": "Recommended",
-    "businessFeat1": "Unlimited active products",
-    "businessFeat2": "Advanced inventory tracking",
-    "businessFeat3": "Automated order fulfillment",
-    "businessFeat4": "Discount & promo codes",
-    "businessFeat5": "Priority customer support",
-    "businessCta": "Get started",
-    "proName": "Pro",
-    "proDesc": "For established brands and high sales volume.",
-    "proPrice": "Contact for pricing",
-    "proFeat1": "Dedicated account manager",
-    "proFeat2": "ERP & accounting export",
-    "proFeat3": "Custom checkout styling",
-    "proFeat4": "Guaranteed SLA uptime",
-    "proFeat5": "Team permissions & roles",
-    "proCta": "Contact us"
+    "label": "PRICING",
+    "title": "Honest, predictable plans.",
+    "subtitle": "Start free, upgrade to subscription, or talk to us for specialized requirements.",
+    "freeName": "Free",
+    "freePrice": "$0",
+    "freePeriod": "forever",
+    "freeDesc": "Start selling with WhatsApp checkout and zero subscription commitment.",
+    "freeFeat1": "Storefront on Snaker subdomain",
+    "freeFeat2": "Theme foundation selection",
+    "freeFeat3": "WhatsApp order routing",
+    "freeFeat4": "Product & catalog manager",
+    "freeCta": "Start free",
+    "paidName": "Paid Plan",
+    "paidPrice": "Subscription",
+    "paidPeriod": "14-day free trial",
+    "paidBadge": "14-day trial",
+    "paidDesc": "Custom domain, direct payment checkout, and deeper visual customization.",
+    "paidFeat1": "Custom domain connection (.com, .store)",
+    "paidFeat2": "Custom brand colors & layout blocks",
+    "paidFeat3": "Direct card & digital wallet checkout",
+    "paidFeat4": "Advanced inventory and order tracking",
+    "paidCta": "Start 14-day trial",
+    "businessTitle": "Need something beyond standard plans?",
+    "businessDesc": "Snaker Business offers specialized ERP integrations, custom data exports, and dedicated volume architecture.",
+    "businessCta": "Talk to us"
   },
   "faq": {
     "label": "FAQ",
     "title": "Frequently asked questions.",
-    "subtitle": "Quick answers about store ownership and payments."
+    "subtitle": "Clear answers about store ownership, WhatsApp ordering, and payments."
   },
-  "demo": {
-    "label": "WALKTHROUGH",
-    "title": "See Snaker in action.",
-    "description": "Leave your details for a tailored walkthrough.",
-    "nameLabel": "Your name",
-    "emailLabel": "Your email",
-    "storeLabel": "Store or business name",
-    "sellingLabel": "What do you sell?",
-    "websiteLabel": "Current website or Instagram",
-    "submitBtn": "Request demo",
-    "submitting": "Submitting...",
-    "successMsg": "Thank you. Our team will reach out shortly."
+  "finalCta": {
+    "title": "Your store can start here.",
+    "subtitle": "Start free today, or try the full Snaker experience for 14 days.",
+    "btnFree": "Start free",
+    "btnTrial": "Try for 14 days",
+    "businessLink": "Business requirements? Talk to us."
   },
-  "cta": {
-    "title": "Launch your store today.",
-    "description": "Start selling online simply and affordably with Snaker.",
-    "primary": "Create store",
-    "secondary": "Request demo"
+  "themesPage": {
+    "title": "Curated Storefront Foundations",
+    "lead": "Snaker provides the reliable backend infrastructure. The visual atmosphere belongs to your brand.",
+    "note": "Free stores choose a theme. Paid plans allow custom palettes and layout components."
+  },
+  "businessPage": {
+    "title": "When standard plans aren't enough.",
+    "lead": "Direct collaboration for merchants with specialized technical needs, high order volumes, or unique ERP integrations.",
+    "cta": "Talk to us"
+  },
+  "partnersPage": {
+    "title": "Snaker Partner Ecosystem",
+    "lead": "An open network for creative agencies, technology developers, and logistics partners.",
+    "applyCta": "Apply to become a partner",
+    "agencyTitle": "Design & Development Agencies",
+    "agencyDesc": "Deliver high-performing stores to your clients without rebuilding ecommerce from scratch.",
+    "techTitle": "Technology & Payment Integrations",
+    "techDesc": "Integrate your SaaS or fintech solutions directly into the Snaker merchant workflow.",
+    "logisticsTitle": "Fulfillment & Carrier Networks",
+    "logisticsDesc": "Offer automated shipping and package fulfillment services to Snaker merchants."
+  },
+  "demoPage": {
+    "title": "See what your store could look like with Snaker.",
+    "lead": "Share a few details about your business. We will walk you through a tailored 15-minute demonstration."
+  },
+  "contactPage": {
+    "title": "Get in touch with Snaker.",
+    "lead": "Reach our team directly for product inquiries, Business partnerships, or general assistance."
+  },
+  "aboutPage": {
+    "title": "Ecommerce made simpler by design.",
+    "lead": "We help merchants launch professional online stores without the cost and risk of building software from scratch."
   },
   "footer": {
     "tagline": "A focused ecommerce platform built for modern retail operations.",

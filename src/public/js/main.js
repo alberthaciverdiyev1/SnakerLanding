@@ -1,16 +1,44 @@
 /**
- * Snaker - High-Performance Promotional Website
- * Motion System, Snake Progress Path, & Conversion Form Handlers
+ * Snaker — Interactive Client Engine
+ * Light/Dark Mode Toggle | Live Store Customizer | Continuous Snake Scroll Reveal | AJAX Forms
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // 1. Sticky Navbar Transition on Scroll
+  // --------------------------------------------------------------------------
+  // 1. Light & Dark Mode System
+  // --------------------------------------------------------------------------
+  const themeToggle = document.getElementById('theme-toggle');
+  const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    try {
+      localStorage.setItem('snaker-theme', theme);
+    } catch (e) {}
+  };
+
+  const toggleTheme = () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+  };
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+  }
+  if (mobileThemeToggle) {
+    mobileThemeToggle.addEventListener('click', toggleTheme);
+  }
+
+  // --------------------------------------------------------------------------
+  // 2. Sticky Navbar Transition
+  // --------------------------------------------------------------------------
   const siteHeader = document.getElementById('site-header');
   const handleScroll = () => {
     if (!siteHeader) return;
-    if (window.scrollY > 40) {
+    if (window.scrollY > 30) {
       siteHeader.classList.add('scrolled');
     } else {
       siteHeader.classList.remove('scrolled');
@@ -19,7 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // 2. Mobile Navigation Toggle
+  // --------------------------------------------------------------------------
+  // 3. Mobile Navigation Drawer
+  // --------------------------------------------------------------------------
   const mobileToggle = document.getElementById('mobile-toggle');
   const mainNav = document.getElementById('main-nav');
   if (mobileToggle && mainNav) {
@@ -36,44 +66,79 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Hero Snake Mouse Parallax & Radial Glow (Desktop Only)
-  const heroSection = document.getElementById('hero');
-  const snakeWrapper = document.getElementById('snake-image-wrapper');
-  const cursorGlow = document.getElementById('hero-cursor-glow');
+  // --------------------------------------------------------------------------
+  // 4. Interactive Live Store Customizer Mockup (Brief Section 20)
+  // --------------------------------------------------------------------------
+  const previewCanvas = document.getElementById('customizer-preview-canvas');
+  const customizerWidget = document.getElementById('customizer-widget');
 
-  if (heroSection && snakeWrapper && !prefersReducedMotion && window.innerWidth > 1024) {
-    let ticking = false;
+  if (previewCanvas && customizerWidget) {
+    // Color Palette Selector
+    const colorBtns = customizerWidget.querySelectorAll('.cw-color-btn');
+    colorBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        colorBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-    heroSection.addEventListener('mousemove', (e) => {
-      if (ticking) return;
-      ticking = true;
-
-      requestAnimationFrame(() => {
-        const rect = heroSection.getBoundingClientRect();
-        const mouseX = e.clientX - rect.left;
-        const mouseY = e.clientY - rect.top;
-
-        if (cursorGlow) {
-          cursorGlow.style.left = `${mouseX}px`;
-          cursorGlow.style.top = `${mouseY}px`;
-          cursorGlow.classList.add('active');
-        }
-
-        const xOffset = ((mouseX / rect.width) - 0.5) * -18;
-        const yOffset = ((mouseY / rect.height) - 0.5) * -14;
-        snakeWrapper.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
-
-        ticking = false;
+        const colorClass = btn.getAttribute('data-color');
+        previewCanvas.classList.remove('theme-emerald', 'theme-obsidian', 'theme-amber', 'theme-clay');
+        previewCanvas.classList.add(colorClass);
       });
     });
 
-    heroSection.addEventListener('mouseleave', () => {
-      if (cursorGlow) cursorGlow.classList.remove('active');
-      snakeWrapper.style.transform = '';
+    // Header Alignment Selector
+    const headerBtns = customizerWidget.querySelectorAll('[data-header]');
+    headerBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        headerBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const headerClass = btn.getAttribute('data-header');
+        previewCanvas.classList.remove('align-left', 'align-center', 'align-split');
+        previewCanvas.classList.add(headerClass);
+      });
+    });
+
+    // Product Grid Columns Selector
+    const gridBtns = customizerWidget.querySelectorAll('[data-grid]');
+    gridBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        gridBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const gridClass = btn.getAttribute('data-grid');
+        previewCanvas.classList.remove('grid-2col', 'grid-3col');
+        previewCanvas.classList.add(gridClass);
+      });
     });
   }
 
-  // 4. Reusable Scroll Reveal System ([data-reveal])
+  // --------------------------------------------------------------------------
+  // 5. Continuous Snake Scroll Animation (Brief Section 8 & 9)
+  // --------------------------------------------------------------------------
+  const continuousSnakePath = document.getElementById('snake-continuous-path');
+  if (continuousSnakePath && !prefersReducedMotion) {
+    const totalLength = 3500;
+    continuousSnakePath.style.strokeDasharray = totalLength;
+    continuousSnakePath.style.strokeDashoffset = totalLength;
+
+    const onScrollSnake = () => {
+      const scrollY = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      
+      const scrollFraction = Math.min(Math.max(scrollY / (docHeight * 0.75), 0), 1);
+      const drawLength = totalLength * (1 - scrollFraction);
+      continuousSnakePath.style.strokeDashoffset = drawLength;
+    };
+
+    window.addEventListener('scroll', onScrollSnake, { passive: true });
+    onScrollSnake();
+  }
+
+  // --------------------------------------------------------------------------
+  // 6. Scroll Reveal System ([data-reveal])
+  // --------------------------------------------------------------------------
   const revealElements = document.querySelectorAll('[data-reveal]');
   if (revealElements.length > 0) {
     if (prefersReducedMotion) {
@@ -87,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       }, {
-        threshold: 0.12,
+        threshold: 0.1,
         rootMargin: '0px 0px -40px 0px'
       });
 
@@ -95,79 +160,63 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 5. Animated Snake Progress Path (Connecting Steps 01 → 02 → 03)
-  const snakeProgress = document.getElementById('snake-progress-path');
-  const stepsTimeline = document.getElementById('steps-timeline');
+  // --------------------------------------------------------------------------
+  // 7. Generic AJAX Form Handler for Demo & Contact Forms
+  // --------------------------------------------------------------------------
+  const setupAjaxForm = (formId, feedbackId) => {
+    const form = document.getElementById(formId);
+    const feedback = document.getElementById(feedbackId);
+    if (!form || !feedback) return;
 
-  if (snakeProgress && stepsTimeline && !prefersReducedMotion) {
-    const pathLength = 800;
-    snakeProgress.style.strokeDasharray = pathLength;
-    snakeProgress.style.strokeDashoffset = pathLength;
-
-    const timelineObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          snakeProgress.style.strokeDashoffset = '0';
-          timelineObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.25 });
-
-    timelineObserver.observe(stepsTimeline);
-  }
-
-  // 6. Demo Request Form AJAX Handler
-  const demoForm = document.getElementById('demo-request-form');
-  const demoFeedback = document.getElementById('demo-form-feedback');
-
-  if (demoForm && demoFeedback) {
-    demoForm.addEventListener('submit', async (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const submitBtn = demoForm.querySelector('button[type="submit"]');
+      const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
 
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>Sending request...</span>';
-      demoFeedback.textContent = '';
-      demoFeedback.className = 'form-feedback';
+      submitBtn.innerHTML = '<span>Sending...</span>';
+      feedback.textContent = '';
+      feedback.className = 'form-feedback';
 
-      const formData = {
-        name: demoForm.name.value.trim(),
-        email: demoForm.email.value.trim(),
-        store_name: demoForm.store_name.value.trim(),
-        selling_category: demoForm.selling_category ? demoForm.selling_category.value.trim() : '',
-        website: demoForm.website ? demoForm.website.value.trim() : '',
-        lang: (demoForm.lang && demoForm.lang.value) ? demoForm.lang.value : (document.documentElement.lang || 'az')
-      };
+      const formData = {};
+      new FormData(form).forEach((value, key) => {
+        formData[key] = value.trim();
+      });
 
       try {
-        const response = await fetch('/request-demo', {
+        const response = await fetch(form.action, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
         });
 
         const data = await response.json();
-
         if (response.ok && data.success) {
-          demoFeedback.textContent = '✓ ' + data.message;
-          demoFeedback.classList.add('success');
-          demoForm.reset();
+          feedback.textContent = '✓ ' + data.message;
+          feedback.classList.add('success');
+          form.reset();
         } else {
-          demoFeedback.textContent = data.error || 'Failed to submit request. Please verify fields.';
-          demoFeedback.classList.add('error');
+          feedback.textContent = data.error || 'Failed to submit. Please check your information.';
+          feedback.classList.add('error');
         }
       } catch (err) {
-        demoFeedback.textContent = 'Network error. Please check your internet connection.';
-        demoFeedback.classList.add('error');
+        feedback.textContent = 'Network error. Please check your internet connection.';
+        feedback.classList.add('error');
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
       }
     });
-  }
+  };
 
-  // 7. Interactive Single FAQ Accordion
+  setupAjaxForm('demo-page-form', 'demo-page-feedback');
+  setupAjaxForm('business-contact-form', 'biz-form-feedback');
+  setupAjaxForm('partner-apply-form', 'partner-form-feedback');
+  setupAjaxForm('general-contact-form', 'contact-form-feedback');
+
+  // --------------------------------------------------------------------------
+  // 8. FAQ Accordion Single-Item Open
+  // --------------------------------------------------------------------------
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     item.addEventListener('toggle', () => {

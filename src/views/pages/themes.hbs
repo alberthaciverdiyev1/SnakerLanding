@@ -1,0 +1,104 @@
+<div class="page-container page-themes">
+  <div class="page-header text-center">
+    <span class="section-tag mono">DESIGN GALLERY</span>
+    <h1 class="page-title">{{t "themesPage.title"}}</h1>
+    <p class="page-lead center-block">{{t "themesPage.lead"}}</p>
+    <div class="page-subline-note font-mono">{{t "themesPage.note"}}</div>
+  </div>
+
+  <div class="site-container">
+    <div class="themes-gallery-grid">
+      <!-- Theme 1: Kura Goods -->
+      <div class="theme-card-item">
+        {{> store-preview
+          themeId="kura"
+          themeClass="sf-theme-warm"
+          name="Kura Goods"
+          category="Fashion & Apparel"
+          domain="kura.snaker.store"
+          heroHeadline="Autonomic Wool Collection"
+          item1Title="Heavy Wool Trench"
+          item1Price="$185.00"
+          item2Title="Knit Scarf - Clay"
+          item2Price="$54.00"
+        }}
+        <div class="theme-card-footer">
+          <div class="tcf-meta">
+            <h3 class="tcf-name">Kura</h3>
+            <span class="tcf-cat">Fashion, Apparel, Editorial</span>
+          </div>
+          <a href="/{{currentLang}}/pricing" class="btn btn-secondary btn-sm">Use theme</a>
+        </div>
+      </div>
+
+      <!-- Theme 2: Verdant Studio -->
+      <div class="theme-card-item">
+        {{> store-preview
+          themeId="verdant"
+          themeClass="sf-theme-clean"
+          name="Verdant Studio"
+          category="Botanicals & Skincare"
+          domain="verdant.snaker.store"
+          heroHeadline="Pure Botanical Formulations"
+          item1Title="Night Extract Oil"
+          item1Price="$48.00"
+          item2Title="Mineral Clay Mask"
+          item2Price="$36.00"
+        }}
+        <div class="theme-card-footer">
+          <div class="tcf-meta">
+            <h3 class="tcf-name">Verdant</h3>
+            <span class="tcf-cat">Skincare, Wellness, Organic</span>
+          </div>
+          <a href="/{{currentLang}}/pricing" class="btn btn-secondary btn-sm">Use theme</a>
+        </div>
+      </div>
+
+      <!-- Theme 3: Mono Objects -->
+      <div class="theme-card-item">
+        {{> store-preview
+          themeId="mono"
+          themeClass="sf-theme-mono"
+          name="Mono Objects"
+          category="Crafted Hardware"
+          domain="mono.snaker.store"
+          heroHeadline="Solid Brass & Slate Objects"
+          item1Title="Desk Organizer"
+          item1Price="$72.00"
+          item2Title="Catchall Dish"
+          item2Price="$42.00"
+        }}
+        <div class="theme-card-footer">
+          <div class="tcf-meta">
+            <h3 class="tcf-name">Mono</h3>
+            <span class="tcf-cat">Hardware, Objects, Minimal</span>
+          </div>
+          <a href="/{{currentLang}}/pricing" class="btn btn-secondary btn-sm">Use theme</a>
+        </div>
+      </div>
+
+      <!-- Theme 4: Atelier Earth -->
+      <div class="theme-card-item">
+        {{> store-preview
+          themeId="atelier"
+          themeClass="sf-theme-warm"
+          name="Atelier Earth"
+          category="Ceramics & Homeware"
+          domain="atelier.snaker.store"
+          heroHeadline="Studio Pottery & Stoneware"
+          item1Title="Handmade Mug"
+          item1Price="$38.00"
+          item2Title="Vessel No. 4"
+          item2Price="$95.00"
+        }}
+        <div class="theme-card-footer">
+          <div class="tcf-meta">
+            <h3 class="tcf-name">Atelier</h3>
+            <span class="tcf-cat">Ceramics, Homeware, Studio</span>
+          </div>
+          <a href="/{{currentLang}}/pricing" class="btn btn-secondary btn-sm">Use theme</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

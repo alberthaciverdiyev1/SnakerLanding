@@ -19,7 +19,10 @@ app.engine('hbs', engine({
   extname: '.hbs',
   defaultLayout: 'main',
   layoutsDir: path.join(__dirname, 'views/layouts'),
-  partialsDir: path.join(__dirname, 'views/partials'),
+  partialsDir: [
+    path.join(__dirname, 'views/partials'),
+    path.join(__dirname, 'views/components')
+  ],
   helpers: {
     t: function(key, options) {
       const lang = (options && options.data && options.data.root && options.data.root.currentLang) || 'az';
@@ -36,6 +39,8 @@ app.engine('hbs', engine({
       return val;
     },
     eq: (a, b) => a === b,
+    and: (a, b) => a && b,
+    or: (a, b) => a || b,
     year: () => 2026
   }
 }));
@@ -54,7 +59,7 @@ app.use(express.json());
 // Routes
 app.use('/', routes);
 
-// 404 Handler
+// 404 Handler - redirect to home of default language
 app.use((req, res) => {
   res.redirect('/az');
 });

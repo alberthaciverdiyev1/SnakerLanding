@@ -1,0 +1,722 @@
+<!-- ==========================================================================
+     SECTION 1: HERO (Art-Directed Snake & Editorial Master Slogan)
+     ========================================================================== -->
+<section class="hero-section" id="hero">
+  <!-- Art-directed snake photo backdrop -->
+  <div class="hero-snake-backdrop" id="hero-snake-backdrop" aria-hidden="true">
+    <div class="snake-radial-glow"></div>
+    <div class="snake-image-wrapper" id="snake-image-wrapper">
+      <img src="/images/snaker-snake.jpg" alt="" class="snake-hero-img" id="snake-hero-img" loading="eager" fetchpriority="high">
+    </div>
+    <div class="snake-gradient-overlay"></div>
+  </div>
+
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-eyebrow" data-entrance="eyebrow">
+        <span class="eyebrow-pip"></span>
+        <span class="eyebrow-text mono">{{t "hero.badge"}}</span>
+      </div>
+
+      <h1 class="hero-headline" data-entrance="headline">
+        <span class="reveal-line">
+          <span class="reveal-inner">{{t "hero.headlineMain"}}</span>
+        </span>
+        <span class="reveal-line">
+          <span class="reveal-inner highlight-brand">{{t "hero.headlineSub"}}</span>
+        </span>
+      </h1>
+
+      <p class="hero-lead" data-entrance="lead">
+        {{t "hero.description"}}
+      </p>
+
+      <div class="hero-cta-group" data-entrance="buttons">
+        <a href="/{{currentLang}}/pricing#free" class="btn btn-primary btn-large">
+          <span>{{t "hero.primaryCta"}}</span>
+          <span class="btn-arrow">&rarr;</span>
+        </a>
+        <a href="#economics" class="btn btn-secondary btn-large">
+          <span>{{t "hero.secondaryCta"}}</span>
+        </a>
+        <a href="/{{currentLang}}/demo" class="hero-text-link">
+          <span>{{t "hero.demoLink"}}</span>
+          <span class="btn-arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="hero-subline-pill" data-entrance="reassurance">
+        <span class="hero-subline-text mono">{{t "hero.subtext"}}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Continuous Snake SVG Path Overlay across page -->
+<div class="snake-narrator-tracker" aria-hidden="true">
+  <svg class="snake-continuous-svg" viewBox="0 0 1440 2800" fill="none" preserveAspectRatio="none">
+    <path id="snake-continuous-path" d="M 1250,50 C 1350,350 950,550 720,700 C 450,880 150,1100 280,1400 C 400,1680 1150,1800 950,2150 C 750,2450 350,2600 500,2780" stroke="var(--brand-bright)" stroke-width="2" stroke-linecap="round" stroke-dasharray="3500" stroke-dashoffset="3500" opacity="0.35"/>
+  </svg>
+</div>
+
+<!-- ==========================================================================
+     SECTION 2: WHY BUILD FROM SCRATCH? (Economic Contrast)
+     ========================================================================== -->
+<section class="section section-economics" id="economics">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "economics.label"}}</span>
+      <h2 class="section-title editorial-display">
+        {{t "economics.title"}}
+      </h2>
+      <p class="section-description center-block">
+        {{t "economics.subtitle"}}
+      </p>
+    </div>
+
+    <div class="economics-comparison-grid" data-reveal="scale">
+      <!-- Side A: Building from scratch -->
+      <div class="econ-card custom-build">
+        <div class="econ-card-header">
+          <span class="econ-pill muted">{{t "economics.customTitle"}}</span>
+          <h3 class="econ-heading">Months of overhead</h3>
+        </div>
+        <ul class="econ-list">
+          <li><span class="econ-bullet-dot">&times;</span> {{t "economics.custom1"}}</li>
+          <li><span class="econ-bullet-dot">&times;</span> {{t "economics.custom2"}}</li>
+          <li><span class="econ-bullet-dot">&times;</span> {{t "economics.custom3"}}</li>
+          <li><span class="econ-bullet-dot">&times;</span> {{t "economics.custom4"}}</li>
+        </ul>
+      </div>
+
+      <!-- Side B: The Snaker Foundation -->
+      <div class="econ-card snaker-build">
+        <div class="econ-card-header">
+          <span class="econ-pill brand">{{t "economics.snakerTitle"}}</span>
+          <h3 class="econ-heading">Ready to sell today</h3>
+        </div>
+        <ul class="econ-list">
+          <li><span class="econ-bullet-dot brand">&check;</span> {{t "economics.snaker1"}}</li>
+          <li><span class="econ-bullet-dot brand">&check;</span> {{t "economics.snaker2"}}</li>
+          <li><span class="econ-bullet-dot brand">&check;</span> {{t "economics.snaker3"}}</li>
+          <li><span class="econ-bullet-dot brand">&check;</span> {{t "economics.snaker4"}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION 3: CONTINUOUS JOURNEY (Create -> Choose -> Add -> Publish)
+     ========================================================================== -->
+<section class="section section-journey" id="journey">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "journey.label"}}</span>
+      <h2 class="section-title">
+        {{t "journey.title"}}
+      </h2>
+    </div>
+
+    <div class="journey-timeline" id="journey-timeline">
+      <div class="journey-step-item" data-reveal="left">
+        <div class="journey-step-num mono">01</div>
+        <h3 class="journey-step-title">{{t "journey.step1Title"}}</h3>
+        <p class="journey-step-desc">{{t "journey.step1Desc"}}</p>
+      </div>
+
+      <div class="journey-step-arrow">&rarr;</div>
+
+      <div class="journey-step-item" data-reveal="scale">
+        <div class="journey-step-num mono">02</div>
+        <h3 class="journey-step-title">{{t "journey.step2Title"}}</h3>
+        <p class="journey-step-desc">{{t "journey.step2Desc"}}</p>
+      </div>
+
+      <div class="journey-step-arrow">&rarr;</div>
+
+      <div class="journey-step-item" data-reveal="scale">
+        <div class="journey-step-num mono">03</div>
+        <h3 class="journey-step-title">{{t "journey.step3Title"}}</h3>
+        <p class="journey-step-desc">{{t "journey.step3Desc"}}</p>
+      </div>
+
+      <div class="journey-step-arrow">&rarr;</div>
+
+      <div class="journey-step-item" data-reveal="right">
+        <div class="journey-step-num mono">04</div>
+        <h3 class="journey-step-title">{{t "journey.step4Title"}}</h3>
+        <p class="journey-step-desc">{{t "journey.step4Desc"}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION 4: STRATEGIC ENTRY — START FREE WITH WHATSAPP FLOW
+     ========================================================================== -->
+<section class="section section-free-tier" id="free-start">
+  <div class="site-container">
+    <div class="free-tier-panel" data-reveal>
+      <div class="free-tier-text">
+        <span class="section-tag brand-accent">{{t "freePlan.label"}}</span>
+        <h2 class="free-tier-heading">{{t "freePlan.title"}}</h2>
+        <p class="free-tier-lead">{{t "freePlan.lead"}}</p>
+
+        <ul class="free-features-list">
+          <li><span class="feat-check">&check;</span> {{t "freePlan.feat1"}}</li>
+          <li><span class="feat-check">&check;</span> {{t "freePlan.feat2"}}</li>
+          <li><span class="feat-check">&check;</span> {{t "freePlan.feat3"}}</li>
+          <li><span class="feat-check">&check;</span> {{t "freePlan.feat4"}}</li>
+        </ul>
+
+        <div class="free-actions">
+          <a href="/{{currentLang}}/pricing#free" class="btn btn-primary btn-large">
+            <span>{{t "freePlan.cta"}}</span>
+            <span class="btn-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- WhatsApp Flow Graphic Mockup -->
+      <div class="free-tier-graphic">
+        <div class="whatsapp-flow-card">
+          <div class="wfc-header">
+            <span class="wfc-dot"></span>
+            <span class="wfc-title mono">WhatsApp Order Routing</span>
+          </div>
+          <div class="wfc-body">
+            <div class="wfc-msg-bubble incoming">
+              <span class="msg-author">Customer &bull; Store Checkout</span>
+              <p class="msg-text">
+                <strong>New Order #1042</strong><br>
+                1x Autonomic Wool Overshirt ($185.00)<br>
+                1x Knit Wool Beanie ($38.00)<br>
+                <em>Total: $223.00 &bull; Ready to fulfill</em>
+              </p>
+              <span class="msg-time mono">14:28 &check;&check;</span>
+            </div>
+            <div class="wfc-msg-bubble outgoing">
+              <p class="msg-text">
+                Thank you! Your order is received and will ship this afternoon.
+              </p>
+              <span class="msg-time mono">14:29 &check;&check;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION 5: INTERACTIVE CUSTOMIZATION WIDGET
+     ========================================================================== -->
+<section class="section section-customizer" id="customization">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "customizer.label"}}</span>
+      <h2 class="section-title">{{t "customizer.title"}}</h2>
+      <p class="section-description center-block">{{t "customizer.description"}}</p>
+    </div>
+
+    <!-- Live Customization Playground -->
+    <div class="customizer-widget-wrapper" id="customizer-widget" data-reveal="scale">
+      <!-- Left: Interactive Live Store Mockup -->
+      <div class="cw-preview-side">
+        <div class="cw-preview-label font-mono">{{t "customizer.previewTitle"}}</div>
+        <div class="cw-store-canvas theme-emerald align-left grid-2col" id="customizer-preview-canvas">
+          <div class="cw-mock-header">
+            <span class="cw-brand-name">AURA OBJECTS</span>
+            <div class="cw-mock-nav">
+              <span>Catalog</span>
+              <span>About</span>
+              <span class="cw-mock-cart font-mono">Cart (2)</span>
+            </div>
+          </div>
+
+          <div class="cw-mock-banner">
+            <span class="cw-banner-tag font-mono">Seasonal Collection</span>
+            <div class="cw-banner-title">Crafted for Daily Use</div>
+          </div>
+
+          <div class="cw-mock-grid">
+            <div class="cw-mock-card">
+              <div class="cw-mock-img-box"></div>
+              <span class="cw-card-name">Brass Vessel</span>
+              <span class="cw-card-price font-mono">$68.00</span>
+            </div>
+            <div class="cw-mock-card">
+              <div class="cw-mock-img-box"></div>
+              <span class="cw-card-name">Stone Tray</span>
+              <span class="cw-card-price font-mono">$42.00</span>
+            </div>
+            <div class="cw-mock-card cw-card-extra">
+              <div class="cw-mock-img-box"></div>
+              <span class="cw-card-name">Linen Cover</span>
+              <span class="cw-card-price font-mono">$34.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Real-Time Customization Controls -->
+      <div class="cw-controls-side">
+        <div class="cw-controls-header">
+          <span class="cw-controls-label font-mono">{{t "customizer.controlsTitle"}}</span>
+          <span class="cw-trial-pill font-mono">{{t "customizer.trialBadge"}}</span>
+        </div>
+
+        <!-- Color Palette Options -->
+        <div class="cw-control-group">
+          <label class="cw-group-title">{{t "customizer.colorsLabel"}}</label>
+          <div class="cw-palette-selector">
+            <button class="cw-color-btn active" data-color="theme-emerald" aria-label="Emerald Palette">
+              <span class="color-swatch" style="background: #119447;"></span>
+              <span>Emerald</span>
+            </button>
+            <button class="cw-color-btn" data-color="theme-obsidian" aria-label="Obsidian Palette">
+              <span class="color-swatch" style="background: #1e293b;"></span>
+              <span>Obsidian</span>
+            </button>
+            <button class="cw-color-btn" data-color="theme-amber" aria-label="Amber Palette">
+              <span class="color-swatch" style="background: #d97706;"></span>
+              <span>Amber</span>
+            </button>
+            <button class="cw-color-btn" data-color="theme-clay" aria-label="Clay Palette">
+              <span class="color-swatch" style="background: #b45309;"></span>
+              <span>Clay</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Header Alignment Controls -->
+        <div class="cw-control-group">
+          <label class="cw-group-title">{{t "customizer.headerLabel"}}</label>
+          <div class="cw-toggle-group">
+            <button class="cw-toggle-btn active" data-header="align-left">Left</button>
+            <button class="cw-toggle-btn" data-header="align-center">Center</button>
+            <button class="cw-toggle-btn" data-header="align-split">Split</button>
+          </div>
+        </div>
+
+        <!-- Product Grid Controls -->
+        <div class="cw-control-group">
+          <label class="cw-group-title">{{t "customizer.gridLabel"}}</label>
+          <div class="cw-toggle-group">
+            <button class="cw-toggle-btn active" data-grid="grid-2col">2 Columns</button>
+            <button class="cw-toggle-btn" data-grid="grid-3col">3 Columns</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION 6: TASK-FOCUSED PRODUCT MANAGEMENT
+     ========================================================================== -->
+<section class="section section-product-tasks" id="product">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "tasks.label"}}</span>
+      <h2 class="section-title">{{t "tasks.title"}}</h2>
+    </div>
+
+    <!-- 3 Task Callout Panels -->
+    <div class="tasks-grid">
+      <div class="task-card" data-reveal="left">
+        <span class="task-num mono">01</span>
+        <h3 class="task-heading">{{t "tasks.task1Title"}}</h3>
+        <p class="task-desc">{{t "tasks.task1Desc"}}</p>
+      </div>
+
+      <div class="task-card" data-reveal="scale">
+        <span class="task-num mono">02</span>
+        <h3 class="task-heading">{{t "tasks.task2Title"}}</h3>
+        <p class="task-desc">{{t "tasks.task2Desc"}}</p>
+      </div>
+
+      <div class="task-card" data-reveal="right">
+        <span class="task-num mono">03</span>
+        <h3 class="task-heading">{{t "tasks.task3Title"}}</h3>
+        <p class="task-desc">{{t "tasks.task3Desc"}}</p>
+      </div>
+    </div>
+
+    <!-- Realistic Operational Dashboard Interface Preview -->
+    <div class="dashboard-mockup-wrapper" data-reveal="scale">
+      <div class="dashboard-window">
+        <div class="dashboard-topbar">
+          <div class="window-controls">
+            <span class="win-dot close"></span>
+            <span class="win-dot min"></span>
+            <span class="win-dot expand"></span>
+          </div>
+          <div class="dashboard-tabs">
+            <span class="dash-tab active">Overview</span>
+            <span class="dash-tab">Orders</span>
+            <span class="dash-tab">Products</span>
+            <span class="dash-tab">Themes</span>
+            <span class="dash-tab">Settings</span>
+          </div>
+          <div class="dash-user-badge">
+            <span class="user-avatar-initial">S</span>
+            <span class="user-store-name">Store Admin</span>
+          </div>
+        </div>
+
+        <div class="dashboard-body">
+          <div class="dashboard-metrics-grid">
+            <div class="metric-card">
+              <span class="metric-label">Today's Sales</span>
+              <div class="metric-row">
+                <span class="metric-value font-mono">$4,280.00</span>
+                <span class="metric-delta positive">+18.4%</span>
+              </div>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">To Fulfill</span>
+              <div class="metric-row">
+                <span class="metric-value font-mono">12 orders</span>
+                <span class="metric-sublabel">Awaiting dispatch</span>
+              </div>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Bank Payout</span>
+              <div class="metric-row">
+                <span class="metric-value font-mono">$1,840.50</span>
+                <span class="metric-sublabel">Direct transfer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-workspace-grid">
+            <div class="dash-panel orders-panel">
+              <div class="panel-header">
+                <h4 class="panel-title">Recent Orders</h4>
+                <span class="panel-badge">Live feed</span>
+              </div>
+              <div class="orders-table-wrapper">
+                <table class="dash-table">
+                  <thead>
+                    <tr>
+                      <th>Order</th>
+                      <th>Customer</th>
+                      <th>Items</th>
+                      <th>Status</th>
+                      <th class="text-right">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="font-mono">#1084</td>
+                      <td>Leyla Aliyeva</td>
+                      <td>2 items</td>
+                      <td><span class="badge-status status-paid">Paid</span></td>
+                      <td class="text-right font-mono">$124.00</td>
+                    </tr>
+                    <tr>
+                      <td class="font-mono">#1083</td>
+                      <td>Murad Hasanov</td>
+                      <td>1 item</td>
+                      <td><span class="badge-status status-shipped">Shipped</span></td>
+                      <td class="text-right font-mono">$68.50</td>
+                    </tr>
+                    <tr>
+                      <td class="font-mono">#1082</td>
+                      <td>Elvin Mammadov</td>
+                      <td>3 items</td>
+                      <td><span class="badge-status status-delivered">Delivered</span></td>
+                      <td class="text-right font-mono">$215.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="dash-panel inventory-panel">
+              <div class="panel-header">
+                <h4 class="panel-title">Stock Levels</h4>
+                <span class="panel-badge">Tracked</span>
+              </div>
+              <div class="inventory-items-list">
+                <div class="inv-item">
+                  <div class="inv-info">
+                    <span class="inv-name">Organic Honey Balm</span>
+                    <span class="inv-sku font-mono">SKU-2041</span>
+                  </div>
+                  <span class="inv-qty in-stock font-mono">48 in stock</span>
+                </div>
+                <div class="inv-item">
+                  <div class="inv-info">
+                    <span class="inv-name">Linen Overshirt</span>
+                    <span class="inv-sku font-mono">SKU-1092</span>
+                  </div>
+                  <span class="inv-qty low-stock font-mono">6 low stock</span>
+                </div>
+                <div class="inv-item">
+                  <div class="inv-info">
+                    <span class="inv-name">Ceramic Pour-over</span>
+                    <span class="inv-sku font-mono">SKU-3380</span>
+                  </div>
+                  <span class="inv-qty in-stock font-mono">32 in stock</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION 7: STOREFRONT SHOWCASE (Modular Replaceable Architecture)
+     ========================================================================== -->
+<section class="section section-storefronts" id="storefronts">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "storefronts.label"}}</span>
+      <h2 class="section-title">{{t "storefronts.title"}}</h2>
+      <p class="section-description center-block">{{t "storefronts.description"}}</p>
+    </div>
+
+    <div class="storefronts-showcase-row">
+      <!-- Store 1: Kura Goods (Fashion) -->
+      {{> store-preview
+        themeId="kura"
+        themeClass="sf-theme-warm"
+        name="Kura Goods"
+        category="Apparel & Textiles"
+        domain="kura.snaker.store"
+        heroHeadline="Autonomic Wool Collection"
+        item1Title="Heavy Wool Trench"
+        item1Price="$185.00"
+        item2Title="Knit Scarf - Clay"
+        item2Price="$54.00"
+      }}
+
+      <!-- Store 2: Verdant Studio (Botanicals) -->
+      {{> store-preview
+        themeId="verdant"
+        themeClass="sf-theme-clean"
+        name="Verdant Studio"
+        category="Botanical Skincare"
+        domain="verdant.snaker.store"
+        heroHeadline="Pure Botanical Formulations"
+        item1Title="Night Extract Oil"
+        item1Price="$48.00"
+        item2Title="Mineral Clay Mask"
+        item2Price="$36.00"
+      }}
+
+      <!-- Store 3: Mono Objects (Hardware) -->
+      {{> store-preview
+        themeId="mono"
+        themeClass="sf-theme-mono"
+        name="Mono Objects"
+        category="Machined Hardware"
+        domain="mono.snaker.store"
+        heroHeadline="Solid Brass & Slate Objects"
+        item1Title="Desk Organizer"
+        item1Price="$72.00"
+        item2Title="Catchall Dish"
+        item2Price="$42.00"
+      }}
+    </div>
+
+    <div class="storefront-cta-row text-center" data-reveal>
+      <a href="/{{currentLang}}/themes" class="btn btn-secondary">
+        <span>Browse all storefront themes &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION 8: SCALE & WHO SNAKER IS FOR
+     ========================================================================== -->
+<section class="section section-scale" id="scale">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "scale.label"}}</span>
+      <h2 class="section-title">{{t "scale.title"}}</h2>
+    </div>
+
+    <div class="scale-stages-grid" data-reveal>
+      <div class="scale-card">
+        <span class="scale-icon-mark font-mono">01</span>
+        <h3 class="scale-title">{{t "scale.scale1Title"}}</h3>
+        <p class="scale-desc">{{t "scale.scale1Desc"}}</p>
+      </div>
+
+      <div class="scale-card">
+        <span class="scale-icon-mark font-mono">02</span>
+        <h3 class="scale-title">{{t "scale.scale2Title"}}</h3>
+        <p class="scale-desc">{{t "scale.scale2Desc"}}</p>
+      </div>
+
+      <div class="scale-card">
+        <span class="scale-icon-mark font-mono">03</span>
+        <h3 class="scale-title">{{t "scale.scale3Title"}}</h3>
+        <p class="scale-desc">{{t "scale.scale3Desc"}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION 9: PRICING (Free -> Subscription with 14-day trial -> Business)
+     ========================================================================== -->
+<section class="section section-pricing" id="pricing">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag mono">{{t "pricing.label"}}</span>
+      <h2 class="section-title text-contrast">{{t "pricing.title"}}</h2>
+      <p class="section-description center-block text-contrast-sub">{{t "pricing.subtitle"}}</p>
+    </div>
+
+    <div class="pricing-tier-grid" data-reveal>
+      <!-- Free Plan -->
+      <div class="pricing-card free-plan" data-reveal="left">
+        <div class="pricing-card-header">
+          <h3 class="plan-name">{{t "pricing.freeName"}}</h3>
+          <p class="plan-desc">{{t "pricing.freeDesc"}}</p>
+          <div class="plan-price-wrap">
+            <span class="plan-amount font-mono">{{t "pricing.freePrice"}}</span>
+            <span class="plan-period">{{t "pricing.freePeriod"}}</span>
+          </div>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features-list">
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.freeFeat1"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.freeFeat2"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.freeFeat3"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.freeFeat4"}}</li>
+        </ul>
+        <div class="plan-cta-wrap">
+          <a href="/{{currentLang}}/pricing#free" class="btn btn-secondary btn-full">
+            <span>{{t "pricing.freeCta"}}</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Paid Plan (14-day trial) -->
+      <div class="pricing-card paid-plan is-featured" data-reveal="scale">
+        <div class="featured-badge font-mono">{{t "pricing.paidBadge"}}</div>
+        <div class="pricing-card-header">
+          <h3 class="plan-name">{{t "pricing.paidName"}}</h3>
+          <p class="plan-desc">{{t "pricing.paidDesc"}}</p>
+          <div class="plan-price-wrap">
+            <span class="plan-amount highlight font-mono">{{t "pricing.paidPrice"}}</span>
+            <span class="plan-period">{{t "pricing.paidPeriod"}}</span>
+          </div>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features-list">
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.paidFeat1"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.paidFeat2"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.paidFeat3"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.paidFeat4"}}</li>
+        </ul>
+        <div class="plan-cta-wrap">
+          <a href="/{{currentLang}}/pricing#paid" class="btn btn-primary btn-full">
+            <span>{{t "pricing.paidCta"}}</span>
+            <span class="btn-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Business Plan (Separate Route) -->
+      <div class="pricing-card business-route" data-reveal="right">
+        <div class="pricing-card-header">
+          <h3 class="plan-name">Business</h3>
+          <p class="plan-desc">{{t "pricing.businessDesc"}}</p>
+          <div class="plan-price-wrap">
+            <span class="plan-amount font-mono">Bespoke</span>
+            <span class="plan-period">Direct agreement</span>
+          </div>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features-list">
+          <li class="plan-feature"><span class="feat-check">&check;</span> Dedicated architecture</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> Custom ERP & data integrations</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> Tailored styling requirements</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> High-volume reliability</li>
+        </ul>
+        <div class="plan-cta-wrap">
+          <a href="/{{currentLang}}/business" class="btn btn-secondary btn-full">
+            <span>{{t "pricing.businessCta"}}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION 10: PURCHASE OBJECTION FAQ
+     ========================================================================== -->
+<section class="section section-faq" id="faq">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "faq.label"}}</span>
+      <h2 class="section-title">{{t "faq.title"}}</h2>
+      <p class="section-description center-block">{{t "faq.subtitle"}}</p>
+    </div>
+
+    <div class="faq-accordion-wrap">
+      {{#each faqs}}
+      <details class="faq-item" {{#if @first}}open{{/if}} data-reveal>
+        <summary class="faq-question">
+          <span class="faq-q-text">{{this.q}}</span>
+          <span class="faq-icon">&plus;</span>
+        </summary>
+        <div class="faq-answer">
+          <p>{{this.a}}</p>
+        </div>
+      </details>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     SECTION 11: FINAL CTA (The Snake Returns Visually)
+     ========================================================================== -->
+<section class="section section-final-banner" id="start">
+  <div class="site-container">
+    <div class="banner-panel" data-reveal>
+      <div class="banner-snake-crop" aria-hidden="true">
+        <img src="/images/snaker-snake.jpg" alt="" class="banner-snake-img" loading="lazy">
+        <div class="banner-snake-mask"></div>
+      </div>
+
+      <div class="banner-content">
+        <h2 class="banner-heading">
+          {{t "finalCta.title"}}
+        </h2>
+        <p class="banner-lead">
+          {{t "finalCta.subtitle"}}
+        </p>
+
+        <div class="banner-actions">
+          <a href="/{{currentLang}}/pricing#free" class="btn btn-primary btn-large">
+            <span>{{t "finalCta.btnFree"}}</span>
+            <span class="btn-arrow">&rarr;</span>
+          </a>
+          <a href="/{{currentLang}}/pricing#paid" class="btn btn-secondary btn-large">
+            <span>{{t "finalCta.btnTrial"}}</span>
+          </a>
+        </div>
+
+        <div class="banner-business-note">
+          <a href="/{{currentLang}}/business" class="banner-business-link">
+            {{t "finalCta.businessLink"}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
