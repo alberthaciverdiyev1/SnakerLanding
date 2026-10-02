@@ -588,99 +588,383 @@
 </section>
 
 <!-- ==========================================================================
-     SECTION 3: THE SNAKER COMMERCE PLATFORM (Shopline-Inspired Hub Grid)
+     SECTION 2: THE SNAKER COMMERCE PLATFORM (High-End Bento Architecture)
      ========================================================================== -->
 <section class="section section-platform-hub" id="platform-hub">
+  <!-- Subtle emerald ambient glow field -->
+  <div class="platform-hub-ambient" aria-hidden="true"></div>
+
   <div class="site-container">
     <div class="section-header-editorial text-center" data-reveal>
-      <span class="section-tag">{{t "platformHub.label"}}</span>
-      <h2 class="section-title">{{t "platformHub.title"}}</h2>
+      <div class="section-badge-pill">
+        <span class="pulse-dot"></span>
+        <span class="badge-text font-mono">{{t "platformHub.label"}}</span>
+      </div>
+      <h2 class="section-title platform-title-gradient">{{t "platformHub.title"}}</h2>
       <p class="section-description center-block">{{t "platformHub.subtitle"}}</p>
     </div>
 
-    <div class="platform-hub-grid" data-reveal="scale">
-      <!-- 1. Online Store -->
-      <div class="hub-card">
-        <div class="hub-card-header">
-          <span class="hub-icon">&#9638;</span>
-          <h3 class="hub-name">{{t "platformHub.onlineStore"}}</h3>
+    <!-- Master Bento Grid -->
+    <div class="bento-platform-grid" data-reveal="scale">
+
+      <!-- ========================================================
+           FLAGSHIP 1: STOREFRONT & HEADLESS ENGINE (7 Cols)
+           ======================================================== -->
+      <div class="bento-card bento-hero-store">
+        <div class="bento-card-inner">
+          <div class="bento-card-top">
+            <div class="bento-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2.5"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+                <path d="M7 8h2m2 0h6M7 11h4"></path>
+              </svg>
+            </div>
+            <div class="bento-meta-badge font-mono">
+              <span class="live-dot-green">●</span> 0.3s TTFB • 99 Lighthouse
+            </div>
+          </div>
+
+          <div class="bento-copy">
+            <h3 class="bento-heading">{{t "platformHub.onlineStore"}}</h3>
+            <p class="bento-subtext">{{t "platformHub.onlineStoreDesc"}}</p>
+          </div>
+
+          <!-- Micro Interactive Storefront Window Preview -->
+          <div class="bento-preview-frame storefront-window-preview">
+            <div class="window-topbar">
+              <div class="window-dots">
+                <span class="w-dot red"></span>
+                <span class="w-dot yellow"></span>
+                <span class="w-dot green"></span>
+              </div>
+              <div class="window-url-pill font-mono">
+                <span class="lock-icon">🔒</span> snaker.store/noir-atelier
+              </div>
+              <span class="window-tag-live font-mono">LIVE STORE</span>
+            </div>
+
+            <div class="storefront-card-grid">
+              <div class="storefront-thumb-wrap">
+                <img src="/images/merchants/sneakers.jpg" alt="Urban Step Runner" class="storefront-thumb-img" loading="lazy">
+                <span class="storefront-sale-badge font-mono">NEW RELEASE</span>
+              </div>
+              <div class="storefront-detail-pane">
+                <div class="storefront-cat-row font-mono">
+                  <span>LUXURY ATHLETICS</span>
+                  <span class="rating-stars">★★★★★ <span class="rating-count">(4.9)</span></span>
+                </div>
+                <h4 class="storefront-prod-title">Krypton Velocity Runner</h4>
+                <div class="storefront-price-row">
+                  <span class="storefront-current-price font-mono">$185.00</span>
+                  <span class="storefront-strikethrough font-mono">$240.00</span>
+                  <span class="storefront-in-stock font-mono">✓ Instant Delivery</span>
+                </div>
+                <div class="storefront-action-row">
+                  <span class="storefront-btn-cta font-mono">
+                    <span>1-Click Apple Pay</span>
+                    <span class="btn-arrow-right">&rarr;</span>
+                  </span>
+                  <span class="storefront-edge-stat font-mono">⚡ Edge Cache Hit</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="hub-desc">{{t "platformHub.onlineStoreDesc"}}</p>
-        <a href="#storefronts" class="hub-link font-mono">Explore storefronts &rarr;</a>
       </div>
 
-      <!-- 2. WhatsApp & Chat Commerce -->
-      <div class="hub-card featured">
-        <div class="hub-card-header">
-          <span class="hub-icon brand">&#9742;</span>
-          <h3 class="hub-name">{{t "platformHub.whatsappChat"}}</h3>
+      <!-- ========================================================
+           FLAGSHIP 2: WHATSAPP & CONVERSATIONAL COMMERCE (5 Cols)
+           ======================================================== -->
+      <div class="bento-card bento-hero-chat featured-glow">
+        <div class="bento-card-inner">
+          <div class="bento-card-top">
+            <div class="bento-icon-badge brand-accent">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </div>
+            <div class="bento-meta-badge brand-tag font-mono">
+              <span>0% Satış İtkisi</span>
+            </div>
+          </div>
+
+          <div class="bento-copy">
+            <h3 class="bento-heading">{{t "platformHub.whatsappChat"}}</h3>
+            <p class="bento-subtext">{{t "platformHub.whatsappChatDesc"}}</p>
+          </div>
+
+          <!-- Micro Interactive WhatsApp Chat Simulator -->
+          <div class="bento-preview-frame whatsapp-chat-preview">
+            <div class="chat-topbar">
+              <div class="chat-avatar-icon">S</div>
+              <div class="chat-header-info">
+                <span class="chat-header-title font-mono">Snaker Commerce Bot</span>
+                <span class="chat-header-status font-mono">Rəsmi Verified Mağaza ✓</span>
+              </div>
+              <span class="chat-active-badge">Online</span>
+            </div>
+
+            <div class="chat-bubbles-stack">
+              <div class="chat-bubble chat-user font-mono">
+                "Salam! Noir Atelier köynək ölçüsü 40 mövcuddur?"
+              </div>
+              <div class="chat-bubble chat-bot">
+                <p class="chat-bot-text font-mono">Bəli! Anbarda cəmi 2 ədəd qaldı. Sizin üçün 15 dəqiqəlik rezerv edildi.</p>
+                <div class="chat-order-card">
+                  <div class="chat-order-header">
+                    <span class="chat-prod-name">Noir Silk Oversized (Size 40)</span>
+                    <span class="chat-prod-price font-mono">$119.00</span>
+                  </div>
+                  <div class="chat-order-cta font-mono">
+                    <span>Bir toxunuşla təsdiq et &rarr;</span>
+                    <span class="chat-check-icon">✓</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="hub-desc">{{t "platformHub.whatsappChatDesc"}}</p>
-        <a href="#free-start" class="hub-link font-mono brand">View WhatsApp flow &rarr;</a>
       </div>
 
-      <!-- 3. Checkout & Payments -->
-      <div class="hub-card">
-        <div class="hub-card-header">
-          <span class="hub-icon">&#128179;</span>
-          <h3 class="hub-name">{{t "platformHub.payments"}}</h3>
+      <!-- ========================================================
+           CARD 3: CHECKOUT & PAYMENTS (4 Cols)
+           ======================================================== -->
+      <div class="bento-card bento-card-compact">
+        <div class="bento-card-inner">
+          <div class="bento-card-top">
+            <div class="bento-icon-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="3"></rect>
+                <line x1="1" y1="10" x2="23" y2="10"></line>
+                <circle cx="6" cy="15" r="1.5"></circle>
+                <circle cx="10" cy="15" r="1.5"></circle>
+              </svg>
+            </div>
+            <span class="bento-meta-badge font-mono">+34% Checkout Rate</span>
+          </div>
+
+          <div class="bento-copy">
+            <h3 class="bento-heading">{{t "platformHub.payments"}}</h3>
+            <p class="bento-subtext">{{t "platformHub.paymentsDesc"}}</p>
+          </div>
+
+          <div class="bento-footer-widget payments-widget">
+            <div class="payment-badges-row font-mono">
+              <span class="p-badge">Apple Pay</span>
+              <span class="p-badge">Google Pay</span>
+              <span class="p-badge">Visa • MC</span>
+              <span class="p-badge highlight">Birbank / Tamkart</span>
+            </div>
+            <div class="payment-security-label font-mono">
+              <span class="sec-pip"></span> 3D Secure 2.0 • PCI-DSS Seviyyə 1
+            </div>
+          </div>
         </div>
-        <p class="hub-desc">{{t "platformHub.paymentsDesc"}}</p>
-        <a href="#pricing" class="hub-link font-mono">Check pricing &rarr;</a>
       </div>
 
-      <!-- 4. Inventory & Stock -->
-      <div class="hub-card">
-        <div class="hub-card-header">
-          <span class="hub-icon">&#9635;</span>
-          <h3 class="hub-name">{{t "platformHub.inventory"}}</h3>
+      <!-- ========================================================
+           CARD 4: INVENTORY & STOCK (4 Cols)
+           ======================================================== -->
+      <div class="bento-card bento-card-compact">
+        <div class="bento-card-inner">
+          <div class="bento-card-top">
+            <div class="bento-icon-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <span class="bento-meta-badge font-mono">Canlı Sinxronizasiya</span>
+          </div>
+
+          <div class="bento-copy">
+            <h3 class="bento-heading">{{t "platformHub.inventory"}}</h3>
+            <p class="bento-subtext">{{t "platformHub.inventoryDesc"}}</p>
+          </div>
+
+          <div class="bento-footer-widget inventory-widget">
+            <div class="inventory-status-bar">
+              <div class="inv-info font-mono">
+                <span class="sku-id">SKU-9402 (Lumen Ceramic)</span>
+                <span class="stock-pill font-mono">142 qalıq</span>
+              </div>
+              <div class="inv-track-bar">
+                <div class="inv-track-fill" style="width: 82%;"></div>
+              </div>
+              <div class="inv-meta font-mono">
+                <span>Avtomatik ehtiyat xəbərdarlığı aktivdir</span>
+                <span class="inv-ok">Normal</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="hub-desc">{{t "platformHub.inventoryDesc"}}</p>
-        <a href="#product" class="hub-link font-mono">See dashboard &rarr;</a>
       </div>
 
-      <!-- 5. Shipping & Logistics -->
-      <div class="hub-card">
-        <div class="hub-card-header">
-          <span class="hub-icon">&#9992;</span>
-          <h3 class="hub-name">{{t "platformHub.fulfillment"}}</h3>
+      <!-- ========================================================
+           CARD 5: SHIPPING & LOGISTICS (4 Cols)
+           ======================================================== -->
+      <div class="bento-card bento-card-compact">
+        <div class="bento-card-inner">
+          <div class="bento-card-top">
+            <div class="bento-icon-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13" rx="1.5"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <span class="bento-meta-badge font-mono">Avto-Kuryer API</span>
+          </div>
+
+          <div class="bento-copy">
+            <h3 class="bento-heading">{{t "platformHub.fulfillment"}}</h3>
+            <p class="bento-subtext">{{t "platformHub.fulfillmentDesc"}}</p>
+          </div>
+
+          <div class="bento-footer-widget logistics-widget">
+            <div class="logistics-timeline-wrap">
+              <div class="timeline-point completed">
+                <span class="t-dot">✓</span>
+                <span class="t-txt font-mono">Qəbul</span>
+              </div>
+              <div class="timeline-connector active"></div>
+              <div class="timeline-point current">
+                <span class="t-dot-pulse"></span>
+                <span class="t-txt font-mono">Kuryerdə</span>
+              </div>
+              <div class="timeline-connector"></div>
+              <div class="timeline-point">
+                <span class="t-dot-pending">○</span>
+                <span class="t-txt font-mono">Təhvil</span>
+              </div>
+            </div>
+            <div class="logistics-meta-row font-mono">
+              <span class="tracking-id">SNK-AZ-84910</span>
+              <span class="delivery-eta">Təxmini: 35 dəq</span>
+            </div>
+          </div>
         </div>
-        <p class="hub-desc">{{t "platformHub.fulfillmentDesc"}}</p>
-        <a href="#product" class="hub-link font-mono">Integrated logistics &rarr;</a>
       </div>
 
-      <!-- 6. Loyalty & Rewards -->
-      <div class="hub-card">
-        <div class="hub-card-header">
-          <span class="hub-icon">&#9733;</span>
-          <h3 class="hub-name">{{t "platformHub.loyalty"}}</h3>
+      <!-- ========================================================
+           CARD 6: LOYALTY & VIP REWARDS (4 Cols)
+           ======================================================== -->
+      <div class="bento-card bento-card-compact">
+        <div class="bento-card-inner">
+          <div class="bento-card-top">
+            <div class="bento-icon-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <span class="bento-meta-badge font-mono">+42% Müştəri Dəyəri</span>
+          </div>
+
+          <div class="bento-copy">
+            <h3 class="bento-heading">{{t "platformHub.loyalty"}}</h3>
+            <p class="bento-subtext">{{t "platformHub.loyaltyDesc"}}</p>
+          </div>
+
+          <div class="bento-footer-widget loyalty-widget">
+            <div class="vip-member-card">
+              <div class="vip-card-top">
+                <span class="vip-crown-icon">👑</span>
+                <span class="vip-tier-name font-mono">VIP GOLD KLUB</span>
+                <span class="vip-points-score font-mono">3,240 Xal</span>
+              </div>
+              <div class="vip-benefit-text font-mono">
+                <span>5% Cashback • Növbəsiz Çatdırılma • Şəxsi Endirimlər</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="hub-desc">{{t "platformHub.loyaltyDesc"}}</p>
-        <a href="#customization" class="hub-link font-mono">Member features &rarr;</a>
       </div>
 
-      <!-- 7. Analytics & Insights -->
-      <div class="hub-card">
-        <div class="hub-card-header">
-          <span class="hub-icon">&#9646;</span>
-          <h3 class="hub-name">{{t "platformHub.analytics"}}</h3>
+      <!-- ========================================================
+           CARD 7: ANALYTICS & INSIGHTS (4 Cols)
+           ======================================================== -->
+      <div class="bento-card bento-card-compact">
+        <div class="bento-card-inner">
+          <div class="bento-card-top">
+            <div class="bento-icon-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <span class="bento-meta-badge font-mono">Real-Vaxt Axını</span>
+          </div>
+
+          <div class="bento-copy">
+            <h3 class="bento-heading">{{t "platformHub.analytics"}}</h3>
+            <p class="bento-subtext">{{t "platformHub.analyticsDesc"}}</p>
+          </div>
+
+          <div class="bento-footer-widget analytics-widget">
+            <div class="analytics-metrics-header font-mono">
+              <div class="revenue-figure">$54,820</div>
+              <div class="revenue-trend font-mono">+31.2% ↑</div>
+            </div>
+            <div class="analytics-spark-bars">
+              <span class="spark-bar" style="height: 42%;"></span>
+              <span class="spark-bar" style="height: 60%;"></span>
+              <span class="spark-bar" style="height: 52%;"></span>
+              <span class="spark-bar" style="height: 78%;"></span>
+              <span class="spark-bar" style="height: 65%;"></span>
+              <span class="spark-bar" style="height: 92%;"></span>
+              <span class="spark-bar active" style="height: 100%;"></span>
+            </div>
+          </div>
         </div>
-        <p class="hub-desc">{{t "platformHub.analyticsDesc"}}</p>
-        <a href="#product" class="hub-link font-mono">Order analytics &rarr;</a>
       </div>
 
-      <!-- 8. Social Channels & Funnels -->
-      <div class="hub-card">
-        <div class="hub-card-header">
-          <span class="hub-icon">&#9672;</span>
-          <h3 class="hub-name">{{t "platformHub.socialSelling"}}</h3>
+      <!-- ========================================================
+           CARD 8: SOCIAL CHANNELS & OMNICHANNEL (4 Cols)
+           ======================================================== -->
+      <div class="bento-card bento-card-compact">
+        <div class="bento-card-inner">
+          <div class="bento-card-top">
+            <div class="bento-icon-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+              </svg>
+            </div>
+            <span class="bento-meta-badge font-mono">360° Satış Şəbəkəsi</span>
+          </div>
+
+          <div class="bento-copy">
+            <h3 class="bento-heading">{{t "platformHub.socialSelling"}}</h3>
+            <p class="bento-subtext">{{t "platformHub.socialSellingDesc"}}</p>
+          </div>
+
+          <div class="bento-footer-widget social-widget">
+            <div class="social-channels-flow font-mono">
+              <span class="ch-node active">Instagram</span>
+              <span class="ch-link">&harr;</span>
+              <span class="ch-node active">TikTok</span>
+              <span class="ch-link">&harr;</span>
+              <span class="ch-node active">Google Feed</span>
+            </div>
+            <div class="social-sync-footer font-mono">
+              <span class="sync-pip-active"></span> Tək mərkəzdən avtomatik məhsul və qiymət yenilənməsi
+            </div>
+          </div>
         </div>
-        <p class="hub-desc">{{t "platformHub.socialSellingDesc"}}</p>
-        <a href="#scale" class="hub-link font-mono">Instagram sellers &rarr;</a>
       </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- ==========================================================================
      SECTION 4: ELEVATED EXPERIENCES (Shopline 3-Tab Interactive Showcase)

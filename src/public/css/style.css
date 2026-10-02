@@ -1504,84 +1504,970 @@ img, svg {
 }
 
 /* ==========================================================================
-   SECTION 2: THE SNAKER COMMERCE PLATFORM (Shopline Hub Grid)
+   SECTION 2: THE SNAKER COMMERCE PLATFORM (High-End Bento Grid Architecture)
    ========================================================================== */
 .section-platform-hub {
-  padding-block: var(--space-2xl);
-  background: var(--surface-secondary);
-  border-bottom: 1px solid var(--border);
+  position: relative;
+  padding-block: var(--space-3xl, 6rem);
+  background: #090d0b;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.platform-hub-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md);
+.platform-hub-ambient {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 480px;
+  background: radial-gradient(ellipse 55% 45% at 50% 30%, rgba(60, 212, 81, 0.12) 0%, rgba(20, 160, 60, 0.03) 60%, transparent 80%);
+  pointer-events: none;
+  z-index: 1;
 }
 
-.hub-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.25s ease;
+.section-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(60, 212, 81, 0.08);
+  border: 1px solid rgba(60, 212, 81, 0.28);
+  margin-bottom: 1.25rem;
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3cd451;
+  box-shadow: 0 0 10px #3cd451;
+  animation: pulseGreen 2.2s infinite ease-in-out;
+}
+
+@keyframes pulseGreen {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.5; }
+}
+
+.badge-text {
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  color: #3cd451;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.platform-title-gradient {
+  background: linear-gradient(180deg, #ffffff 40%, rgba(255, 255, 255, 0.72) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 820px;
+  margin-inline: auto;
+  letter-spacing: -0.025em;
+}
+
+/* 12-Column Master Bento Grid */
+.bento-platform-grid {
   position: relative;
   z-index: 2;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.75rem;
 }
 
-.hub-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--brand-bright);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+/* Card Base */
+.bento-card {
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(155deg, rgba(20, 26, 22, 0.78) 0%, rgba(11, 15, 12, 0.92) 100%);
+  border: 1px solid rgba(60, 212, 81, 0.16);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.hub-card.featured {
-  border-color: var(--brand);
-  background: linear-gradient(180deg, var(--surface) 0%, var(--brand-surface) 100%);
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(60, 212, 81, 0.45);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 28px rgba(60, 212, 81, 0.16);
 }
 
-.hub-card-header {
+.bento-card-inner {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flagship Col Spans */
+.bento-hero-store {
+  grid-column: span 7;
+}
+
+.bento-hero-chat {
+  grid-column: span 5;
+}
+
+.bento-card-compact {
+  grid-column: span 4;
+}
+
+/* Header Inside Card */
+.bento-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.bento-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(60, 212, 81, 0.1);
+  border: 1px solid rgba(60, 212, 81, 0.3);
+  color: #3cd451;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.bento-card:hover .bento-icon-badge {
+  transform: scale(1.08);
+  background: rgba(60, 212, 81, 0.18);
+  border-color: rgba(60, 212, 81, 0.6);
+}
+
+.bento-icon-badge.brand-accent {
+  background: rgba(60, 212, 81, 0.16);
+  border-color: rgba(60, 212, 81, 0.45);
+}
+
+.bento-meta-badge {
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 12px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bento-meta-badge.brand-tag {
+  color: #3cd451;
+  background: rgba(60, 212, 81, 0.1);
+  border-color: rgba(60, 212, 81, 0.3);
+  font-weight: 700;
+}
+
+.live-dot-green {
+  color: #3cd451;
+  font-size: 0.75rem;
+  animation: pulseGreen 1.8s infinite;
+}
+
+.bento-copy {
+  margin-bottom: 1.5rem;
+}
+
+.bento-heading {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin-bottom: 0.45rem;
+}
+
+.bento-subtext {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.62);
+  margin: 0;
+}
+
+/* ==========================================================================
+   FLAGSHIP 1 PREVIEW: STOREFRONT WINDOW
+   ========================================================================== */
+.bento-preview-frame {
+  margin-top: auto;
+  border-radius: 14px;
+  background: rgba(14, 18, 15, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.window-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.window-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.w-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.w-dot.red { background: #ff5f56; }
+.w-dot.yellow { background: #ffbd2e; }
+.w-dot.green { background: #27c93f; }
+
+.window-url-pill {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 3px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.lock-icon {
+  font-size: 0.68rem;
+}
+
+.window-tag-live {
+  font-size: 0.66rem;
+  color: #3cd451;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.storefront-card-grid {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  align-items: center;
+}
+
+.storefront-thumb-wrap {
+  position: relative;
+  width: 140px;
+  height: 130px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.storefront-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.bento-card:hover .storefront-thumb-img {
+  transform: scale(1.06);
+}
+
+.storefront-sale-badge {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: rgba(60, 212, 81, 0.85);
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+.storefront-detail-pane {
+  flex: 1;
+  min-width: 0;
+}
+
+.storefront-cat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 4px;
+}
+
+.rating-stars {
+  color: #fbbf24;
+  font-size: 0.72rem;
+}
+
+.rating-count {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.storefront-prod-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.storefront-price-row {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 0.65rem;
+  margin-bottom: 12px;
 }
 
-.hub-icon {
-  font-size: 1.25rem;
-  color: var(--brand-bright);
-}
-.hub-icon.brand {
-  color: #10b981;
+.storefront-current-price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #3cd451;
 }
 
-.hub-name {
-  font-size: 1.02rem;
-  font-weight: 700;
-  color: var(--text);
+.storefront-strikethrough {
+  font-size: 0.82rem;
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.4);
 }
 
-.hub-desc {
-  font-size: 0.86rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-  margin-bottom: var(--space-sm);
-  flex: 1;
+.storefront-in-stock {
+  font-size: 0.68rem;
+  color: #a7f3d0;
+  margin-left: auto;
 }
 
-.hub-link {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--brand);
+.storefront-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.storefront-btn-cta {
   display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #3cd451;
+  color: #051408;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.bento-card:hover .storefront-btn-cta {
+  background: #4ef064;
+}
+
+.storefront-edge-stat {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ==========================================================================
+   FLAGSHIP 2 PREVIEW: WHATSAPP CONVERSATIONAL COMMERCE
+   ========================================================================== */
+.whatsapp-chat-preview {
+  padding: 14px;
+}
+
+.chat-topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 12px;
+}
+
+.chat-avatar-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #10b981;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.88rem;
+}
+
+.chat-header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.chat-header-status {
+  font-size: 0.66rem;
+  color: #3cd451;
+}
+
+.chat-active-badge {
+  margin-left: auto;
+  font-size: 0.64rem;
+  color: #3cd451;
+  background: rgba(60, 212, 81, 0.12);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.chat-bubbles-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.chat-bubble {
+  max-width: 90%;
+  border-radius: 12px;
+  padding: 9px 13px;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.chat-user {
+  align-self: flex-end;
+  background: #153820;
+  color: #e2fbe8;
+  border: 1px solid rgba(60, 212, 81, 0.25);
+  border-bottom-right-radius: 3px;
+}
+
+.chat-bot {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom-left-radius: 3px;
+}
+
+.chat-bot-text {
+  margin: 0 0 8px 0;
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.chat-order-card {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(60, 212, 81, 0.35);
+  border-radius: 8px;
+  padding: 8px 11px;
+}
+
+.chat-order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.chat-prod-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.chat-prod-price {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #3cd451;
+}
+
+.chat-order-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(60, 212, 81, 0.16);
+  color: #3cd451;
+  padding: 5px 9px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.chat-check-icon {
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+/* ==========================================================================
+   WIDGETS FOR 6 COMPACT CARDS
+   ========================================================================== */
+.bento-footer-widget {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Card 3: Payments Widget */
+.payment-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 9px;
+}
+
+.p-badge {
+  font-size: 0.68rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 4px 9px;
+  border-radius: 6px;
+}
+
+.p-badge.highlight {
+  color: #3cd451;
+  background: rgba(60, 212, 81, 0.1);
+  border-color: rgba(60, 212, 81, 0.3);
+}
+
+.payment-security-label {
+  font-size: 0.67rem;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sec-pip {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3cd451;
+}
+
+/* Card 4: Inventory Widget */
+.inventory-status-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inv-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.69rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.stock-pill {
+  color: #3cd451;
+  font-weight: 700;
+}
+
+.inv-track-bar {
+  width: 100%;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.inv-track-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #3cd451 100%);
+  border-radius: 999px;
+}
+
+.inv-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.inv-ok {
+  color: #a7f3d0;
+}
+
+/* Card 5: Logistics Widget */
+.logistics-timeline-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.timeline-point {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 4px;
 }
-.hub-link:hover {
-  color: var(--brand-bright);
+
+.t-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(60, 212, 81, 0.2);
+  border: 1px solid rgba(60, 212, 81, 0.6);
+  color: #3cd451;
+  font-size: 0.65rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-dot-pulse {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3cd451;
+  box-shadow: 0 0 10px #3cd451;
+  animation: pulseGreen 1.5s infinite;
+}
+
+.t-dot-pending {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.85rem;
+}
+
+.t-txt {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.timeline-connector {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-inline: 6px;
+}
+
+.timeline-connector.active {
+  background: #3cd451;
+}
+
+.logistics-meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.67rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.delivery-eta {
+  color: #3cd451;
+}
+
+/* Card 6: Loyalty Widget */
+.vip-member-card {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(251, 191, 36, 0.25);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.vip-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.vip-crown-icon {
+  font-size: 0.9rem;
+}
+
+.vip-tier-name {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #fbbf24;
+  letter-spacing: 0.05em;
+}
+
+.vip-points-score {
+  font-size: 0.72rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.vip-benefit-text {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
+}
+
+/* Card 7: Analytics Widget */
+.analytics-metrics-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.revenue-figure {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.revenue-trend {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #3cd451;
+}
+
+.analytics-spark-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 38px;
+}
+
+.spark-bar {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px 3px 0 0;
+  transition: background 0.25s ease, height 0.4s ease;
+}
+
+.spark-bar.active {
+  background: linear-gradient(180deg, #3cd451 0%, #10b981 100%);
+  box-shadow: 0 0 10px rgba(60, 212, 81, 0.4);
+}
+
+.bento-card:hover .spark-bar {
+  background: rgba(60, 212, 81, 0.35);
+}
+
+.bento-card:hover .spark-bar.active {
+  background: #3cd451;
+}
+
+/* Card 8: Social Channels Widget */
+.social-channels-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  font-size: 0.69rem;
+}
+
+.ch-node.active {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.ch-link {
+  color: #3cd451;
+  font-size: 0.8rem;
+}
+
+.social-sync-footer {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sync-pip-active {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3cd451;
+  box-shadow: 0 0 6px #3cd451;
+}
+
+/* ==========================================================================
+   RESPONSIVE ADAPTATIONS
+   ========================================================================== */
+@media (max-width: 1080px) {
+  .bento-hero-store {
+    grid-column: span 12;
+  }
+  .bento-hero-chat {
+    grid-column: span 12;
+  }
+  .bento-card-compact {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-platform-hub {
+    padding-block: var(--space-xl);
+  }
+  .bento-platform-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .bento-hero-store,
+  .bento-hero-chat,
+  .bento-card-compact {
+    grid-column: span 1;
+  }
+  .bento-card-inner {
+    padding: 1.5rem;
+  }
+  .storefront-card-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .storefront-thumb-wrap {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+/* ==========================================================================
+   LIGHT THEME OVERRIDES FOR BENTO PLATFORM GRID
+   ========================================================================== */
+[data-theme="light"] .section-platform-hub {
+  background: #f8fafc;
+  border-bottom-color: #e2e8f0;
+}
+
+[data-theme="light"] .platform-hub-ambient {
+  background: radial-gradient(ellipse 55% 45% at 50% 30%, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+}
+
+[data-theme="light"] .platform-title-gradient {
+  background: linear-gradient(180deg, #0f172a 40%, #334155 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .bento-card {
+  background: #ffffff;
+  border-color: #e2e8f0;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .bento-card:hover {
+  border-color: #10b981;
+  box-shadow: 0 18px 40px rgba(16, 185, 129, 0.12);
+}
+
+[data-theme="light"] .bento-heading {
+  color: #0f172a;
+}
+
+[data-theme="light"] .bento-subtext {
+  color: #475569;
+}
+
+[data-theme="light"] .bento-meta-badge {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+[data-theme="light"] .bento-preview-frame {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .window-topbar {
+  background: #ffffff;
+  border-bottom-color: #e2e8f0;
+}
+
+[data-theme="light"] .window-url-pill {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  color: #475569;
+}
+
+[data-theme="light"] .storefront-prod-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .chat-user {
+  background: #dcfce7;
+  color: #064e3b;
+  border-color: #86efac;
+}
+
+[data-theme="light"] .chat-bot {
+  background: #f1f5f9;
+  color: #1e293b;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .chat-bot-text {
+  color: #1e293b;
+}
+
+[data-theme="light"] .chat-order-card {
+  background: #ffffff;
+  border-color: #10b981;
+}
+
+[data-theme="light"] .chat-prod-name {
+  color: #0f172a;
+}
+
+[data-theme="light"] .revenue-figure {
+  color: #0f172a;
+}
+
+[data-theme="light"] .p-badge {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+[data-theme="light"] .vip-member-card {
+  background: #fefce8;
+  border-color: #fde047;
+}
+
+[data-theme="light"] .vip-points-score {
+  color: #713f12;
+}
+
+[data-theme="light"] .vip-benefit-text {
+  color: #854d0e;
+}
+
+[data-theme="light"] .social-channels-flow {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .ch-node.active {
+  color: #0f172a;
+}
+
+[data-theme="light"] .bento-footer-widget {
+  border-top-color: #e2e8f0;
 }
 
 /* ==========================================================================
