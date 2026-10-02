@@ -52,10 +52,97 @@
   </div>
 </section>
 
-<!-- Continuous Snake SVG Path Overlay across page -->
-<div class="snake-narrator-tracker" aria-hidden="true">
-  <svg class="snake-continuous-svg" viewBox="0 0 1440 2800" fill="none" preserveAspectRatio="none">
-    <path id="snake-continuous-path" d="M 1250,50 C 1350,350 950,550 720,700 C 450,880 150,1100 280,1400 C 400,1680 1150,1800 950,2150 C 750,2450 350,2600 500,2780" stroke="var(--brand-bright)" stroke-width="2" stroke-linecap="round" stroke-dasharray="3500" stroke-dashoffset="3500" opacity="0.35"/>
+<!-- Continuous Dimensional Snake SVG Anatomy across page -->
+<div class="snake-narrator-tracker" id="snake-narrator-tracker" aria-hidden="true">
+  <svg class="snake-continuous-svg" id="snake-continuous-svg" fill="none">
+    <defs>
+      <!-- Atmospheric Neon Green Aura Filter -->
+      <filter id="snake-ambient-glow" x="-40%" y="-40%" width="180%" height="180%">
+        <feGaussianBlur stdDeviation="12" result="glowBlur" />
+        <feComponentTransfer in="glowBlur" result="glowBoost">
+          <feFuncA type="linear" slope="0.8" />
+        </feComponentTransfer>
+        <feMerge>
+          <feMergeNode in="glowBoost" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+
+      <!-- Dimensional Drop Shadow Filter -->
+      <filter id="snake-soft-shadow" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.65" />
+      </filter>
+
+      <!-- Rich Emerald Snake Body Gradient -->
+      <linearGradient id="snake-body-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#083e20" />
+        <stop offset="30%" stop-color="#11833f" />
+        <stop offset="70%" stop-color="#28b556" />
+        <stop offset="100%" stop-color="#4ae670" />
+      </linearGradient>
+
+      <!-- Dorsal Ridge Spine Highlight Gradient -->
+      <linearGradient id="snake-spine-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="rgba(180, 255, 195, 0.9)" />
+        <stop offset="50%" stop-color="rgba(95, 245, 135, 0.95)" />
+        <stop offset="100%" stop-color="rgba(45, 215, 85, 0.75)" />
+      </linearGradient>
+
+      <!-- Sculpted Head Plate Gradient -->
+      <linearGradient id="snake-head-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#052613" />
+        <stop offset="45%" stop-color="#12783d" />
+        <stop offset="100%" stop-color="#32c25e" />
+      </linearGradient>
+    </defs>
+
+    <!-- Layer 1: Ambient Drop Shadow -->
+    <path id="snake-path-shadow" class="snake-path" stroke="rgba(0,0,0,0.55)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Layer 2: Radiant Emerald Atmospheric Glow -->
+    <path id="snake-path-glow" class="snake-path" stroke="rgba(53, 211, 74, 0.3)" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" filter="url(#snake-ambient-glow)" />
+
+    <!-- Layer 3: Deep Dark Emerald Muscular Core -->
+    <path id="snake-path-base" class="snake-path" stroke="#042011" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Layer 4: Vivid Emerald Scales Gradient Layer -->
+    <path id="snake-path-body" class="snake-path" stroke="url(#snake-body-gradient)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Layer 5: Reptilian Scale Bands / Segmentation Pattern -->
+    <path id="snake-path-scales" class="snake-path" stroke="#052815" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 14" opacity="0.85" />
+
+    <!-- Layer 6: Luminous Dorsal Ridge Spine Highlight -->
+    <path id="snake-path-spine" class="snake-path" stroke="url(#snake-spine-gradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+
+    <!-- Layer 7: Dynamic Traveling Viper Head (Positioned & Rotated via JS) -->
+    <g id="snake-head-group" class="snake-head-group" style="opacity: 0;">
+      <!-- Ambient Green Head Halo -->
+      <circle cx="0" cy="0" r="30" fill="rgba(53, 211, 74, 0.22)" filter="url(#snake-ambient-glow)" />
+      
+      <!-- Forked Tongue (Dynamic flicking tip) -->
+      <path d="M 22,0 L 32,0 L 40,-4 M 32,0 L 40,4" stroke="#ff3366" stroke-width="2" stroke-linecap="round" opacity="0.95" />
+      
+      <!-- Sculpted Emerald Viper Head Polygon -->
+      <path d="M 22,0 C 18,-11 2,-16 -18,-14 C -26,-7 -28,0 -28,0 C -28,0 -26,7 -18,14 C 2,16 18,11 22,0 Z" fill="url(#snake-head-gradient)" stroke="#3cd451" stroke-width="1.8" />
+      
+      <!-- Scale Crown Segment Ridges -->
+      <path d="M 8,-6 L 16,0 L 8,6 M -2,-10 L 8,0 L -2,10 M -12,-12 L -2,0 L -12,12" stroke="#084222" stroke-width="1.6" fill="none" opacity="0.75" />
+      
+      <!-- Center Crown Ridge -->
+      <path d="M -24,0 L 16,0" stroke="#75f38e" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+      
+      <!-- Left Snake Eye (Gold Viper Eye with vertical slit) -->
+      <circle cx="6" cy="-8.5" r="5" fill="rgba(250, 204, 21, 0.4)" />
+      <ellipse cx="6" cy="-8.5" rx="4" ry="2.5" fill="#facc15" />
+      <ellipse cx="6" cy="-8.5" rx="1.2" ry="2.5" fill="#041a0d" />
+      <circle cx="7" cy="-9.5" r="0.8" fill="#ffffff" />
+      
+      <!-- Right Snake Eye (Gold Viper Eye with vertical slit) -->
+      <circle cx="6" cy="8.5" r="5" fill="rgba(250, 204, 21, 0.4)" />
+      <ellipse cx="6" cy="8.5" rx="4" ry="2.5" fill="#facc15" />
+      <ellipse cx="6" cy="8.5" rx="1.2" ry="2.5" fill="#041a0d" />
+      <circle cx="7" cy="7.5" r="0.8" fill="#ffffff" />
+    </g>
   </svg>
 </div>
 
@@ -345,7 +432,7 @@
     </div>
 
     <!-- Realistic Operational Dashboard Interface Preview -->
-    <div class="dashboard-mockup-wrapper" data-reveal="scale">
+    <div class="dashboard-mockup-wrapper" id="dashboard-mockup-wrapper" data-reveal="scale">
       <div class="dashboard-window">
         <div class="dashboard-topbar">
           <div class="window-controls">

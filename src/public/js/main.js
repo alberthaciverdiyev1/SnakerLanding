@@ -114,26 +114,191 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --------------------------------------------------------------------------
-  // 5. Continuous Snake Scroll Animation (Brief Section 8 & 9)
+  // 5. Dimensional Continuous Snake Navigation Engine (Brief Section 8 & 9)
   // --------------------------------------------------------------------------
-  const continuousSnakePath = document.getElementById('snake-continuous-path');
-  if (continuousSnakePath && !prefersReducedMotion) {
-    const totalLength = 3500;
-    continuousSnakePath.style.strokeDasharray = totalLength;
-    continuousSnakePath.style.strokeDashoffset = totalLength;
+  const trackerEl = document.getElementById('snake-narrator-tracker');
+  const svgEl = document.getElementById('snake-continuous-svg');
+  const snakePaths = [
+    document.getElementById('snake-path-shadow'),
+    document.getElementById('snake-path-glow'),
+    document.getElementById('snake-path-base'),
+    document.getElementById('snake-path-body'),
+    document.getElementById('snake-path-scales'),
+    document.getElementById('snake-path-spine')
+  ].filter(Boolean);
+  const snakeHeadGroup = document.getElementById('snake-head-group');
+  const snakeHeroImg = document.getElementById('snake-hero-img');
 
-    const onScrollSnake = () => {
-      const scrollY = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (docHeight <= 0) return;
-      
-      const scrollFraction = Math.min(Math.max(scrollY / (docHeight * 0.75), 0), 1);
-      const drawLength = totalLength * (1 - scrollFraction);
-      continuousSnakePath.style.strokeDashoffset = drawLength;
+  if (trackerEl && svgEl && snakePaths.length > 0 && !prefersReducedMotion) {
+    let totalLength = 0;
+    let currentProgress = 0;
+    let targetProgress = 0;
+    let isAnimating = false;
+
+    // Smooth Catmull-Rom spline interpolation converted to cubic Bezier curves
+    const generateSmoothPath = (points) => {
+      if (points.length < 2) return '';
+      let d = `M ${points[0].x.toFixed(1)},${points[0].y.toFixed(1)}`;
+      for (let i = 0; i < points.length - 1; i++) {
+        const p0 = points[Math.max(0, i - 1)];
+        const p1 = points[i];
+        const p2 = points[i + 1];
+        const p3 = points[Math.min(points.length - 1, i + 2)];
+
+        const cp1x = p1.x + (p2.x - p0.x) / 6;
+        const cp1y = p1.y + (p2.y - p0.y) / 6;
+        const cp2x = p2.x - (p3.x - p1.x) / 6;
+        const cp2y = p2.y - (p3.y - p1.y) / 6;
+
+        d += ` C ${cp1x.toFixed(1)},${cp1y.toFixed(1)} ${cp2x.toFixed(1)},${cp2y.toFixed(1)} ${p2.x.toFixed(1)},${p2.y.toFixed(1)}`;
+      }
+      return d;
     };
 
-    window.addEventListener('scroll', onScrollSnake, { passive: true });
-    onScrollSnake();
+    const buildSnakeWaypoints = () => {
+      const siteMain = document.getElementById('main-content') || trackerEl.parentElement;
+      const mainRect = siteMain.getBoundingClientRect();
+      const mainTop = mainRect.top + window.scrollY;
+      const w = trackerEl.offsetWidth || window.innerWidth;
+      const h = trackerEl.offsetHeight || siteMain.scrollHeight;
+      const isMobile = w < 768;
+
+      svgEl.setAttribute('viewBox', `0 0 ${w} ${h}`);
+
+      const getSectionPoint = (id, xFraction, yFraction = 0.5) => {
+        const el = document.getElementById(id);
+        if (!el) return null;
+        const rect = el.getBoundingClientRect();
+        const y = (rect.top + window.scrollY - mainTop) + rect.height * yFraction;
+        const x = w * xFraction;
+        return { x, y };
+      };
+
+      // Waypoints weaving naturally down through sections and around/behind mockups
+      const waypoints = [
+        // Point 0: Top right hero (emerging from the photographic snake backdrop)
+        getSectionPoint('hero', isMobile ? 0.75 : 0.82, 0.40),
+        // Point 1: Hero exit curving into economics
+        getSectionPoint('hero', isMobile ? 0.50 : 0.62, 0.88),
+        // Point 2: Economics section left curve
+        getSectionPoint('economics', isMobile ? 0.20 : 0.15, 0.38),
+        // Point 3: Economics section weave through cards
+        getSectionPoint('economics', isMobile ? 0.65 : 0.52, 0.82),
+        // Point 4: Journey timeline right swoop
+        getSectionPoint('journey', isMobile ? 0.80 : 0.82, 0.50),
+        // Point 5: Free plan WhatsApp mockup curve
+        getSectionPoint('free-start', isMobile ? 0.20 : 0.22, 0.55),
+        // Point 6: Customizer widget right curve
+        getSectionPoint('customization', isMobile ? 0.80 : 0.82, 0.50),
+        // Point 7: Behind dashboard mockup (occlusion dive!)
+        getSectionPoint('product', isMobile ? 0.35 : 0.32, 0.58),
+        // Point 8: Product section exit right curve
+        getSectionPoint('product', isMobile ? 0.68 : 0.72, 0.90),
+        // Point 9: Storefronts row left curve
+        getSectionPoint('storefronts', isMobile ? 0.25 : 0.25, 0.52),
+        // Point 10: Scale section right curve
+        getSectionPoint('scale', isMobile ? 0.75 : 0.74, 0.50),
+        // Point 11: Pricing section center weave behind featured card
+        getSectionPoint('pricing', isMobile ? 0.50 : 0.48, 0.55),
+        // Point 12: FAQ section left swoop
+        getSectionPoint('faq', isMobile ? 0.25 : 0.20, 0.50),
+        // Point 13: Final CTA banner meeting the photographic snake!
+        getSectionPoint('start', isMobile ? 0.50 : 0.52, 0.45)
+      ].filter(Boolean);
+
+      if (waypoints.length < 2) return;
+
+      const pathData = generateSmoothPath(waypoints);
+      snakePaths.forEach(p => p.setAttribute('d', pathData));
+
+      // Calculate total path length
+      const guidePath = document.getElementById('snake-path-body') || snakePaths[0];
+      totalLength = guidePath.getTotalLength();
+
+      snakePaths.forEach(p => {
+        p.style.strokeDasharray = `${totalLength} ${totalLength}`;
+        p.style.strokeDashoffset = `${totalLength}`;
+      });
+
+      renderSnake(currentProgress);
+    };
+
+    const renderSnake = (progress) => {
+      if (totalLength <= 0) return;
+      const clamped = Math.max(0, Math.min(1, progress));
+      const drawOffset = totalLength * (1 - clamped);
+      snakePaths.forEach(p => {
+        p.style.strokeDashoffset = drawOffset;
+      });
+
+      if (snakeHeadGroup) {
+        if (progress <= 0.003) {
+          snakeHeadGroup.style.opacity = '0';
+        } else {
+          snakeHeadGroup.style.opacity = '1';
+          const currentDist = clamped * totalLength;
+          const guidePath = document.getElementById('snake-path-body') || snakePaths[0];
+          const point = guidePath.getPointAtLength(currentDist);
+          
+          // Calculate heading tangent angle
+          const nextDist = Math.min(totalLength, currentDist + 10);
+          const nextPoint = guidePath.getPointAtLength(nextDist);
+          
+          const dx = nextPoint.x - point.x;
+          const dy = nextPoint.y - point.y;
+          const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+          
+          snakeHeadGroup.setAttribute('transform', `translate(${point.x.toFixed(1)}, ${point.y.toFixed(1)}) rotate(${angle.toFixed(1)})`);
+        }
+      }
+    };
+
+    const tickAnimation = () => {
+      const diff = targetProgress - currentProgress;
+      if (Math.abs(diff) > 0.0004) {
+        currentProgress += diff * 0.09;
+        renderSnake(currentProgress);
+        requestAnimationFrame(tickAnimation);
+      } else {
+        currentProgress = targetProgress;
+        renderSnake(currentProgress);
+        isAnimating = false;
+      }
+    };
+
+    const onScroll = () => {
+      const scrollY = window.scrollY;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (maxScroll <= 0) return;
+
+      // Parallax on hero photographic snake
+      if (snakeHeroImg && scrollY < 1200) {
+        snakeHeroImg.style.transform = `translate3d(0, ${(scrollY * 0.12).toFixed(1)}px, 0)`;
+      }
+
+      // Compute normalized progress for smooth bidirectional scroll
+      targetProgress = Math.max(0, Math.min(1, scrollY / maxScroll));
+
+      if (!isAnimating) {
+        isAnimating = true;
+        requestAnimationFrame(tickAnimation);
+      }
+    };
+
+    // Initialize layout after DOM rendering and fonts
+    window.addEventListener('load', buildSnakeWaypoints);
+    buildSnakeWaypoints();
+
+    // Rebuild waypoints on window resize (debounced)
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(buildSnakeWaypoints, 150);
+    });
+
+    // Listen to scroll for active bidirectional motion (progress on scroll down, reverse on scroll up)
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 
   // --------------------------------------------------------------------------
