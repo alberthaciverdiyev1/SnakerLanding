@@ -29,6 +29,11 @@
     "demoLink": "Demo isteyin",
     "subtext": "Ücretsiz başla · 14 günlük tam deneme · Sıfır komisyon"
   },
+  "brands": {
+    "eyebrow": "BİZİMLE ÇALIŞAN ŞİRKETLER",
+    "title": "Bizimle çalışan ve Snaker ile büyüyen markalar",
+    "subtext": "Her gün binlerce siparişi yöneten 5.000'den fazla e-ticaret markası ve mağaza"
+  },
   "pillars": {
     "p1Title": "Hassasiyetle kurun, hızla başlatın",
     "p1Desc": "Özel yazılım geliştirmeye gerek kalmadan mağazanızı kurup büyütecek entegre mağaza temeli.",

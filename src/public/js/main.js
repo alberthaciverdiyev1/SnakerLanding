@@ -325,8 +325,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const waypoints = [
           // Point 0: Hero stage
           getSectionPoint('hero', isMobile ? 0.75 : 0.82, 0.40),
-          // Point 1: Hero exit curving into pillars
+          // Point 1: Hero exit curving towards brands
           getSectionPoint('hero', isMobile ? 0.50 : 0.62, 0.90),
+          // Point 1b: Client brands marquee section
+          getSectionPoint('client-brands', isMobile ? 0.40 : 0.35, 0.50),
           // Point 2: Pillars section
           getSectionPoint('pillars', isMobile ? 0.25 : 0.18, 0.50),
           // Point 3: Platform Hub section
