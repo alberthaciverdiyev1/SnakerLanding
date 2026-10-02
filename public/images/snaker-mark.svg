@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <!-- Minimalist, technical geometric serpent glyph -->
+  <path d="M8 32 C8 24 16 22 20 20 C24 18 32 16 32 8" stroke="#119447" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M12 32 C12 26 18 24 22 22 C26 20 30 18 30 14" stroke="#35d34a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <!-- Snake eye micro-accent -->
+  <circle cx="32" cy="8" r="2.5" fill="#d6b625"/>
+  <circle cx="32.5" cy="7.5" r="0.8" fill="#0a0d0b"/>
+</svg>

@@ -1,0 +1,23 @@
+{
+  "name": "snaker",
+  "version": "1.0.0",
+  "description": "Snaker - High-Performance Ecommerce Platform Promotional Website",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "keywords": [
+    "snaker",
+    "ecommerce",
+    "promotional",
+    "express",
+    "handlebars"
+  ],
+  "author": "Snaker Team",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1"
+  }
+}

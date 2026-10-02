@@ -1,0 +1,664 @@
+<!-- SECTION 1: HERO (Art-Directed Snake with Clean Editorial Typography) -->
+<section class="hero-section" id="hero">
+  <!-- Art-directed snake background layer -->
+  <div class="hero-snake-backdrop" id="hero-snake-backdrop" aria-hidden="true">
+    <div class="snake-radial-glow"></div>
+    <div class="snake-image-wrapper" id="snake-image-wrapper">
+      <img src="/images/snaker-snake.jpg" alt="" class="snake-hero-img" id="snake-hero-img" loading="eager" fetchpriority="high">
+    </div>
+    <div class="snake-gradient-overlay"></div>
+    <div class="hero-cursor-glow" id="hero-cursor-glow"></div>
+  </div>
+
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-eyebrow" data-entrance="eyebrow">
+        <span class="eyebrow-pip"></span>
+        <span class="eyebrow-text">{{t "intro.label"}}</span>
+      </div>
+
+      <h1 class="hero-headline" data-entrance="headline">
+        <span class="reveal-line">
+          <span class="reveal-inner">{{t "hero.headlineMain"}}</span>
+        </span>
+        <span class="reveal-line">
+          <span class="reveal-inner highlight-green">{{t "hero.headlineSub"}}</span>
+        </span>
+      </h1>
+
+      <p class="hero-lead" data-entrance="lead">
+        {{t "hero.description"}}
+      </p>
+
+      <div class="hero-cta-group" data-entrance="buttons">
+        <a href="#pricing" class="btn btn-primary btn-large">
+          <span>{{t "hero.primaryCta"}}</span>
+          <span class="btn-arrow">&rarr;</span>
+        </a>
+        <a href="#demo" class="btn btn-secondary btn-large">
+          <span>{{t "hero.secondaryCta"}}</span>
+        </a>
+      </div>
+
+      <div class="hero-subline-pill" data-entrance="reassurance">
+        <span class="hero-subline-text">{{t "hero.subtext"}}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: EDITORIAL APPROACH & PILLARS -->
+<section class="section section-approach" id="solutions">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "intro.label"}}</span>
+      <h2 class="section-title">
+        {{t "intro.title"}}
+      </h2>
+      <p class="section-description center-block">
+        {{t "intro.lead"}}
+      </p>
+    </div>
+
+    <div class="pillars-grid">
+      <!-- Pillar 01 -->
+      <div class="pillar-card" data-reveal="left">
+        <div class="pillar-num-wrap">
+          <span class="pillar-num mono">01</span>
+        </div>
+        <h3 class="pillar-heading">{{t "pillars.simplicityTitle"}}</h3>
+        <p class="pillar-body">{{t "pillars.simplicityBody"}}</p>
+      </div>
+
+      <!-- Pillar 02 -->
+      <div class="pillar-card highlight-pillar" data-reveal="scale">
+        <div class="pillar-num-wrap">
+          <span class="pillar-num mono">02</span>
+        </div>
+        <h3 class="pillar-heading">{{t "pillars.affordabilityTitle"}}</h3>
+        <p class="pillar-body">{{t "pillars.affordabilityBody"}}</p>
+      </div>
+
+      <!-- Pillar 03 -->
+      <div class="pillar-card" data-reveal="right">
+        <div class="pillar-num-wrap">
+          <span class="pillar-num mono">03</span>
+        </div>
+        <h3 class="pillar-heading">{{t "pillars.autonomyTitle"}}</h3>
+        <p class="pillar-body">{{t "pillars.autonomyBody"}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: OPERATIONAL INTERFACE (Realistic Dashboard Preview) -->
+<section class="section section-product" id="product">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "product.label"}}</span>
+      <h2 class="section-title">
+        {{t "product.title"}}
+      </h2>
+      <p class="section-description center-block">
+        {{t "product.subtitle"}}
+      </p>
+    </div>
+
+    <!-- Commercial Dashboard Mockup -->
+    <div class="dashboard-mockup-wrapper" data-reveal="scale">
+      <div class="dashboard-window">
+        <!-- Dashboard Top Navigation Bar -->
+        <div class="dashboard-topbar">
+          <div class="window-controls">
+            <span class="win-dot close"></span>
+            <span class="win-dot min"></span>
+            <span class="win-dot expand"></span>
+          </div>
+          <div class="dashboard-tabs">
+            <span class="dash-tab active">{{t "product.tabOverview"}}</span>
+            <span class="dash-tab">{{t "product.tabOrders"}}</span>
+            <span class="dash-tab">{{t "product.tabProducts"}}</span>
+            <span class="dash-tab">{{t "product.tabCustomers"}}</span>
+            <span class="dash-tab">{{t "product.tabThemes"}}</span>
+            <span class="dash-tab">{{t "product.tabSettings"}}</span>
+          </div>
+          <div class="dash-user-badge">
+            <span class="user-avatar-initial">S</span>
+            <span class="user-store-name">Store Admin</span>
+          </div>
+        </div>
+
+        <!-- Dashboard Canvas -->
+        <div class="dashboard-body">
+          <!-- Metric KPI Summary Cards -->
+          <div class="dashboard-metrics-grid">
+            <div class="metric-card">
+              <span class="metric-label">{{t "product.todaySales"}}</span>
+              <div class="metric-row">
+                <span class="metric-value font-mono">$4,280.00</span>
+                <span class="metric-delta positive">+18.4%</span>
+              </div>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">{{t "product.ordersToShip"}}</span>
+              <div class="metric-row">
+                <span class="metric-value font-mono">12</span>
+                <span class="metric-sublabel">Awaiting fulfillment</span>
+              </div>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">{{t "product.payoutStatus"}}</span>
+              <div class="metric-row">
+                <span class="metric-value font-mono">$1,840.50</span>
+                <span class="metric-sublabel">Direct to bank</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Split Workspace: Orders Table & Inventory Status -->
+          <div class="dashboard-workspace-grid">
+            <!-- Left: Orders Table -->
+            <div class="dash-panel orders-panel">
+              <div class="panel-header">
+                <h4 class="panel-title">{{t "product.recentOrdersTitle"}}</h4>
+                <span class="panel-badge">Live feed</span>
+              </div>
+              <div class="orders-table-wrapper">
+                <table class="dash-table">
+                  <thead>
+                    <tr>
+                      <th>{{t "product.orderNum"}}</th>
+                      <th>{{t "product.customer"}}</th>
+                      <th>{{t "product.items"}}</th>
+                      <th>{{t "product.status"}}</th>
+                      <th class="text-right">{{t "product.total"}}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="font-mono">#1084</td>
+                      <td>Leyla Aliyeva</td>
+                      <td>2 items</td>
+                      <td><span class="badge-status status-paid">{{t "product.statusPaid"}}</span></td>
+                      <td class="text-right font-mono">$124.00</td>
+                    </tr>
+                    <tr>
+                      <td class="font-mono">#1083</td>
+                      <td>Murad Hasanov</td>
+                      <td>1 item</td>
+                      <td><span class="badge-status status-shipped">{{t "product.statusShipped"}}</span></td>
+                      <td class="text-right font-mono">$68.50</td>
+                    </tr>
+                    <tr>
+                      <td class="font-mono">#1082</td>
+                      <td>Elvin Mammadov</td>
+                      <td>3 items</td>
+                      <td><span class="badge-status status-delivered">{{t "product.statusDelivered"}}</span></td>
+                      <td class="text-right font-mono">$215.00</td>
+                    </tr>
+                    <tr>
+                      <td class="font-mono">#1081</td>
+                      <td>Aysel Karimova</td>
+                      <td>1 item</td>
+                      <td><span class="badge-status status-paid">{{t "product.statusPaid"}}</span></td>
+                      <td class="text-right font-mono">$45.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Right: Inventory Status -->
+            <div class="dash-panel inventory-panel">
+              <div class="panel-header">
+                <h4 class="panel-title">{{t "product.stockLevelTitle"}}</h4>
+                <span class="panel-badge">Tracked</span>
+              </div>
+              <div class="inventory-items-list">
+                <div class="inv-item">
+                  <div class="inv-info">
+                    <span class="inv-name">Organic Honey Balm</span>
+                    <span class="inv-sku font-mono">SKU-2041</span>
+                  </div>
+                  <span class="inv-qty in-stock font-mono">48 {{t "product.inStock"}}</span>
+                </div>
+                <div class="inv-item">
+                  <div class="inv-info">
+                    <span class="inv-name">Linen Overshirt - Olive</span>
+                    <span class="inv-sku font-mono">SKU-1092</span>
+                  </div>
+                  <span class="inv-qty low-stock font-mono">6 {{t "product.lowStock"}}</span>
+                </div>
+                <div class="inv-item">
+                  <div class="inv-info">
+                    <span class="inv-name">Ceramic Pour-over</span>
+                    <span class="inv-sku font-mono">SKU-3380</span>
+                  </div>
+                  <span class="inv-qty in-stock font-mono">32 {{t "product.inStock"}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: 3-STEP SETUP / ONBOARDING -->
+<section class="section section-steps" id="how-it-works">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "steps.label"}}</span>
+      <h2 class="section-title">
+        {{t "steps.title"}}
+      </h2>
+    </div>
+
+    <div class="steps-timeline" id="steps-timeline">
+      <!-- Animated S-curve snake path connecting steps on desktop -->
+      <div class="snake-path-tracker" aria-hidden="true">
+        <svg class="snake-svg-path" viewBox="0 0 1000 240" fill="none">
+          <path id="snake-progress-path" d="M 50,120 C 250,20 400,220 500,120 C 600,20 750,220 950,120" stroke="var(--snake-bright)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="800" stroke-dashoffset="800" />
+        </svg>
+      </div>
+
+      <div class="steps-cards-row">
+        <!-- Step 1 -->
+        <div class="step-card" data-reveal="left">
+          <div class="step-badge">
+            <span class="step-number mono">{{t "steps.step1Num"}}</span>
+          </div>
+          <h3 class="step-heading">{{t "steps.step1Title"}}</h3>
+          <p class="step-body">{{t "steps.step1Desc"}}</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card highlight-step" data-reveal="scale">
+          <div class="step-badge">
+            <span class="step-number mono">{{t "steps.step2Num"}}</span>
+          </div>
+          <h3 class="step-heading">{{t "steps.step2Title"}}</h3>
+          <p class="step-body">{{t "steps.step2Desc"}}</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card" data-reveal="right">
+          <div class="step-badge">
+            <span class="step-number mono">{{t "steps.step3Num"}}</span>
+          </div>
+          <h3 class="step-heading">{{t "steps.step3Title"}}</h3>
+          <p class="step-body">{{t "steps.step3Desc"}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: STOREFRONT SHOWCASE -->
+<section class="section section-storefronts" id="storefronts">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "storefronts.label"}}</span>
+      <h2 class="section-title">
+        {{t "storefronts.title"}}
+      </h2>
+      <p class="section-description center-block">
+        {{t "storefronts.description"}}
+      </p>
+    </div>
+
+    <div class="storefronts-showcase-row">
+      <!-- Store 1: Kura Goods -->
+      <div class="storefront-card" data-reveal="left">
+        <div class="sf-browser-top">
+          <span class="sf-browser-dot"></span>
+          <span class="sf-browser-dot"></span>
+          <span class="sf-browser-dot"></span>
+          <span class="sf-domain-bar mono">kuragoods.com</span>
+        </div>
+        <div class="sf-preview-body sf-theme-warm">
+          <div class="sf-header-mock">
+            <span class="sf-brand-mock">{{t "storefronts.store1Name"}}</span>
+            <span class="sf-nav-dots">&middot; &middot; &middot;</span>
+          </div>
+          <div class="sf-hero-mock">
+            <span class="sf-hero-sub">{{t "storefronts.store1Type"}}</span>
+            <div class="sf-hero-title-mock">Autonomic Wool Collection</div>
+          </div>
+          <div class="sf-items-mock">
+            <div class="sf-item-box">
+              <div class="sf-item-img-placeholder"></div>
+              <span class="sf-item-name">Heavy Trench</span>
+              <span class="sf-item-price mono">$185.00</span>
+            </div>
+            <div class="sf-item-box">
+              <div class="sf-item-img-placeholder"></div>
+              <span class="sf-item-name">Knit Scarf</span>
+              <span class="sf-item-price mono">$54.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Store 2: Verdant Studio -->
+      <div class="storefront-card highlight-storefront" data-reveal="scale">
+        <div class="sf-browser-top">
+          <span class="sf-browser-dot"></span>
+          <span class="sf-browser-dot"></span>
+          <span class="sf-browser-dot"></span>
+          <span class="sf-domain-bar mono">verdant.studio</span>
+        </div>
+        <div class="sf-preview-body sf-theme-clean">
+          <div class="sf-header-mock">
+            <span class="sf-brand-mock">{{t "storefronts.store2Name"}}</span>
+            <span class="sf-nav-dots">&middot; &middot; &middot;</span>
+          </div>
+          <div class="sf-hero-mock">
+            <span class="sf-hero-sub">{{t "storefronts.store2Type"}}</span>
+            <div class="sf-hero-title-mock">Pure Botanical Formulations</div>
+          </div>
+          <div class="sf-items-mock">
+            <div class="sf-item-box">
+              <div class="sf-item-img-placeholder"></div>
+              <span class="sf-item-name">Night Extract</span>
+              <span class="sf-item-price mono">$48.00</span>
+            </div>
+            <div class="sf-item-box">
+              <div class="sf-item-img-placeholder"></div>
+              <span class="sf-item-name">Clay Mask</span>
+              <span class="sf-item-price mono">$36.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Store 3: Mono Objects -->
+      <div class="storefront-card" data-reveal="right">
+        <div class="sf-browser-top">
+          <span class="sf-browser-dot"></span>
+          <span class="sf-browser-dot"></span>
+          <span class="sf-browser-dot"></span>
+          <span class="sf-domain-bar mono">mono-objects.com</span>
+        </div>
+        <div class="sf-preview-body sf-theme-mono">
+          <div class="sf-header-mock">
+            <span class="sf-brand-mock">{{t "storefronts.store3Name"}}</span>
+            <span class="sf-nav-dots">&middot; &middot; &middot;</span>
+          </div>
+          <div class="sf-hero-mock">
+            <span class="sf-hero-sub">{{t "storefronts.store3Type"}}</span>
+            <div class="sf-hero-title-mock">Machined Brass &amp; Slate</div>
+          </div>
+          <div class="sf-items-mock">
+            <div class="sf-item-box">
+              <div class="sf-item-img-placeholder"></div>
+              <span class="sf-item-name">Desk Tray</span>
+              <span class="sf-item-price mono">$72.00</span>
+            </div>
+            <div class="sf-item-box">
+              <div class="sf-item-img-placeholder"></div>
+              <span class="sf-item-name">Catchall Dish</span>
+              <span class="sf-item-price mono">$42.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="storefronts-reassurance-box" data-reveal>
+      <div class="srb-item">
+        <span class="srb-check">&bull;</span>
+        <span>{{t "storefronts.mobileReady"}}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: INFRASTRUCTURE & PERFORMANCE NOTE -->
+<section class="section section-infrastructure" id="infrastructure">
+  <div class="site-container">
+    <div class="infrastructure-box" data-reveal>
+      <span class="section-tag mono">{{t "performance.label"}}</span>
+      <h2 class="infra-heading">{{t "performance.title"}}</h2>
+      <p class="infra-description">{{t "performance.description"}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: COMMERCIAL PRICING (3 Clear Tiers, Null Price Handling) -->
+<section class="section section-pricing" id="pricing">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag mono">{{t "pricing.label"}}</span>
+      <h2 class="section-title text-white">
+        {{t "pricing.title"}}
+      </h2>
+      <p class="section-description center-block text-light">
+        {{t "pricing.subtitle"}}
+      </p>
+    </div>
+
+    <div class="pricing-tier-grid" data-reveal>
+      <!-- Plan 1: Starter -->
+      <div class="pricing-card" data-reveal="left">
+        <div class="pricing-card-header">
+          <h3 class="plan-name">{{t "pricing.starterName"}}</h3>
+          <p class="plan-desc">{{t "pricing.starterDesc"}}</p>
+          <div class="plan-price-wrap">
+            <span class="plan-price-label">{{t "pricing.starterPrice"}}</span>
+          </div>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features-list">
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.starterFeat1"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.starterFeat2"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.starterFeat3"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.starterFeat4"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.starterFeat5"}}</li>
+        </ul>
+        <div class="plan-cta-wrap">
+          <a href="#demo" class="btn btn-secondary btn-full">
+            <span>{{t "pricing.starterCta"}}</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Plan 2: Business (Featured) -->
+      <div class="pricing-card is-featured" data-reveal="scale">
+        <div class="featured-badge">{{t "pricing.businessBadge"}}</div>
+        <div class="pricing-card-header">
+          <h3 class="plan-name">{{t "pricing.businessName"}}</h3>
+          <p class="plan-desc">{{t "pricing.businessDesc"}}</p>
+          <div class="plan-price-wrap">
+            <span class="plan-price-label highlight">{{t "pricing.businessPrice"}}</span>
+          </div>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features-list">
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat1"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat2"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat3"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat4"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.businessFeat5"}}</li>
+        </ul>
+        <div class="plan-cta-wrap">
+          <a href="#demo" class="btn btn-primary btn-full">
+            <span>{{t "pricing.businessCta"}}</span>
+            <span class="btn-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Plan 3: Pro -->
+      <div class="pricing-card" data-reveal="right">
+        <div class="pricing-card-header">
+          <h3 class="plan-name">{{t "pricing.proName"}}</h3>
+          <p class="plan-desc">{{t "pricing.proDesc"}}</p>
+          <div class="plan-price-wrap">
+            <span class="plan-price-label">{{t "pricing.proPrice"}}</span>
+          </div>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features-list">
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.proFeat1"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.proFeat2"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.proFeat3"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.proFeat4"}}</li>
+          <li class="plan-feature"><span class="feat-check">&check;</span> {{t "pricing.proFeat5"}}</li>
+        </ul>
+        <div class="plan-cta-wrap">
+          <a href="#demo" class="btn btn-secondary btn-full">
+            <span>{{t "pricing.proCta"}}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8: OBJECTION-FOCUSED FAQ -->
+<section class="section section-faq" id="faq">
+  <div class="site-container">
+    <div class="section-header-editorial text-center" data-reveal>
+      <span class="section-tag">{{t "faq.label"}}</span>
+      <h2 class="section-title">
+        {{t "faq.title"}}
+      </h2>
+      <p class="section-description center-block">
+        {{t "faq.subtitle"}}
+      </p>
+    </div>
+
+    <div class="faq-accordion-wrap">
+      {{#each faqs}}
+      <details class="faq-item" {{#if @first}}open{{/if}} data-reveal>
+        <summary class="faq-question">
+          <span class="faq-q-text">{{this.q}}</span>
+          <span class="faq-icon">&plus;</span>
+        </summary>
+        <div class="faq-answer">
+          <p>{{this.a}}</p>
+        </div>
+      </details>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 9: DEDICATED DEMO REQUEST -->
+<section class="section section-demo" id="demo">
+  <div class="site-container">
+    <div class="demo-split-grid" data-reveal>
+      <!-- Left Info Column -->
+      <div class="demo-info-col">
+        <span class="section-tag mono">{{t "demo.label"}}</span>
+        <h2 class="demo-title">
+          {{t "demo.title"}}
+        </h2>
+        <p class="demo-desc">
+          {{t "demo.description"}}
+        </p>
+
+        <div class="demo-feature-checks">
+          <div class="df-check">
+            <span class="df-icon">&check;</span>
+            <div class="df-text">
+              <strong>{{t "storefronts.title"}}</strong>
+              <span>{{t "storefronts.description"}}</span>
+            </div>
+          </div>
+          <div class="df-check">
+            <span class="df-icon">&check;</span>
+            <div class="df-text">
+              <strong>{{t "pillars.simplicityTitle"}}</strong>
+              <span>{{t "pillars.simplicityBody"}}</span>
+            </div>
+          </div>
+          <div class="df-check">
+            <span class="df-icon">&check;</span>
+            <div class="df-text">
+              <strong>{{t "pillars.affordabilityTitle"}}</strong>
+              <span>{{t "pillars.affordabilityBody"}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Demo Form Column -->
+      <div class="demo-form-col">
+        <div class="demo-form-card">
+          <h3 class="form-card-title">{{t "demo.title"}}</h3>
+          <p class="form-card-sub">{{t "demo.description"}}</p>
+
+          <form class="demo-form" id="demo-request-form" action="/request-demo" method="POST">
+            <input type="hidden" name="lang" value="{{currentLang}}">
+
+            <div class="form-group">
+              <label for="demo-name">{{t "demo.nameLabel"}}</label>
+              <input type="text" id="demo-name" name="name" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="demo-email">{{t "demo.emailLabel"}}</label>
+              <input type="email" id="demo-email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="demo-store">{{t "demo.storeLabel"}}</label>
+              <input type="text" id="demo-store" name="store_name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="demo-selling">{{t "demo.sellingLabel"}}</label>
+              <input type="text" id="demo-selling" name="selling_category">
+            </div>
+
+            <div class="form-group">
+              <label for="demo-website">{{t "demo.websiteLabel"}}</label>
+              <input type="text" id="demo-website" name="website">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large btn-full demo-submit-btn">
+              <span>{{t "demo.submitBtn"}}</span>
+              <span class="btn-arrow">&rarr;</span>
+            </button>
+
+            <div class="form-feedback" id="demo-form-feedback" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 10: FINAL CLOSING CALL TO ACTION BANNER -->
+<section class="section section-final-banner" id="start">
+  <div class="site-container">
+    <div class="banner-panel" data-reveal>
+      <div class="banner-snake-crop" aria-hidden="true">
+        <img src="/images/snaker-snake.jpg" alt="" class="banner-snake-img" loading="lazy">
+        <div class="banner-snake-mask"></div>
+      </div>
+
+      <div class="banner-content">
+        <span class="section-tag mono">{{t "intro.label"}}</span>
+        <h2 class="banner-heading">
+          {{t "cta.title"}}
+        </h2>
+        <p class="banner-lead">
+          {{t "cta.description"}}
+        </p>
+        <div class="banner-actions">
+          <a href="#pricing" class="btn btn-primary btn-large">
+            <span>{{t "cta.primary"}}</span>
+            <span class="btn-arrow">&rarr;</span>
+          </a>
+          <a href="#demo" class="btn btn-secondary btn-large">
+            <span>{{t "cta.secondary"}}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

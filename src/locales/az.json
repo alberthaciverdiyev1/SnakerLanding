@@ -1,0 +1,161 @@
+{
+  "lang": "az",
+  "meta": {
+    "title": "Snaker — Onlayn satış daha sadə",
+    "description": "Mürəkkəb proqram təminatı və əlavə xərclər olmadan onlayn mağazanızı yaradın və idarə edin."
+  },
+  "nav": {
+    "product": "Məhsul",
+    "solutions": "Həllər",
+    "themes": "Vitrinlər",
+    "pricing": "Qiymətlər",
+    "faq": "Sual-Cavab",
+    "signIn": "Daxil ol",
+    "createStore": "Mağaza yarat",
+    "requestDemo": "Demo sifariş et"
+  },
+  "hero": {
+    "headlineMain": "Onlayn satış,",
+    "headlineSub": "daha sadə.",
+    "description": "Mürəkkəb proqram təminatı və əsassız xərclər olmadan onlayn mağazanızı qurun və idarə edin. Məhsullar, ödənişlər və sifarişlər tək platformada.",
+    "primaryCta": "Mağaza yarat",
+    "secondaryCta": "Demo sifariş et",
+    "subtext": "Vitrin · Məhsullar · Sifarişlər · Ödənişlər"
+  },
+  "intro": {
+    "label": "YANAŞMA",
+    "title": "Mağazanı idarə etmək mürəkkəb proqramla işləmək kimi olmamalıdır.",
+    "lead": "Əksər sahibkarlar bütün diqqətini məhsullarına və müştərilərinə yönəltmək istəyir. Ənənəvi e-ticarət platformaları isə hələ ilk sifarişi almamış sizi onlarla əlavə proqram quraşdırmağa və texniki nasazlıqları həll etməyə məcbur edir."
+  },
+  "pillars": {
+    "simplicityTitle": "Sahibkarlar üçün nəzərdə tutulub, proqramçılar üçün deyil.",
+    "simplicityBody": "Gündəlik ticarət üçün hazırlanmış aydın interfeys vasitəsilə məhsulları dərhal əlavə edin, qiymətləri dəyişin və sifarişləri idarə edin.",
+    "affordabilityTitle": "Real bizneslər üçün şəffaf qiymətləndirmə.",
+    "affordabilityBody": "Biznesinizin bu gün ehtiyacı olan funksiyalarla başlayın və inkişaf etdikcə genişlənin. Sadə funksiyalar üçün məcburi ödənişli əlavələr tələb olunmur.",
+    "autonomyTitle": "Sizin brendiniz, tam müstəqilliyiniz.",
+    "autonomyBody": "Mağazanız öz domeninizdə fəaliyyət göstərir, sizin brend üslubunuzu əks etdirir və qazanılan vəsait birbaşa bank hesabınıza köçürülür."
+  },
+  "product": {
+    "label": "ƏMƏLİYYAT PANELİ",
+    "title": "Gündəlik ticarətinizi idarə etmək üçün vahid məkan.",
+    "subtitle": "Sifarişlər, qalıqlar və müştərilər üçün aydın və rahat görünüş.",
+    "tabOverview": "İcmal",
+    "tabOrders": "Sifarişlər",
+    "tabProducts": "Məhsullar",
+    "tabCustomers": "Müştərilər",
+    "tabThemes": "Vitrin dizaynı",
+    "tabSettings": "Tənzimləmələr",
+    "todaySales": "Bugünkü satış",
+    "ordersToShip": "Göndərilməli sifarişlər",
+    "payoutStatus": "Bank köçürməsi gözlənilir",
+    "recentOrdersTitle": "Son sifarişlər",
+    "statusPaid": "Ödənilib",
+    "statusShipped": "Yoldadır",
+    "statusDelivered": "Çatdırılıb",
+    "orderNum": "Sifariş",
+    "customer": "Müştəri",
+    "items": "Məhsullar",
+    "status": "Status",
+    "total": "Məbləğ",
+    "stockLevelTitle": "Anbar qalığı",
+    "inStock": "anbarda",
+    "lowStock": "az qalıb"
+  },
+  "steps": {
+    "label": "BAŞLANĞIC",
+    "title": "Kataloqdan ilk satışa qədər cəmi üç addım.",
+    "step1Num": "01",
+    "step1Title": "Mağazanızı qurun",
+    "step1Desc": "Mağazanın adını qeyd edin, domen ünvanınızı bağlayın və vizual üslubu seçin.",
+    "step2Num": "02",
+    "step2Title": "Məhsulları daxil edin",
+    "step2Desc": "Məhsul şəkillərini yükləyin, rəng və ölçü seçimlərini qeyd edin və qiymətləri təyin edin.",
+    "step3Num": "03",
+    "step3Title": "Sifarişləri qəbul edin",
+    "step3Desc": "Ödəniş qapısını aktivləşdirin və dərhal onlayn satışa başlayın."
+  },
+  "storefronts": {
+    "label": "NÜMUNƏ VİTRİNLƏR",
+    "title": "Snaker üzərində qurulub. Sizin brendinizə uyğun dizayn edilib.",
+    "description": "Snaker etibarlı və sürətli texniki bazanı təmin edir, siz isə mağazanızın dizaynı, şriftləri və müştəri təcrübəsi üzərində tam sahibliyə malik olursunuz.",
+    "store1Name": "Kura Geyim",
+    "store1Type": "Geyim və Tekstil",
+    "store2Name": "Verdant Studio",
+    "store2Type": "Təbii Kosmetika",
+    "store3Name": "Mono Objects",
+    "store3Type": "Dizayn Əşyaları",
+    "mobileReady": "Əlavə tənzimləmə olmadan bütün mobil cihazlarda mükəmməl görünüş."
+  },
+  "performance": {
+    "label": "İNFRASTRUKTUR",
+    "title": "Müştəriləriniz üçün sürətli, sizin üçün qayğısız.",
+    "description": "Mağaza səhifələri istifadəçilərə ən yaxın serverlərdən dərhal təqdim olunur. Sürətli açılan səhifələr müştərilərin alış-verişdən imtina etməsinin qarşısını alır."
+  },
+  "pricing": {
+    "label": "TARİF PLANLARI",
+    "title": "Real bizneslər üçün aydın və şəffaf qiymətlər.",
+    "subtitle": "Biznesinizin cari miqyasına uyğun tarifi seçin.",
+    "starterName": "Başlanğıc",
+    "starterDesc": "Onlayn satışa yeni başlayan fərdi sahibkarlar və kiçik mağazalar üçün.",
+    "starterPrice": "Qiymət üçün müraciət edin",
+    "starterFeat1": "Tam onlayn vitrin",
+    "starterFeat2": "100-ə qədər aktiv məhsul",
+    "starterFeat3": "Fərdi domen qoşulması",
+    "starterFeat4": "Birbaşa ödəniş inteqrasiyaları",
+    "starterFeat5": "Standart dəstək",
+    "starterCta": "Başlayın",
+    "businessName": "Biznes",
+    "businessDesc": "Geniş çeşidi və aktiv sifariş axını olan mağazalar üçün.",
+    "businessPrice": "Qiymət üçün müraciət edin",
+    "businessBadge": "Tövsiyə olunur",
+    "businessFeat1": "Limitsiz aktiv məhsul",
+    "businessFeat2": "Təkmil anbar izləməsi",
+    "businessFeat3": "Çoxsaylı anbar dəstəyi",
+    "businessFeat4": "Endirim və promo kodlar",
+    "businessFeat5": "Prioritet müştəri dəstəyi",
+    "businessCta": "Başlayın",
+    "proName": "Pro",
+    "proDesc": "Böyük çeşidə və xüsusi inteqrasiya tələblərinə malik şəbəkələr üçün.",
+    "proPrice": "Qiymət üçün müraciət edin",
+    "proFeat1": "Fərdi menecer dəstəyi",
+    "proFeat2": "ERP və 1C sistemlərinə ixrac",
+    "proFeat3": "Özəl sifariş səhifəsi dizaynı",
+    "proFeat4": "SLA zəmanəti",
+    "proFeat5": "Komanda üçün icazə bölgüsü",
+    "proCta": "Əlaqə saxlayın"
+  },
+  "faq": {
+    "label": "SUALLAR VƏ CAVABLAR",
+    "title": "Tez-tez verilən suallar.",
+    "subtitle": "Mağaza qurulması, ödənişlər və idarəetmə haqqında aydın cavablar."
+  },
+  "demo": {
+    "label": "ƏLAQƏ VƏ TƏQDİMAT",
+    "title": "Snaker-i öz biznesiniz üçün kəşf edin.",
+    "description": "Biznesinizin istiqamətini bizimlə bölüşün. Mütəxəssislərimiz sizə mağazanızın Snaker-də necə işləyəcəyini əyani şəkildə nümayiş etdirsin.",
+    "nameLabel": "Adınız və soyadınız",
+    "emailLabel": "Elektron poçt ünvanınız",
+    "storeLabel": "Biznes və ya mağaza adı",
+    "sellingLabel": "Hansı növ məhsullar satırsınız?",
+    "websiteLabel": "Hazırkı sayt və ya sosial media səhifəniz (istəyə görə)",
+    "submitBtn": "Demo sifariş et",
+    "submitting": "Göndərilir...",
+    "successMsg": "Təşəkkür edirik. Məlumatlarınız qeydə alındı, tezliklə sizinlə əlaqə saxlayacağıq."
+  },
+  "cta": {
+    "title": "Mağazanızı Snaker ilə açın.",
+    "description": "Sadə idarəetmə, şəffaf şərtlər və müstəqil brend dizaynını seçən sahibkarlara qoşulun.",
+    "primary": "Mağaza yarat",
+    "secondary": "Demo sifariş et"
+  },
+  "footer": {
+    "tagline": "Müasir pərakəndə satış üçün hazırlanmış fokuslanmış e-ticarət platforması.",
+    "platform": "Platforma",
+    "resources": "Resurslar",
+    "company": "Şirkət",
+    "legal": "Hüquqi",
+    "privacy": "Məxfilik siyasəti",
+    "terms": "İstifadə şərtləri",
+    "rights": "Bütün hüquqlar qorunur."
+  }
+}

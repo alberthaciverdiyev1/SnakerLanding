@@ -1,0 +1,161 @@
+{
+  "lang": "en",
+  "meta": {
+    "title": "Snaker — Online selling, made simpler",
+    "description": "Create and manage your online store without complicated software or unnecessary costs."
+  },
+  "nav": {
+    "product": "Product",
+    "solutions": "Solutions",
+    "themes": "Storefronts",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "signIn": "Sign in",
+    "createStore": "Create your store",
+    "requestDemo": "Request a demo"
+  },
+  "hero": {
+    "headlineMain": "Online selling,",
+    "headlineSub": "made simpler.",
+    "description": "Create and manage your online store without complicated software or unnecessary costs. Products, payments, and orders in one place.",
+    "primaryCta": "Create your store",
+    "secondaryCta": "Request a demo",
+    "subtext": "Storefront · Products · Orders · Payments"
+  },
+  "intro": {
+    "label": "THE APPROACH",
+    "title": "Running your store shouldn't feel like running software.",
+    "lead": "Most business owners want to focus on their products and their customers. Traditional ecommerce platforms make you configure plugins, manage multiple subscriptions, and troubleshoot technical issues before you can even take an order."
+  },
+  "pillars": {
+    "simplicityTitle": "Built for owners, not developers.",
+    "simplicityBody": "Add products in moments, adjust prices, and fulfill customer orders from a clean interface designed for daily retail operations.",
+    "affordabilityTitle": "Straightforward pricing for real businesses.",
+    "affordabilityBody": "Start with what your business needs today and scale as you grow. No mandatory third-party app fees to unlock basic retail functions.",
+    "autonomyTitle": "Your brand, fully independent.",
+    "autonomyBody": "Your store runs on your own domain, reflects your visual identity, and sends payouts straight to your bank account."
+  },
+  "product": {
+    "label": "OPERATIONAL INTERFACE",
+    "title": "A single place to manage your retail day.",
+    "subtitle": "Clear views for orders, stock, and customer communication.",
+    "tabOverview": "Overview",
+    "tabOrders": "Orders",
+    "tabProducts": "Products",
+    "tabCustomers": "Customers",
+    "tabThemes": "Storefront",
+    "tabSettings": "Settings",
+    "todaySales": "Today's sales",
+    "ordersToShip": "Orders awaiting shipment",
+    "payoutStatus": "Pending bank deposit",
+    "recentOrdersTitle": "Recent orders",
+    "statusPaid": "Paid",
+    "statusShipped": "Shipped",
+    "statusDelivered": "Delivered",
+    "orderNum": "Order",
+    "customer": "Customer",
+    "items": "Items",
+    "status": "Status",
+    "total": "Total",
+    "stockLevelTitle": "Inventory status",
+    "inStock": "in stock",
+    "lowStock": "low stock"
+  },
+  "steps": {
+    "label": "ONBOARDING",
+    "title": "From catalog to checkout in three steps.",
+    "step1Num": "01",
+    "step1Title": "Set up your store",
+    "step1Desc": "Name your store, connect your domain, and choose a starting aesthetic.",
+    "step2Num": "02",
+    "step2Title": "Add your inventory",
+    "step2Desc": "Upload photographs, assign variant options, and set transparent pricing.",
+    "step3Num": "03",
+    "step3Title": "Receive orders",
+    "step3Desc": "Connect your payment processor and begin taking orders immediately."
+  },
+  "storefronts": {
+    "label": "STOREFRONT SHOWCASE",
+    "title": "Built on Snaker. Designed around your brand.",
+    "description": "Snaker provides the reliable backend infrastructure while you retain full control over your storefront presentation, typography, and customer experience.",
+    "store1Name": "Kura Goods",
+    "store1Type": "Apparel & Textiles",
+    "store2Name": "Verdant Studio",
+    "store2Type": "Skincare & Botanicals",
+    "store3Name": "Mono Objects",
+    "store3Type": "Crafted Hardware",
+    "mobileReady": "Responsive on every screen size without manual configuration."
+  },
+  "performance": {
+    "label": "INFRASTRUCTURE",
+    "title": "Fast for your customers, handled for you.",
+    "description": "Storefront pages are pre-rendered and served from edge locations nearest to your buyers. Fast loading times lead to fewer abandoned carts without you needing to manage server configurations."
+  },
+  "pricing": {
+    "label": "COMMERCIAL PLANS",
+    "title": "Straightforward pricing for real businesses.",
+    "subtitle": "Choose the level that fits your current operational scale.",
+    "starterName": "Starter",
+    "starterDesc": "For individuals and new businesses launching their first catalog.",
+    "starterPrice": "Contact for pricing",
+    "starterFeat1": "Complete online storefront",
+    "starterFeat2": "Up to 100 active products",
+    "starterFeat3": "Custom domain connection",
+    "starterFeat4": "Direct payment integrations",
+    "starterFeat5": "Standard support",
+    "starterCta": "Get started",
+    "businessName": "Business",
+    "businessDesc": "For active retail stores requiring higher volume and automated workflows.",
+    "businessPrice": "Contact for pricing",
+    "businessBadge": "Recommended",
+    "businessFeat1": "Unlimited active products",
+    "businessFeat2": "Advanced inventory tracking",
+    "businessFeat3": "Multi-location fulfillment",
+    "businessFeat4": "Discount and promotion codes",
+    "businessFeat5": "Priority customer support",
+    "businessCta": "Get started",
+    "proName": "Pro",
+    "proDesc": "For established merchants and multi-brand retail operations.",
+    "proPrice": "Contact for pricing",
+    "proFeat1": "Dedicated account manager",
+    "proFeat2": "Custom ERP and accounting export",
+    "proFeat3": "Custom checkout styling",
+    "proFeat4": "SLA performance commitment",
+    "proFeat5": "Team permission management",
+    "proCta": "Contact us"
+  },
+  "faq": {
+    "label": "QUESTIONS & ANSWERS",
+    "title": "Frequently asked questions.",
+    "subtitle": "Clear answers regarding store ownership, payments, and setup."
+  },
+  "demo": {
+    "label": "SCHEDULE A CONVERSATION",
+    "title": "See Snaker with your business in mind.",
+    "description": "Share your current store details or business concept. We will walk you through a tailored demonstration of the platform.",
+    "nameLabel": "Your name",
+    "emailLabel": "Work or personal email",
+    "storeLabel": "Business or store name",
+    "sellingLabel": "What type of products do you sell?",
+    "websiteLabel": "Current website or social profile (optional)",
+    "submitBtn": "Request a demo",
+    "submitting": "Submitting...",
+    "successMsg": "Thank you. Our team will review your details and contact you shortly."
+  },
+  "cta": {
+    "title": "Start your store on Snaker.",
+    "description": "Join merchants who value focused tools, transparent pricing, and design independence.",
+    "primary": "Create your store",
+    "secondary": "Request a demo"
+  },
+  "footer": {
+    "tagline": "A focused ecommerce platform built for modern retail operations.",
+    "platform": "Platform",
+    "resources": "Resources",
+    "company": "Company",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "All rights reserved."
+  }
+}
